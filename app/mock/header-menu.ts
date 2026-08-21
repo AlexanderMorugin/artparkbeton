@@ -21,26 +21,26 @@ export const headerMenu = [
   },
   {
     id: 5,
-    title: "Гарантия",
-    route: "/guarantee",
-  },
-  {
-    id: 5,
-    title: "Портфолио",
-    route: "/portfolio",
-  },
-  {
-    id: 6,
     title: "Доставка",
     route: "/delivery",
   },
   {
+    id: 6,
+    title: "Гарантия",
+    route: "/guarantee",
+  },
+  {
     id: 7,
+    title: "Портфолио",
+    route: "/portfolio",
+  },
+  {
+    id: 8,
     title: "Отзывы",
     route: "/review",
   },
   {
-    id: 8,
+    id: 9,
     title: "Контакты",
     route: "/contact",
   },

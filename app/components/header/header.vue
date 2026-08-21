@@ -20,6 +20,8 @@ import Logo from "../logo/logo.vue";
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    height: 60px;
   }
 }
 </style>

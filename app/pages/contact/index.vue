@@ -16,21 +16,13 @@ const breadcrumbs = [
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <div class="container">
-      <h1 class="title">Контакты</h1>
-    </div>
+    <TitlePage title="Контакты" />
   </ContainerPage>
 </template>
 
-<style lang="scss" scoped>
+<!-- <style lang="scss" scoped>
 .title {
   width: 100%;
   text-align: center;
 }
-.container {
-  display: grid;
-  align-items: center;
-  outline: 1px solid red;
-  height: 100%;
-}
-</style>
+</style> -->

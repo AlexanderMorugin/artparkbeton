@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { Breadcrumbs } from "~/types/breadcrumbs";
 
-// const { breadcrumbs, route } = defineProps(["breadcrumbs", "route"]);
 const props = defineProps<{
   breadcrumbs: Breadcrumbs[];
   route: string;
@@ -27,7 +26,7 @@ const props = defineProps<{
             <span itemprop="name">{{ item.name }}</span>
           </NuxtLink>
           <meta itemprop="position" :content="String(index + 1)" />
-          <span class="breadcrumbs__slash">/</span>
+          <IconArrowIos class="breadcrumbs__arrow" />
         </div>
 
         <div v-else class="breadcrumbs__active">
@@ -47,30 +46,34 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .breadcrumbs {
   padding-top: 20px;
-  // padding-left: 1rem;
+  animation: appear 1s ease-in-out;
 
   &__list {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
+    height: 17px;
     text-transform: lowercase;
-    // color: var(--mask-white-fourthly);
+    font-size: 14px;
+    color: $white-mask-two;
     letter-spacing: 0.8px;
   }
 
   &__link {
-    // color: var(--mask-white-secondary);
-    // border-bottom: 1px dashed var(--mask-white-fourthly);
-
+    color: $white-mask-two;
     transition: 0.2s ease;
 
     &:hover {
-      // color: var(--white-primary);
+      color: $white-one;
     }
   }
 
-  &__slash {
-    padding-left: 10px;
+  &__arrow {
+    width: 10px;
+    height: 10px;
+    fill: $white-mask-two;
+    vertical-align: middle;
+    padding-left: 6px;
   }
 
   &__active {
@@ -79,6 +82,17 @@ const props = defineProps<{
     -webkit-box-orient: vertical;
     overflow: hidden;
     overflow-wrap: anywhere;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 </style>

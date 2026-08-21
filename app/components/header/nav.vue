@@ -24,6 +24,7 @@ import { headerMenu } from "~/mock/header-menu";
   &__link {
     position: relative;
     display: inline-block;
+    font-size: 16px;
 
     &:after {
       content: "";
@@ -41,9 +42,9 @@ import { headerMenu } from "~/mock/header-menu";
       transform-origin: right;
       transform: scaleX(0);
       bottom: 0;
-      height: 2px;
+      height: 1px;
       width: 100%;
-      background-color: white;
+      background-color: $orange-four;
       transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     }
 
