@@ -1,0 +1,51 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  background: none;
+  border: none;
+  list-style: none;
+}
+
+a {
+  color: $white-one;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 22px;
+  // letter-spacing: 1px;
+
+  // font-family: "Galliard-Antiqua", sans-serif;
+  // font-size: 24px;
+
+  line-height: 1.7;
+  color: $white-one;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  background: $black-one;
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+// .page-padding-x {
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+// }
+.page-padding-y {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
