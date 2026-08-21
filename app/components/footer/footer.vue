@@ -6,6 +6,6 @@
 
 <style lang="scss" scoped>
 .footer {
-  // border: 1px solid $white-one;
+  border: 1px solid $white-one;
 }
 </style>

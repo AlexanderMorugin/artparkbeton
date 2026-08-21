@@ -1,3 +1,3 @@
 <template>
-  <div>Connect</div>
+  <div>Connect Block</div>
 </template>

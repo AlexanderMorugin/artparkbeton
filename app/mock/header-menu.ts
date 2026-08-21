@@ -26,7 +26,7 @@ export const headerMenu = [
   },
   {
     id: 5,
-    title: "Наши работы",
+    title: "Портфолио",
     route: "/portfolio",
   },
   {

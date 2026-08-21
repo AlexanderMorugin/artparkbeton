@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   ssr: false, // Cпециально для SPA, если нужно только статику, оставляем true
   nitro: {
     preset: "static",
@@ -16,4 +16,9 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/scss/main.scss", "~/assets/scss/_fonts.scss"],
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
 });

@@ -14,7 +14,7 @@ import Logo from "../logo/logo.vue";
 
 <style lang="scss" scoped>
 .header {
-  // border: 1px solid $white-one;
+  border: 1px solid $white-one;
 
   &__container {
     display: flex;
