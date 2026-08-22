@@ -6,8 +6,8 @@ const route = useRoute();
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },
   {
-    name: "Доставка",
-    path: "/delivery",
+    name: "Заказчику",
+    path: "/customer",
     content: "last",
   },
 ];
@@ -16,7 +16,7 @@ const breadcrumbs = [
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Доставка и оплата" />
+    <TitlePage title="Информация для заказчика" />
   </ContainerPage>
 </template>
 

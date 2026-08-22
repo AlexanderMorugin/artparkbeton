@@ -36,6 +36,13 @@ const props = defineProps<{
     word-break: break-all;
     animation: fall-down 1s ease-in-out;
     opacity: 0.9;
+    background-clip: text;
+    background-image: linear-gradient(
+      90deg,
+      $white-one 44.5%,
+      $orange-one 66.35%
+    );
+    color: transparent;
 
     @media (max-width: 1920px) {
       font-size: 60px;

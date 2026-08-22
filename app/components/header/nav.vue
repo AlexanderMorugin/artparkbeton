@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { headerMenu } from "~/mock/header-menu";
+
+const route = useRoute();
+
+console.log(route);
 </script>
 
 <template>
