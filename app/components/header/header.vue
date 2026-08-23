@@ -15,7 +15,7 @@ const openChatModal = () => (isChatModalOpen.value = true);
     <ContainerPage class="header__container">
       <HeaderNavButton v-if="isScreenLarge" name="nav" @click="openNavModal" />
       <Logo />
-      <HeaderNav v-if="!isScreenLarge" />
+      <HeaderNav v-if="!isScreenLarge" place="desktop" />
       <HeaderNavButton
         v-if="isScreenLarge"
         name="chat"
@@ -29,7 +29,6 @@ const openChatModal = () => (isChatModalOpen.value = true);
     <Transition name="left">
       <HeaderNavModal
         v-if="isNavModalOpen"
-        place="left"
         title="Меню"
         name="nav"
         @close-modal="isNavModalOpen = false"
@@ -42,8 +41,7 @@ const openChatModal = () => (isChatModalOpen.value = true);
     <Transition name="right">
       <HeaderNavModal
         v-if="isChatModalOpen"
-        place="right"
-        title="Связаться"
+        title="Связь"
         name="chat"
         @close-modal="isChatModalOpen = false"
       />

@@ -3,18 +3,41 @@ import { headerMenu } from "~/mock/header-menu";
 
 const route = useRoute();
 
-console.log(route);
+const props = defineProps<{
+  place: string;
+}>();
+
+const emits = defineEmits(["closeModal"]);
 </script>
 
 <template>
   <nav class="headerNav">
     <NuxtLink
+      v-if="props.place === 'desktop'"
       v-for="item in headerMenu"
       :key="item.id"
       :to="item.route"
       class="headerNav__link headerNav__link_line"
       >{{ item.title }}</NuxtLink
     >
+
+    <NuxtLink
+      v-if="props.place === 'mobile'"
+      v-for="item in headerMenu"
+      :key="item.id"
+      :to="item.route"
+      class="headerNav__linkMobile"
+      @click="emits('closeModal')"
+    >
+      <span class="headerNav__linkMobileText">{{ item.title }}</span>
+      <IconArrowIos class="headerNav__linkMobileArrow" />
+    </NuxtLink>
+
+    <Logo
+      v-if="props.place === 'mobile'"
+      class="headerNav__logo"
+      @click="emits('closeModal')"
+    />
   </nav>
 </template>
 
@@ -24,6 +47,13 @@ console.log(route);
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
   &__link {
     position: relative;
@@ -57,6 +87,32 @@ console.log(route);
       transform-origin: left;
       transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);
     }
+  }
+
+  &__linkMobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: $white-mask-four;
+    border-radius: $br-xs;
+    padding: 10px;
+  }
+
+  &__linkMobileText {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  &__linkMobileArrow {
+    width: 16px;
+    height: 16px;
+    fill: $white-mask-two;
+  }
+
+  &__logo {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 }
 </style>

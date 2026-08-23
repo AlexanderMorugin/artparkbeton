@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const props = defineProps<{
-  place: string;
   title: string;
   name: string;
 }>();
@@ -12,10 +11,20 @@ const emits = defineEmits(["closeModal"]);
   <div class="headerNavModal" click.stop>
     <div class="headerNavModal__container">
       <div class="headerNavModal__top">
-        <span v-if="props.name === 'chat'"> {{ props.title }}</span>
+        <span v-if="props.name === 'chat'" class="headerNavModal__topTitle">
+          {{ props.title }}</span
+        >
         <HeaderNavButton name="close" @click="emits('closeModal')" />
-        <span v-if="props.name === 'nav'"> {{ props.title }}</span>
+        <span v-if="props.name === 'nav'" class="headerNavModal__topTitle">
+          {{ props.title }}</span
+        >
       </div>
+
+      <HeaderNav
+        v-if="props.name === 'nav'"
+        place="mobile"
+        @closeModal="emits('closeModal')"
+      />
     </div>
   </div>
 </template>
@@ -38,6 +47,10 @@ const emits = defineEmits(["closeModal"]);
     gap: 32px;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 1024px) {
+      gap: 1rem;
+    }
   }
 
   &__top {
@@ -48,6 +61,14 @@ const emits = defineEmits(["closeModal"]);
     border-bottom: 1px solid $white-mask-three;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  &__topTitle {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $orange-four;
   }
 }
 </style>
