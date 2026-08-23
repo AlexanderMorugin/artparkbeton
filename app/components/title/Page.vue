@@ -1,14 +1,14 @@
-<script lang="ts" setup>
-const props = defineProps<{
-  title: string;
-}>();
-</script>
-
 <template>
   <h1 class="titlePage">
     <span class="titlePage__title">{{ props.title }}</span>
   </h1>
 </template>
+
+<script lang="ts" setup>
+const props = defineProps<{
+  title: string;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .titlePage {

@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import { headerMenu } from "~/mock/header-menu";
-
-const route = useRoute();
-
-const props = defineProps<{
-  place: string;
-}>();
-
-const emits = defineEmits(["closeModal"]);
-</script>
-
 <template>
   <nav class="headerNav">
     <NuxtLink
@@ -40,6 +28,18 @@ const emits = defineEmits(["closeModal"]);
     />
   </nav>
 </template>
+
+<script setup lang="ts">
+import { headerMenu } from "~/mock/header-menu";
+
+const route = useRoute();
+
+const props = defineProps<{
+  place: string;
+}>();
+
+const emits = defineEmits(["closeModal"]);
+</script>
 
 <style lang="scss" scoped>
 .headerNav {
@@ -97,6 +97,11 @@ const emits = defineEmits(["closeModal"]);
     background: $white-mask-four;
     border-radius: $br-xs;
     padding: 10px;
+    transition: 0.2s ease;
+
+    &:hover {
+      background: $white-mask-three;
+    }
   }
 
   &__linkMobileText {
@@ -108,11 +113,16 @@ const emits = defineEmits(["closeModal"]);
     width: 16px;
     height: 16px;
     fill: $white-mask-two;
+    transition: 0.2s ease;
   }
 
   &__logo {
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
+}
+
+.headerNav__linkMobile:hover .headerNav__linkMobileArrow {
+  fill: $orange-four;
 }
 </style>

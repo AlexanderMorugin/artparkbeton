@@ -1,12 +1,3 @@
-<script lang="ts" setup>
-import type { Breadcrumbs } from "~/types/breadcrumbs";
-
-const props = defineProps<{
-  breadcrumbs: Breadcrumbs[];
-  route: string;
-}>();
-</script>
-
 <template>
   <div class="breadcrumbs">
     <ul
@@ -42,6 +33,15 @@ const props = defineProps<{
     </ul>
   </div>
 </template>
+
+<script lang="ts" setup>
+import type { Breadcrumbs } from "~/types/breadcrumbs";
+
+const props = defineProps<{
+  breadcrumbs: Breadcrumbs[];
+  route: string;
+}>();
+</script>
 
 <style lang="scss" scoped>
 .breadcrumbs {

@@ -1,12 +1,3 @@
-<script setup lang="ts">
-const props = defineProps<{
-  title: string;
-  name: string;
-}>();
-
-const emits = defineEmits(["closeModal"]);
-</script>
-
 <template>
   <div class="headerNavModal" click.stop>
     <div class="headerNavModal__container">
@@ -25,9 +16,20 @@ const emits = defineEmits(["closeModal"]);
         place="mobile"
         @closeModal="emits('closeModal')"
       />
+
+      <HeaderChat v-if="props.name === 'chat'" />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  title: string;
+  name: string;
+}>();
+
+const emits = defineEmits(["closeModal"]);
+</script>
 
 <style lang="scss" scoped>
 .headerNavModal {

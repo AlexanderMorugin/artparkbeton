@@ -1,7 +1,3 @@
-<script setup lang="ts">
-const props = defineProps<{ name: string }>();
-</script>
-
 <template>
   <button class="headerNavButton">
     <IconMenu v-if="props.name === 'nav'" class="headerNavButton__icon" />
@@ -9,6 +5,10 @@ const props = defineProps<{ name: string }>();
     <IconClose v-if="props.name === 'close'" class="headerNavButton__icon" />
   </button>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{ name: string }>();
+</script>
 
 <style lang="scss" scoped>
 .headerNavButton {

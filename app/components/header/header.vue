@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import Logo from "../logo/logo.vue";
-
-const { isScreenLarge } = useResizeLarge();
-
-const isNavModalOpen = ref(false);
-const isChatModalOpen = ref(false);
-
-const openNavModal = () => (isNavModalOpen.value = true);
-const openChatModal = () => (isChatModalOpen.value = true);
-</script>
-
 <template>
   <header class="header">
     <ContainerPage class="header__container">
@@ -48,6 +36,16 @@ const openChatModal = () => (isChatModalOpen.value = true);
     </Transition>
   </Teleport>
 </template>
+
+<script setup lang="ts">
+const { isScreenLarge } = useResizeLarge();
+
+const isNavModalOpen = ref(false);
+const isChatModalOpen = ref(false);
+
+const openNavModal = () => (isNavModalOpen.value = true);
+const openChatModal = () => (isChatModalOpen.value = true);
+</script>
 
 <style lang="scss" scoped>
 .header {
