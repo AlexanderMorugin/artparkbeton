@@ -15,6 +15,10 @@
 
   &__icon {
     width: 48px;
+
+    @media (max-width: 390px) {
+      width: 32px;
+    }
   }
 
   &__text {

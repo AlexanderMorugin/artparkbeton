@@ -1,6 +1,12 @@
+<script setup lang="ts">
+const props = defineProps<{ name: string }>();
+</script>
+
 <template>
   <button class="headerNavButton">
-    <IconMenu class="headerNavButton__icon" />
+    <IconMenu v-if="props.name === 'nav'" class="headerNavButton__icon" />
+    <IconChat v-if="props.name === 'chat'" class="headerNavButton__icon" />
+    <IconClose v-if="props.name === 'close'" class="headerNavButton__icon" />
   </button>
 </template>
 
@@ -14,9 +20,12 @@
   border-radius: 50%;
   border: 1px solid $white-mask-three;
 
+  @media (max-width: 390px) {
+    width: 32px;
+    height: 32px;
+  }
+
   &__icon {
-    width: 24px;
-    height: 24px;
     fill: $white-one;
     opacity: 0.9;
     transition: 0.2s ease;
