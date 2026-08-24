@@ -51,8 +51,6 @@ const openChatModal = () => (isChatModalOpen.value = true);
 .header {
   position: sticky;
   top: 0;
-  // display: flex;
-  // align-items: center;
   width: 100%;
   animation: filter 3s ease;
   backdrop-filter: blur(15px) grayscale(50%);

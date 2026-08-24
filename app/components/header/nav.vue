@@ -51,8 +51,8 @@ const emits = defineEmits(["closeModal"]);
   @media (max-width: 1024px) {
     flex-direction: column;
     gap: 10px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 26px;
+    padding-right: 26px;
   }
 
   &__link {

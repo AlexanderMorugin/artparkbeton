@@ -15,17 +15,17 @@ const props = defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  @media (max-width: 1920px) {
-    padding-top: 20px;
-    padding-bottom: 60px;
-  }
+  // @media (max-width: 1920px) {
+  //   padding-top: 20px;
+  //   padding-bottom: 60px;
+  // }
 
-  @media (max-width: 767px) {
-    padding-bottom: 20px;
-  }
+  // @media (max-width: 767px) {
+  //   padding-bottom: 20px;
+  // }
 
   &__title {
     width: 100%;

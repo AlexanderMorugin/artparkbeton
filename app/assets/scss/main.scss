@@ -21,7 +21,7 @@ a {
 
 body {
   font-family: "Montserrat-Regular", sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   // letter-spacing: 1px;
 
   // font-family: "Galliard-Antiqua", sans-serif;
@@ -33,8 +33,8 @@ body {
   -webkit-font-smoothing: antialiased;
   background: $black-one;
 
-  @media (max-width: 767px) {
-    font-size: 20px;
+  @media (max-width: 1024px) {
+    font-size: 14px;
   }
 }
 

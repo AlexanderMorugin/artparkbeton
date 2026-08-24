@@ -1,0 +1,25 @@
+<template>
+  <section class="contact">
+    <ContactMap />
+    <ContactInfo />
+  </section>
+</template>
+
+<style lang="scss" scoped>
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__block {
+    background: $white-mask-five;
+    border-radius: $br-s;
+    padding: 1rem;
+    // border: 1px solid $white-mask-four;
+  }
+}
+</style>

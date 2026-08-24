@@ -27,7 +27,7 @@
     letter-spacing: 1px;
 
     &_span {
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: 0;
     }
   }

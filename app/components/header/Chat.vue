@@ -1,19 +1,17 @@
 <script setup lang="ts">
 import {
   ADDRESS,
-  EMAIL,
   MAX_LINK,
   PHONE_NUMBER_PRIMARY,
   PHONE_NUMBER_PRIMARY_LINK,
   TELEGRAM_LINK,
-  WHATSAPP_LINK,
 } from "~/mock/info";
 </script>
 
 <template>
   <div class="headerChat">
     <div class="headerChat__block">
-      <span class="headerChat__blockTitle">Телефоны</span>
+      <span class="headerChat__blockTitle">Телефон</span>
       <a :href="PHONE_NUMBER_PRIMARY_LINK" class="headerChat__blockText">{{
         PHONE_NUMBER_PRIMARY
       }}</a>
@@ -23,8 +21,6 @@ import {
       <span class="headerChat__blockTitle">Мессенджеры</span>
       <div class="headerChat__blockMessenger">
         <ButtonChat :link="MAX_LINK" name="max" />
-        <ButtonChat :link="`mailto:${EMAIL}`" name="email" />
-        <ButtonChat :link="`mailto:${WHATSAPP_LINK}`" name="whatsapp" />
         <ButtonChat :link="TELEGRAM_LINK" name="telegram" />
       </div>
     </div>
@@ -75,8 +71,9 @@ import {
   }
 
   &__blockAddress {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
+    letter-spacing: 1px;
   }
 }
 </style>
