@@ -20,10 +20,3 @@ const breadcrumbs = [
   },
 ];
 </script>
-
-<!-- <style lang="scss" scoped>
-.title {
-  width: 100%;
-  text-align: center;
-}
-</style> -->

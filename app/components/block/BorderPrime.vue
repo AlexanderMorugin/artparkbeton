@@ -13,8 +13,9 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .blockPrime {
   border-radius: $br-m;
+  border: 1px solid $white-mask-four;
   padding: 1rem;
-  backdrop-filter: blur(150px) brightness(80%);
+  backdrop-filter: blur(1px);
 
   @media (max-width: 1024px) {
     border-radius: $br-s;

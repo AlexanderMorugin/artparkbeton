@@ -39,7 +39,7 @@ const emits = defineEmits(["closeModal"]);
   top: 0;
   right: 0;
   animation: filter 3s ease;
-  backdrop-filter: blur(15px) grayscale(50%);
+  backdrop-filter: blur(15px) grayscale(50%) brightness(50%);
   overflow-y: auto;
   z-index: 10;
 

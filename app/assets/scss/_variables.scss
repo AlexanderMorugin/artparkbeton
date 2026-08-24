@@ -6,7 +6,8 @@ $white-mask-four: rgba(255, 255, 255, 0.2);
 $white-mask-five: rgba(255, 255, 255, 0.1);
 
 // $black-one: #110c00;
-$black-one: #262727;
+$black-one: rgb(38, 39, 39);
+$black-mask-one: rgba(0, 0, 0, 0.05);
 // $black-one: #292929;
 // $black-two: #1a1a1a;
 
@@ -15,12 +16,18 @@ $black-one: #262727;
 // $black-mask-three: rgba(26, 26, 24, 0.2);
 // $black-two: #000000;
 
-$grey-one: #494949;
+// $grey-one: #494949;
 
-$orange-one: #d78113;
+// $orange-one: #d78113;
+$orange-one: #ff9300;
+// $orange-two: #ff9300;
 // $orange-two: #ed9c32;
 // $orange-three: #f0b160;
 $orange-four: #f5c88e;
+// $orange-four: #fae0be;
+// $orange-four: #fcf5eb;
+
+// $orange-five: #fae0be;
 
 // $blue-one: #2fd2cd;
 
@@ -50,6 +57,7 @@ $orange-four: #f5c88e;
 // $gradient-blue-one: linear-gradient(0.439turn, $blue-one 0%, $blue-three 100%);
 
 // $shadow-one: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$shadow-one: rgba(38, 39, 39, 0.2) 0px 7px 29px 0px;
 
 // $padding-x: 1rem;
 

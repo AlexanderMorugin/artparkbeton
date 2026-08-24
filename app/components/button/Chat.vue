@@ -38,7 +38,7 @@ const props = defineProps<{
   width: 48px;
   height: 48px;
   border-radius: 8px;
-  border: 2px solid $white-mask-three;
+  border: 1px solid $white-mask-three;
   overflow: hidden;
 
   &:hover {

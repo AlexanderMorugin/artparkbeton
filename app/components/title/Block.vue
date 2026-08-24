@@ -10,12 +10,13 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .titleBlock {
+  font-family: "Montserrat-Medium", sans-serif;
   font-size: 22px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 
   @media (max-width: 1024px) {
     font-size: 18px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 }
 </style>

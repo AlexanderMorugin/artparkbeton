@@ -1,40 +1,44 @@
 <template>
-  <BlockPrime color="one" class="contactInfo">
-    <TitleBlock title="Где нас найти" />
-    <div class="contactInfo__block">
-      <BlockPrime color="one" class="contactInfo__block">
-        <TitleBlockSmall title="Адрес" />
-        <span class="contactInfo__blockText">{{ ADDRESS }}</span>
-      </BlockPrime>
-      <BlockPrime color="one" class="contactInfo__block">
-        <TitleBlockSmall title="Время работы" />
-        <span class="contactInfo__blockText">{{ WORK_HOURS }}</span>
-      </BlockPrime>
-      <BlockPrime color="one" class="contactInfo__block">
-        <TitleBlockSmall title="Связь" />
-        <div class="contactInfo__blockIcon">
-          <ButtonChat :link="MAX_LINK" name="max" />
-          <ButtonChat :link="TELEGRAM_LINK" name="telegram" />
-        </div>
+  <BlockGradientPrime>
+    <BlockPrime color="one" class="contactInfo">
+      <TitleBlock title="Где нас найти" />
+      <div class="contactInfo__block">
+        <BlockBorderPrime
+          color="one"
+          class="contactInfo__block contactInfo__block_border"
+        >
+          <TitleBlockSmall title="Адрес" />
+          <span>{{ ADDRESS }}</span>
+        </BlockBorderPrime>
+        <BlockBorderPrime
+          color="one"
+          class="contactInfo__block contactInfo__block_border"
+        >
+          <TitleBlockSmall title="Время работы" />
+          <span>{{ WORK_HOURS }}</span>
+        </BlockBorderPrime>
+        <BlockBorderPrime
+          color="one"
+          class="contactInfo__block contactInfo__block_border"
+        >
+          <TitleBlockSmall title="Связь" />
+          <div class="contactInfo__blockIcon">
+            <ButtonChat :link="MAX_LINK" name="max" />
+            <ButtonChat :link="TELEGRAM_LINK" name="telegram" />
+          </div>
 
-        <div class="contactInfo__blockIcon">
-          <IconPhone class="contactInfo__icon" />
-          <a :href="PHONE_NUMBER_PRIMARY_LINK" class="contactInfo__blockText">{{
-            PHONE_NUMBER_PRIMARY
-          }}</a>
-        </div>
-        <div class="contactInfo__blockIcon">
-          <IconEmail class="contactInfo__icon" />
-          <a
-            :href="EMAIL_LINK"
-            target="_blank"
-            class="contactInfo__blockText"
-            >{{ EMAIL }}</a
-          >
-        </div>
-      </BlockPrime>
-    </div>
-  </BlockPrime>
+          <div class="contactInfo__blockIcon">
+            <IconPhone class="contactInfo__icon" />
+            <a :href="PHONE_NUMBER_PRIMARY_LINK">{{ PHONE_NUMBER_PRIMARY }}</a>
+          </div>
+          <div class="contactInfo__blockIcon">
+            <IconEmail class="contactInfo__icon" />
+            <a :href="EMAIL_LINK" target="_blank">{{ EMAIL }}</a>
+          </div>
+        </BlockBorderPrime>
+      </div>
+    </BlockPrime>
+  </BlockGradientPrime>
 </template>
 
 <script setup lang="ts">
@@ -54,16 +58,20 @@ import {
 .contactInfo {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 30px;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
 
   &__block {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
 
-  &__blockText {
-    color: $white-mask-one;
+    &_border {
+      box-shadow: $shadow-one;
+    }
   }
 
   &__blockIcon {
