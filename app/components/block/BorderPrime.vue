@@ -23,7 +23,6 @@ const props = defineProps<{
   }
 
   &_colorOne {
-    // background: $white-mask-five;
     background: $black-mask-one;
   }
 }

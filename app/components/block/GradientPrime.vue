@@ -15,10 +15,14 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 40%;
+    width: 70%;
+    height: 60%;
     border-radius: 50%;
     background: $orange-one;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 }
 </style>

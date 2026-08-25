@@ -1,5 +1,4 @@
 <template>
-  <!-- <BlockPrime color="one"> -->
   <div class="map">
     <iframe
       src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa782d5f20d531b8b50144280f249630e3fa5981b9886f6512dfc2b96684de7a1&amp;source=constructor"
@@ -9,7 +8,6 @@
       title="Карта проезда"
     ></iframe>
   </div>
-  <!-- </BlockPrime> -->
 </template>
 
 <style lang="scss" scoped>

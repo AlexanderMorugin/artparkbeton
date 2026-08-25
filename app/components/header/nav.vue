@@ -94,8 +94,9 @@ const emits = defineEmits(["closeModal"]);
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: $white-mask-four;
+    background: $black-mask-one;
     border-radius: $br-xs;
+    border: 1px solid $white-mask-four;
     padding: 10px;
     transition: 0.2s ease;
 

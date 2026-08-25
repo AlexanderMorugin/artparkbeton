@@ -14,12 +14,7 @@
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
-  }
-
-  &__block {
-    background: $white-mask-five;
-    border-radius: $br-s;
-    padding: 1rem;
+    gap: 2rem;
   }
 }
 </style>

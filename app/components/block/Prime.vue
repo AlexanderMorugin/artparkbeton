@@ -18,12 +18,19 @@ const props = defineProps<{
 
   @media (max-width: 1024px) {
     border-radius: $br-s;
-    padding: 10px;
+  }
+
+  @media (max-width: 576px) {
+    backdrop-filter: none;
+    padding: 0;
   }
 
   &_colorOne {
-    // background: $white-mask-five;
     background: $black-mask-one;
+
+    @media (max-width: 576px) {
+      background: none;
+    }
   }
 }
 </style>
