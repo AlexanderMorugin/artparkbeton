@@ -14,7 +14,6 @@ ul {
 }
 
 a {
-  // font-family: "Montserrat-Medium", sans-serif;
   color: $white-one;
   text-decoration: none;
 }
@@ -22,33 +21,15 @@ a {
 body {
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 16px;
-  // letter-spacing: 1px;
-
-  // font-family: "Galliard-Antiqua", sans-serif;
-  // font-size: 24px;
-
   line-height: 1.7;
   color: $white-one;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   background: $black-one;
-
-  // @media (max-width: 1024px) {
-  //   font-size: 14px;
-  // }
 }
 
 button {
   background: transparent;
   border: none;
   cursor: pointer;
-}
-
-// .page-padding-x {
-//   padding-left: 1rem;
-//   padding-right: 1rem;
-// }
-.page-padding-y {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }

@@ -1,13 +1,3 @@
-<script setup lang="ts">
-import {
-  ADDRESS,
-  MAX_LINK,
-  PHONE_NUMBER_PRIMARY,
-  PHONE_NUMBER_PRIMARY_LINK,
-  TELEGRAM_LINK,
-} from "~/mock/info";
-</script>
-
 <template>
   <div class="headerChat">
     <div class="headerChat__block">
@@ -30,9 +20,19 @@ import {
       <span class="headerChat__blockAddress">{{ ADDRESS }}</span>
     </div>
 
-    <Logo />
+    <Logo class="headerChat__logo" />
   </div>
 </template>
+
+<script setup lang="ts">
+import {
+  ADDRESS,
+  MAX_LINK,
+  PHONE_NUMBER_PRIMARY,
+  PHONE_NUMBER_PRIMARY_LINK,
+  TELEGRAM_LINK,
+} from "~/mock/info";
+</script>
 
 <style lang="scss" scoped>
 .headerChat {
@@ -74,6 +74,11 @@ import {
     font-size: 16px;
     text-align: center;
     letter-spacing: 1px;
+  }
+
+  &__logo {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 }
 </style>

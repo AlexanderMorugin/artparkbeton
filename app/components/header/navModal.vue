@@ -59,10 +59,14 @@ const emits = defineEmits(["closeModal"]);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    min-height: 70px;
     border-bottom: 1px solid $white-mask-three;
     padding-left: 1rem;
     padding-right: 1rem;
+
+    @media (max-width: 1024px) {
+      min-height: 60px;
+    }
   }
 
   &__topTitle {
