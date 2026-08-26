@@ -1,6 +1,6 @@
 <template>
   <NuxtLink to="/" title="На главную" class="logo">
-    <img src="/images/logo/logo.png" alt="Лого" class="logo__icon" />
+    <img src="/logo/logo.png" alt="Лого" class="logo__icon" />
     <div class="logo__text">
       Арт <span class="logo__text logo__text_span">П.А.Р.К.</span>
     </div>
