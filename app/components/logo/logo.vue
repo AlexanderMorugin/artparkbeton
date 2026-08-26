@@ -1,9 +1,7 @@
 <template>
   <NuxtLink to="/" title="На главную" class="logo">
     <img src="/logo/logo.png" alt="Лого" class="logo__icon" />
-    <div class="logo__text">
-      Арт <span class="logo__text logo__text_span">П.А.Р.К.</span>
-    </div>
+    <div class="logo__text">Арт П.А.Р.К</div>
   </NuxtLink>
 </template>
 
@@ -16,19 +14,18 @@
   &__icon {
     width: 48px;
 
-    @media (max-width: 390px) {
-      width: 32px;
+    @media (max-width: 576px) {
+      width: 36px;
     }
   }
 
   &__text {
-    font-family: "Galliard-Antiqua", sans-serif;
-    font-size: 24px;
+    font-family: "Oswald-SemiBold", sans-serif;
+    font-size: 22px;
     letter-spacing: 1px;
 
-    &_span {
-      font-size: 20px;
-      letter-spacing: 0;
+    @media (max-width: 576px) {
+      font-size: 18px;
     }
   }
 }

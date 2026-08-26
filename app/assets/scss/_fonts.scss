@@ -42,13 +42,57 @@
   font-display: swap;
 }
 
+// @font-face {
+//   src:
+//     local("Galliard-Antiqua"),
+//     url("/fonts/Galliard-Antiqua.woff2") format("woff2"),
+//     url("/fonts/Galliard-Antiqua.woff") format("woff");
+//   font-family: "Galliard-Antiqua";
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   src:
+//     local("Oswald-Regular"),
+//     url("/fonts/Oswald-Regular.woff2") format("woff2"),
+//     url("/fonts/Oswald-Regular.woff") format("woff");
+//   font-family: "Oswald-Regular";
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   src:
+//     local("Oswald-Medium"),
+//     url("/fonts/Oswald-Medium.woff2") format("woff2"),
+//     url("/fonts/Oswald-Medium.woff") format("woff");
+//   font-family: "Oswald-Medium";
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
 @font-face {
   src:
-    local("Galliard-Antiqua"),
-    url("/fonts/Galliard-Antiqua.woff2") format("woff2"),
-    url("/fonts/Galliard-Antiqua.woff") format("woff");
-  font-family: "Galliard-Antiqua";
+    local("Oswald-SemiBold"),
+    url("/fonts/Oswald-SemiBold.woff2") format("woff2"),
+    url("/fonts/Oswald-SemiBold.woff") format("woff");
+  font-family: "Oswald-SemiBold";
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+// @font-face {
+//   src:
+//     local("Oswald-Bold"),
+//     url("/fonts/Oswald-Bold.woff2") format("woff2"),
+//     url("/fonts/Oswald-Bold.woff") format("woff");
+//   font-family: "Oswald-Bold";
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
