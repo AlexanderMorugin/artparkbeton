@@ -1,8 +1,9 @@
 <template>
   <NuxtLink :to="`/catalog${item.route}`" class="catalogListCard">
+    <div class="catalogListCard__titleHide">{{ item.title }}</div>
     <div class="catalogListCard__titleBlock">
       <div class="catalogListCard__title">
-        <TitleBlock :title="item.title" />
+        <TitleCatalog :title="item.title" />
       </div>
       <span class="catalogListCard__subtitle">{{ item.subtitle }}</span>
     </div>
@@ -66,11 +67,30 @@ const props = defineProps<{
   background: $white-one;
   border-radius: $br-m;
   padding: 1rem;
-  transition: 0.2s ease;
   overflow: hidden;
+  transition: 0.2s ease;
 
   &:hover {
-    background: $white-mask-four;
+    background: $black-mask-three;
+  }
+
+  &__titleHide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: $white-mask-one;
+    text-align: center;
+    z-index: 2;
+    transition: 0.8s ease;
+    opacity: 0;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__titleBlock {
@@ -105,28 +125,28 @@ const props = defineProps<{
   }
 
   &__mark {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: $orange-four;
+    background: $orange-one;
   }
 
   &__markIcon {
-    width: 16px;
-    height: 16px;
-    fill: $black-one;
+    width: 18px;
+    height: 18px;
+    fill: $white-one;
   }
 
   &__clip {
     position: absolute;
-
     fill: $black-one;
 
     &_step {
-      bottom: -20px;
+      bottom: -44px;
       left: -20px;
       width: 200px;
       height: 200px;
@@ -134,24 +154,24 @@ const props = defineProps<{
 
     &_tile {
       bottom: -20px;
-      left: 0;
+      left: -6px;
       width: 150px;
       height: 150px;
       transform: rotate(157deg);
     }
 
     &_baluster {
-      bottom: -20px;
-      left: 20px;
-      width: 120px;
-      height: 120px;
+      bottom: -44px;
+      left: -20px;
+      width: 130px;
+      height: 130px;
     }
 
     &_sill {
-      bottom: 0;
+      bottom: -20px;
       left: 20px;
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
 
     &_worktop {
@@ -162,22 +182,22 @@ const props = defineProps<{
     }
 
     &_interior {
-      bottom: -30px;
-      left: 50px;
+      bottom: -34px;
+      left: -24px;
       width: 150px;
       height: 150px;
     }
 
     &_souvenir {
-      bottom: 0;
-      left: 50px;
-      width: 100px;
-      height: 100px;
+      bottom: -20px;
+      left: 0;
+      width: 130px;
+      height: 130px;
     }
 
     &_monument {
-      bottom: -30px;
-      left: 50px;
+      bottom: -50px;
+      left: 0;
       width: 150px;
       height: 150px;
     }
@@ -186,5 +206,49 @@ const props = defineProps<{
 
 .catalogListCard:hover .catalogListCard__mark {
   background: $orange-one;
+}
+
+.catalogListCard:hover .catalogListCard__titleBlock {
+  opacity: 0;
+}
+
+.catalogListCard:hover .catalogListCard__titleHide {
+  opacity: 1;
+}
+
+.catalogListCard:hover .catalogListCard__clip {
+  opacity: 0;
+}
+
+.catalogListCard__mark::after,
+.catalogListCard__mark::before {
+  content: "";
+  position: absolute;
+  border: 1px solid $orange-four;
+  left: -10px;
+  opacity: 0;
+  right: -10px;
+  top: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  animation: pulse 2.5s linear infinite;
+}
+
+.catalogListCard__mark::after {
+  animation-delay: 1.25s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
 }
 </style>
