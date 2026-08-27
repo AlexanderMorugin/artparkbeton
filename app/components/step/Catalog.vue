@@ -1,10 +1,17 @@
 <template>
   <section class="stepCatalog">
-    <h2>Каталог ступеней</h2>
-
-    <NuxtLink to="/catalog/step/inside">ступени для лестницы</NuxtLink>
-    <NuxtLink to="/catalog/step/outside">ступени для уличного крыльца</NuxtLink>
-    <NuxtLink to="/catalog/step/curved">ступени криволинейные</NuxtLink>
+    <CatalogPictureCard
+      route="/catalog/step/inside"
+      title="Ступени для лестницы"
+    />
+    <CatalogPictureCard
+      route="/catalog/step/outside"
+      title="Ступени для крыльца"
+    />
+    <CatalogPictureCard
+      route="/catalog/step/curved"
+      title="Ступени криволинейные"
+    />
   </section>
 </template>
 

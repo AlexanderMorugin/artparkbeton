@@ -21,11 +21,7 @@
         </div>
 
         <div v-else class="breadcrumbs__active">
-          <span itemprop="name">{{
-            item.name.split(" ").length > 1
-              ? item.name.split(" ").slice(1).join(" ")
-              : item.name
-          }}</span>
+          <span itemprop="name">{{ item.name }}</span>
           <meta itemprop="item" :content="route" />
           <meta itemprop="position" :content="String(index + 1)" />
         </div>
@@ -57,6 +53,12 @@ const props = defineProps<{
     font-size: 14px;
     color: $white-mask-two;
     letter-spacing: 0.8px;
+
+    @media (max-width: 576px) {
+      font-size: 11px;
+      letter-spacing: 0;
+      gap: 2px;
+    }
   }
 
   &__link {
@@ -74,6 +76,10 @@ const props = defineProps<{
     fill: $white-mask-two;
     vertical-align: middle;
     padding-left: 6px;
+
+    @media (max-width: 576px) {
+      padding-left: 2px;
+    }
   }
 
   &__active {

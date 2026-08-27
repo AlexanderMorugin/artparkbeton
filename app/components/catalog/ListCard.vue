@@ -41,10 +41,8 @@
       class="catalogListCard__clip catalogListCard__clip_worktop"
     />
 
-    <div class="catalogListCard__markBlock">
-      <div class="catalogListCard__mark">
-        <IconArrowIos class="catalogListCard__markIcon" />
-      </div>
+    <div class="catalogListCard__forward">
+      <ButtonForward />
     </div>
   </NuxtLink>
 </template>
@@ -119,26 +117,9 @@ const props = defineProps<{
     padding-top: 1rem;
   }
 
-  &__markBlock {
+  &__forward {
     display: flex;
     justify-content: right;
-  }
-
-  &__mark {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: $orange-one;
-  }
-
-  &__markIcon {
-    width: 18px;
-    height: 18px;
-    fill: $white-one;
   }
 
   &__clip {
@@ -204,10 +185,6 @@ const props = defineProps<{
   }
 }
 
-.catalogListCard:hover .catalogListCard__mark {
-  background: $orange-one;
-}
-
 .catalogListCard:hover .catalogListCard__titleBlock {
   opacity: 0;
 }
@@ -218,37 +195,5 @@ const props = defineProps<{
 
 .catalogListCard:hover .catalogListCard__clip {
   opacity: 0;
-}
-
-.catalogListCard__mark::after,
-.catalogListCard__mark::before {
-  content: "";
-  position: absolute;
-  border: 1px solid $orange-four;
-  left: -10px;
-  opacity: 0;
-  right: -10px;
-  top: -10px;
-  bottom: -10px;
-  border-radius: 50%;
-  animation: pulse 2.5s linear infinite;
-}
-
-.catalogListCard__mark::after {
-  animation-delay: 1.25s;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
 }
 </style>

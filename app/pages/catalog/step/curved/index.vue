@@ -18,10 +18,10 @@ const breadcrumbs = [
     path: "/catalog/step",
     content: "3",
   },
-  // {
-  //   name: "",
-  //   path: "/inside",
-  //   content: "last",
-  // },
+  {
+    name: "Криволинейные",
+    path: "/curved",
+    content: "last",
+  },
 ];
 </script>

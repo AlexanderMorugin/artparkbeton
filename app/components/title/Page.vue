@@ -18,22 +18,12 @@ const props = defineProps<{
   padding-top: 20px;
   padding-bottom: 20px;
 
-  // @media (max-width: 1920px) {
-  //   padding-top: 20px;
-  //   padding-bottom: 60px;
-  // }
-
-  // @media (max-width: 767px) {
-  //   padding-bottom: 20px;
-  // }
-
   &__title {
     width: 100%;
     font-family: "Montserrat-Bold", sans-serif;
     font-size: 48px;
     letter-spacing: 4px;
     text-align: center;
-    word-break: break-all;
     animation: fall-down 1s ease-in-out;
     opacity: 0.9;
     background-clip: text;
@@ -52,9 +42,10 @@ const props = defineProps<{
       font-size: 40px;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 576px) {
       font-size: 28px;
       line-height: 44px;
+      letter-spacing: 2px;
     }
   }
 }
