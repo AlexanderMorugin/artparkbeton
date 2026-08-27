@@ -2,7 +2,7 @@
   <NuxtLink :to="props.route" class="catalogPictureCard">
     <div class="catalogPictureCard__imageBlock">
       <img
-        src="/images/catalog/step/step-curved-800-500.webp"
+        :src="props.image"
         :alt="props.title"
         class="catalogPictureCard__image"
       />
@@ -28,6 +28,7 @@
 const props = defineProps<{
   route: string;
   title: string;
+  image: string;
 }>();
 </script>
 
@@ -49,7 +50,7 @@ const props = defineProps<{
   // border: 1px solid red;
 
   &__imageBlock {
-    border-radius: $br-l;
+    border-radius: $br-m;
     overflow: hidden;
 
     // border: 1px solid red;
@@ -72,7 +73,7 @@ const props = defineProps<{
 
   &__subtitle {
     // letter-spacing: 0.8px;
-    color: $white-mask-two;
+    color: $white-mask-one;
     margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
