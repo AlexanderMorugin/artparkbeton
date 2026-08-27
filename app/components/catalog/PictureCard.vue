@@ -47,13 +47,9 @@ const props = defineProps<{
     padding: 10px;
   }
 
-  // border: 1px solid red;
-
   &__imageBlock {
     border-radius: $br-m;
     overflow: hidden;
-
-    // border: 1px solid red;
   }
 
   &__image {
@@ -68,11 +64,7 @@ const props = defineProps<{
     justify-content: space-between;
   }
 
-  // &__titleBlock {
-  // }
-
   &__subtitle {
-    // letter-spacing: 0.8px;
     color: $white-mask-one;
     margin-top: 20px;
     padding-top: 20px;
@@ -88,8 +80,6 @@ const props = defineProps<{
       padding-bottom: 10px;
       padding-right: 10px;
     }
-
-    // border: 1px solid red;
   }
 }
 </style>

@@ -69,9 +69,9 @@ const props = defineProps<{
   overflow: hidden;
   transition: 0.2s ease;
 
-  // &:hover {
-  //   background: $black-mask-three;
-  // }
+  &:hover {
+    background: $white-mask-three;
+  }
 
   &__titleHide {
     position: absolute;
@@ -98,9 +98,7 @@ const props = defineProps<{
   }
 
   &__title {
-    // color: $black-one;
     min-height: 75px;
-    // border-bottom: 1px solid $black-mask-two;
     border-bottom: 1px solid $white-mask-three;
 
     @media (max-width: 1024px) {
@@ -110,7 +108,6 @@ const props = defineProps<{
 
   &__subtitle {
     font-size: 14px;
-    // color: $black-mask-two;
     color: $white-mask-one;
     overflow: hidden;
     display: -webkit-box;
@@ -195,8 +192,4 @@ const props = defineProps<{
 .catalogListCard:hover .catalogListCard__titleHide {
   opacity: 1;
 }
-
-// .catalogListCard:hover .catalogListCard__clip {
-//   opacity: 0;
-// }
 </style>
