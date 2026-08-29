@@ -35,7 +35,11 @@ const emits = defineEmits<{
 .emblaCatalogThumbs {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  gap: 6px;
+
+  @media (max-width: 767px) {
+    gap: 4px;
+  }
 
   &__button {
     width: 100%;

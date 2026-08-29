@@ -94,7 +94,11 @@ onMounted(() => {
 .emblaCatalogCard {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
+
+  @media (max-width: 767px) {
+    gap: 4px;
+  }
 
   &__viewport {
     position: relative;
@@ -112,11 +116,6 @@ onMounted(() => {
     position: relative;
     flex: 0 0 100%;
     min-width: 0;
-    min-height: 400px;
-
-    @media (max-width: 767px) {
-      min-height: 200px;
-    }
   }
 
   &__slideImage {
