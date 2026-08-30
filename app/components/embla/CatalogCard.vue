@@ -41,11 +41,11 @@ import type { EmblaCarouselType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-vue";
 import type { CatalogList } from "~/types/catalog";
 
-const [emblaRef, emblaApi] = useEmblaCarousel();
-
 const props = defineProps<{
   list: CatalogList[];
 }>();
+
+const [emblaRef, emblaApi] = useEmblaCarousel();
 
 const activeThumb = ref(0);
 
@@ -63,7 +63,7 @@ const goToSlide = (slide: CatalogList) => {
   if (!emblaApi.value) return;
 
   activeThumb.value = slide.id;
-  emblaApi.value.scrollTo(slide.id, false);
+  emblaApi.value.scrollTo(slide.id);
 };
 
 const scrollNext = () => {
@@ -85,6 +85,10 @@ onMounted(() => {
 
   updateButtonStates(emblaApi.value);
   emblaApi.value.on("select", updateButtonStates);
+
+  emblaApi.value.on("select", () => {
+    activeThumb.value = Number(emblaApi.value?.selectedScrollSnap());
+  });
 
   onSelect(emblaApi.value);
 });
