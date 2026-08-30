@@ -1,10 +1,12 @@
 <template>
-  <button class="emblaButtonFullScreen">
+  <button @click="emits('openImageModal')" class="emblaButtonFullScreen">
     <IconFullScreen class="emblaButtonFullScreen__icon" />
   </button>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const emits = defineEmits(["openImageModal"]);
+</script>
 
 <style lang="scss" scoped>
 .emblaButtonFullScreen {

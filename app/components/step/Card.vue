@@ -1,6 +1,6 @@
 <template>
   <section class="stepCard">
-    <EmblaCatalogCard :list="catalogStepInside" />
+    <EmblaCatalogCard :list="catalogStepInside" :isModal="false" />
   </section>
 </template>
 
