@@ -37,9 +37,14 @@ const emits = defineEmits<{
 
 <style lang="scss" scoped>
 .emblaCatalogThumbs {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // display: grid;
+  // grid-template-columns: repeat(5, 1fr);
   gap: 6px;
+
+  width: 100%;
 
   @media (max-width: 767px) {
     gap: 4px;
@@ -52,21 +57,27 @@ const emits = defineEmits<{
     z-index: 20;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
+    // display: flex;
+    // justify-content: center;
+    // width: 100%;
+    padding: 5px;
     backdrop-filter: blur(15px) grayscale(50%) brightness(50%);
   }
 
   &__button {
     width: 100%;
+    max-width: 100px;
+    height: 100%;
+    // height: 100px;
     padding: 0;
     border-radius: $br-xs;
     overflow: hidden;
 
     &_modal {
-      max-width: 100px;
+      // max-width: 100px;
+      // height: 100%;
+      border-radius: 0;
+      border: 1px solid $black-mask-two;
     }
 
     &_active {

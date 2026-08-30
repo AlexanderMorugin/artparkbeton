@@ -1,11 +1,15 @@
 <template>
   <section class="stepCard">
-    <EmblaCatalogCard :list="catalogStepInside" :isModal="false" />
+    <EmblaCatalogCard :list="props.list" :isModal="false" />
   </section>
 </template>
 
 <script setup lang="ts">
-import { catalogStepInside } from "~/mock/catalog-step-inside";
+import type { CatalogList } from "~/types/catalog";
+
+const props = defineProps<{
+  list: CatalogList[];
+}>();
 </script>
 
 <style lang="scss" scoped>

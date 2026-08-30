@@ -2,11 +2,12 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для лестницы" />
-    <StepCard />
+    <StepCard :list="catalogStepInside" />
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
+import { catalogStepInside } from "~/mock/steps/catalog-step-inside";
 import { SITE } from "~/mock/meta";
 
 const route = useRoute();
