@@ -114,12 +114,13 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: end;
+    row-gap: 10px;
     // column-gap: 10px;
   }
 
   &__priceBlockGridName {
     font-size: 12px;
-    // line-height: 3;
+    line-height: 2;
     color: $white-mask-two;
   }
 
@@ -129,7 +130,7 @@
     padding-left: 10px;
     padding-right: 10px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 576px) {
       font-size: 12px;
     }
   }
@@ -139,7 +140,7 @@
     text-align: right;
     padding-left: 10px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 576px) {
       font-size: 12px;
     }
   }
