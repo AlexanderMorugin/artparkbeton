@@ -3,7 +3,7 @@
     <div class="catalogListCard__titleHide">{{ item.title }}</div>
     <div class="catalogListCard__titleBlock">
       <div class="catalogListCard__title">
-        <TitleCatalog :title="item.title" />
+        <TitleCatalogListCard :title="item.title" />
       </div>
       <span class="catalogListCard__subtitle">{{ item.subtitle }}</span>
     </div>

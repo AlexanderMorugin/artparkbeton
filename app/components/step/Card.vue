@@ -1,7 +1,8 @@
 <template>
-  <section class="stepCard">
+  <div class="stepCard">
     <EmblaCatalogCard :list="props.list" :isModal="false" />
-  </section>
+    <StepDetails />
+  </div>
 </template>
 
 <script setup lang="ts">

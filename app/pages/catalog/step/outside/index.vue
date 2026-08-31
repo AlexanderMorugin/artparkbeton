@@ -3,6 +3,7 @@
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для крыльца" />
     <StepCard :list="catalogStepOutside" />
+    <StepOptions />
   </ContainerPage>
 </template>
 

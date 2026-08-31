@@ -1,5 +1,5 @@
 <template>
-  <div class="emblaCatalogCard">
+  <section class="emblaCatalogCard">
     <div class="emblaCatalogCard__viewport" ref="emblaRef">
       <div class="emblaCatalogCard__container">
         <div
@@ -40,7 +40,7 @@
       :activeThumb="activeThumb"
       @goToSlide="goToSlide"
     />
-  </div>
+  </section>
 
   <!-- Модалка картинки -->
   <Teleport to="#teleports">
