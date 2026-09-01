@@ -12,3 +12,12 @@ export interface CatalogList {
   imageNormal: string;
   imageThumb: string;
 }
+
+export interface CatalogStep {
+  id: number;
+  sizeName: string;
+  sizeOptions: string;
+  sizeWeight: string;
+  sizePrice: string;
+  sizeCurrency: string;
+}

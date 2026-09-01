@@ -19,7 +19,7 @@ const props = defineProps<{
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     grid-template-columns: 1fr;
   }
 }

@@ -118,16 +118,12 @@ onMounted(() => {
 .emblaCatalogCard {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-
-  @media (max-width: 767px) {
-    gap: 4px;
-  }
+  gap: 4px;
+  height: min-content;
 
   &__viewport {
     position: relative;
     height: 100%;
-    border-radius: $br-xs;
     overflow: hidden;
   }
 
