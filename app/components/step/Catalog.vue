@@ -28,8 +28,5 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 1rem;
-
-  // border: 1px solid red;
 }
 </style>

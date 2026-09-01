@@ -1,5 +1,5 @@
 <template>
-  <ContainerPage>
+  <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени и подступенки" />
     <StepCatalog />

@@ -1,6 +1,6 @@
 <template>
   <StepBlock>
-    <TitleCatalogBlock title="Характеристики" />
+    <TitleCatalogBlock title="Описание" />
     <StepLine />
     <p>
       Проступь укладывается на подготовленное основание и фиксируется на ней при

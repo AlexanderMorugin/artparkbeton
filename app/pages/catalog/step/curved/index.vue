@@ -1,8 +1,14 @@
 <template>
-  <ContainerPage>
+  <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени криволинейные" />
     <StepCard :list="catalogStepCurved" />
+    <StepDescription />
+    <StepOptions />
+    <StepTime />
+    <StepDelivery />
+    <StepPayment />
+    <StepInstallation />
   </ContainerPage>
 </template>
 
