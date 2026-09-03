@@ -2,13 +2,10 @@
   <StepBlock>
     <TitleCatalogBlock title="Доставка" />
     <StepLine />
-    <p>
-      Проступь укладывается на подготовленное основание и фиксируется на ней при
-      помощи раствора или клеевого состава для бетонов. При монтаже на подвесном
-      пролете проступь фиксируется на нем приваркой закладных деталей проступи к
-      конструкции лестницы.
-    </p>
+    <StepOptionBlock place="delivery" :data="delivery" />
   </StepBlock>
 </template>
 
-<style lang="scss" scoped></style>
+<script lang="ts" setup>
+import { delivery } from "~/mock/delivery";
+</script>

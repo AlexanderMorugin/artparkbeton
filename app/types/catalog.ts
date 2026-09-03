@@ -21,3 +21,9 @@ export interface CatalogStep {
   sizePrice: string;
   sizeCurrency: string;
 }
+
+export interface CatalogStepOptions {
+  optionName: string;
+  optionDescription: string[] | string;
+  optionDescriptionTwo?: string;
+}
