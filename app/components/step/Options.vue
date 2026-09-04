@@ -1,9 +1,9 @@
 <template>
-  <StepBlock>
+  <BlockOption>
     <TitleCatalogBlock title="Характеристики" />
     <StepLine />
-    <StepOptionBlock place="options" :data="catalogStepOutsideOptions" />
-  </StepBlock>
+    <!-- <StepOptionBlock place="options" :data="catalogStepOutsideOptions" /> -->
+  </BlockOption>
 </template>
 
 <script lang="ts" setup>

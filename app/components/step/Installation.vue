@@ -1,5 +1,5 @@
 <template>
-  <StepBlock>
+  <BlockOption>
     <TitleCatalogBlock title="Монтаж" />
     <StepLine />
     <p>
@@ -8,7 +8,7 @@
       пролете проступь фиксируется на нем приваркой закладных деталей проступи к
       конструкции лестницы.
     </p>
-  </StepBlock>
+  </BlockOption>
 </template>
 
 <style lang="scss" scoped></style>

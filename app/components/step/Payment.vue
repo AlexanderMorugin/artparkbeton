@@ -1,14 +1,13 @@
 <template>
-  <StepBlock>
+  <BlockOption>
     <TitleCatalogBlock title="Оплата" />
     <StepLine />
-    <p>
-      Проступь укладывается на подготовленное основание и фиксируется на ней при
-      помощи раствора или клеевого состава для бетонов. При монтаже на подвесном
-      пролете проступь фиксируется на нем приваркой закладных деталей проступи к
-      конструкции лестницы.
-    </p>
-  </StepBlock>
+    <StepOptionBlock place="options" :data="payment" />
+  </BlockOption>
 </template>
+
+<script setup lang="ts">
+import { payment } from "~/mock/payment";
+</script>
 
 <style lang="scss" scoped></style>

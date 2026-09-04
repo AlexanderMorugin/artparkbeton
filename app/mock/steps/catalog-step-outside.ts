@@ -93,7 +93,7 @@ export const catalogStepOutsideOptions = [
     optionDescription: ["Матовая", "Глянцевая", "Структурированная"],
   },
   {
-    optionName: "Варианты оттделки",
+    optionName: "Варианты отделки",
     optionDescription: [
       "Гладкая",
       "Три прорези",

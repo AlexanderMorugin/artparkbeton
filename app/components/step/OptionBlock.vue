@@ -1,16 +1,16 @@
 <template>
-  <ul class="stepOptionBlock">
+  <ul class="blockOption">
     <li
       v-if="props.place === 'options'"
       v-for="(item, i) in props.data"
       :key="i"
-      class="stepOptionBlock__item"
+      class="blockOption__item"
     >
-      <span class="stepOptionBlock__name">{{ item.optionName }}</span>
-      <div class="stepOptionBlock__text">
+      <span class="blockOption__name">{{ item.optionName }}</span>
+      <div class="blockOption__text">
         <div v-for="(n, i) in item.optionDescription" :key="i">
           <span>{{ n }}</span>
-          <span class="stepOptionBlock__slash">
+          <span class="blockOption__slash">
             {{
               i < item.optionDescription.length - 1
                 ? `&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;`
@@ -22,13 +22,13 @@
     </li>
 
     <li
-      v-if="props.place === 'delivery'"
+      v-if="props.place === 'delivery' || props.place === 'time'"
       v-for="(item, i) in props.data"
       :key="i"
-      class="stepOptionBlock__item"
+      class="blockOption__item"
     >
-      <span class="stepOptionBlock__name">{{ item.optionName }}</span>
-      <div class="stepOptionBlock__textPlane">
+      <span class="blockOption__name">{{ item.optionName }}</span>
+      <div class="blockOption__textPlane">
         <span>{{ item.optionDescription }}</span>
         <span>{{ item.optionDescriptionTwo }}</span>
       </div>
@@ -46,7 +46,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.stepOptionBlock {
+.blockOption {
   display: flex;
   flex-direction: column;
   gap: 20px;
