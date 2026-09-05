@@ -34,7 +34,6 @@ const props = defineProps<{
   height: 36px;
   border-radius: 50%;
   border: 1px solid $white-mask-four;
-  // border-top: 1px solid #3498db;
   background: $black-one;
   transition: 0.2s ease;
 
@@ -56,7 +55,6 @@ const props = defineProps<{
     width: 18px;
     height: 18px;
     fill: $white-one;
-    transition: 0.5s ease;
 
     &_open {
       transform: rotate(90deg);
@@ -66,10 +64,6 @@ const props = defineProps<{
       transform: rotate(270deg);
     }
   }
-}
-
-.buttonOptionToogle:hover .buttonOptionToogle__icon {
-  animation: none;
 }
 
 @keyframes spin {
