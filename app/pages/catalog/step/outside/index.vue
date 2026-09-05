@@ -3,12 +3,20 @@
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для крыльца" />
     <StepCard :list="catalogStepOutside" />
-    <StepDescription />
-    <StepOptions />
-    <StepTime />
-    <StepDelivery />
-    <StepPayment />
-    <StepInstallation />
+    <StepDescription name="description" />
+    <StepOptions
+      name="options"
+      :isState="isOptionsBlockOpen"
+      @toggleOpening="toggleOpening('options')"
+    />
+    <StepTime
+      name="time"
+      :isState="isTimeBlockOpen"
+      @toggleOpening="toggleOpening('time')"
+    />
+    <!-- <StepDelivery name="delivery" />
+    <StepPayment name="payment" />
+    <StepInstallation name="installation" /> -->
   </ContainerPage>
 </template>
 
@@ -17,6 +25,9 @@ import { catalogStepOutside } from "~/mock/steps/catalog-step-outside";
 import { SITE } from "~/mock/meta";
 
 const route = useRoute();
+
+const isOptionsBlockOpen = ref(false);
+const isTimeBlockOpen = ref(false);
 
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },
@@ -32,4 +43,9 @@ const breadcrumbs = [
     content: "last",
   },
 ];
+
+const toggleOpening = (arg: string) => {
+  if (arg === "options") isOptionsBlockOpen.value = !isOptionsBlockOpen.value;
+  if (arg === "time") isTimeBlockOpen.value = !isTimeBlockOpen.value;
+};
 </script>

@@ -1,11 +1,6 @@
 <template>
   <ul class="blockOption">
-    <li
-      v-if="props.place === 'options'"
-      v-for="(item, i) in props.data"
-      :key="i"
-      class="blockOption__item"
-    >
+    <li v-for="(item, i) in props.data" :key="i" class="blockOption__item">
       <span class="blockOption__name">{{ item.optionName }}</span>
       <div class="blockOption__text">
         <div v-for="(n, i) in item.optionDescription" :key="i">
@@ -22,7 +17,7 @@
     </li>
 
     <li
-      v-if="props.place === 'delivery' || props.place === 'time'"
+      v-if="props.name === 'delivery' || props.name === 'time'"
       v-for="(item, i) in props.data"
       :key="i"
       class="blockOption__item"
@@ -40,7 +35,8 @@
 import type { CatalogStepOptions } from "~/types/catalog";
 
 const props = defineProps<{
-  place: string;
+  // place: string;
+  name: string;
   data: CatalogStepOptions[];
 }>();
 </script>
