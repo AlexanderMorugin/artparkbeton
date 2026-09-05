@@ -1,14 +1,27 @@
 <template>
-  <BlockOption>
+  <BlockOption
+    :name="props.name"
+    :isState="props.isState"
+    @toggleOpening="emits('toggleOpening')"
+  >
     <TitleCatalogBlock title="Монтаж" />
-    <StepLine />
-    <p>
-      Проступь укладывается на подготовленное основание и фиксируется на ней при
-      помощи раствора или клеевого состава для бетонов. При монтаже на подвесном
-      пролете проступь фиксируется на нем приваркой закладных деталей проступи к
-      конструкции лестницы.
-    </p>
+    <TransitionGroup name="list" tag="div">
+      <StepLine v-if="props.isState" />
+      <p v-if="props.isState">
+        Проступь укладывается на подготовленное основание и фиксируется на ней
+        при помощи раствора или клеевого состава для бетонов. При монтаже на
+        подвесном пролете проступь фиксируется на нем приваркой закладных
+        деталей проступи к конструкции лестницы.
+      </p>
+    </TransitionGroup>
   </BlockOption>
 </template>
 
-<style lang="scss" scoped></style>
+<script setup lang="ts">
+const props = defineProps<{
+  name: string;
+  isState: boolean;
+}>();
+
+const emits = defineEmits(["toggleOpening"]);
+</script>

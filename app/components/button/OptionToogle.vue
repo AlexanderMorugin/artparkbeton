@@ -1,5 +1,6 @@
 <template>
   <button title="Подробнее" class="buttonOptionToogle">
+    <div class="buttonOptionToogle__spin" />
     <IconArrowIos
       class="buttonOptionToogle__icon"
       :class="
@@ -21,14 +22,11 @@ const props = defineProps<{
 .buttonOptionToogle {
   position: absolute;
   bottom: -18px;
-  // left: 50%;
   left: 0;
   right: 0;
   width: 100%;
-  /* равномерное распределение отступов */
   margin-left: auto;
   margin-right: auto;
-  // transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +34,7 @@ const props = defineProps<{
   height: 36px;
   border-radius: 50%;
   border: 1px solid $white-mask-four;
+  // border-top: 1px solid #3498db;
   background: $black-one;
   transition: 0.2s ease;
 
@@ -43,13 +42,21 @@ const props = defineProps<{
     border: 1px solid $orange-one;
   }
 
+  &__spin {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-bottom: 1px solid $white-mask-three;
+    box-shadow: 2px 2px 20px $white-mask-five;
+    animation: spin 2s linear infinite;
+  }
+
   &__icon {
     width: 18px;
     height: 18px;
     fill: $white-one;
     transition: 0.5s ease;
-    // transform: rotate(90deg);
-    // animation: pulse 2.5s linear infinite;
 
     &_open {
       transform: rotate(90deg);
@@ -65,17 +72,12 @@ const props = defineProps<{
   animation: none;
 }
 
-@keyframes pulse {
+@keyframes spin {
   0% {
-    transform: scale(0.5) rotate(90deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(1.2) rotate(90deg);
-    opacity: 0;
+    transform: rotate(360deg);
   }
 }
 </style>

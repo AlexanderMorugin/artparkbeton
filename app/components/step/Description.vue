@@ -1,5 +1,5 @@
 <template>
-  <BlockOption :name="props.name">
+  <BlockOption :name="props.name" :isState="props.isState">
     <TitleCatalogBlock title="Описание" />
     <StepLine />
     <p>
@@ -14,5 +14,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
   name: string;
+  isState: boolean;
 }>();
 </script>
