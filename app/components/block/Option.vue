@@ -13,6 +13,20 @@
     <div class="blockOption__container">
       <slot />
     </div>
+
+    <IconDescription
+      v-if="props.name === 'description'"
+      class="blockOption__icon"
+    />
+    <IconDelivery v-if="props.name === 'delivery'" class="blockOption__icon" />
+    <IconInstallation
+      v-if="props.name === 'installation'"
+      class="blockOption__icon"
+    />
+    <IconOptions v-if="props.name === 'options'" class="blockOption__icon" />
+    <IconTime v-if="props.name === 'time'" class="blockOption__icon" />
+    <IconPayment v-if="props.name === 'payment'" class="blockOption__icon" />
+
     <ButtonOptionToogle
       v-if="props.name !== 'description'"
       :isState="props.isState"
@@ -50,6 +64,19 @@ const emits = defineEmits(["toggleOpening"]);
     flex-direction: column;
     gap: 10px;
     overflow: hidden;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    fill: $white-mask-three;
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: 576px) {
+      right: 10px;
+    }
   }
 }
 </style>
