@@ -29,6 +29,8 @@
       :isState="isInstallationBlockOpen"
       @toggleOpening="toggleOpening('installation')"
     />
+
+    <UltrabetonPromo />
   </ContainerPage>
 </template>
 
