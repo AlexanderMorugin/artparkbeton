@@ -35,10 +35,19 @@
     line-height: 1.7;
     color: $white-one;
     vertical-align: middle;
+
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
   }
 
   &__icon {
     fill: $white-one;
+
+    @media (max-width: 576px) {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 </style>

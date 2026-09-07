@@ -17,7 +17,11 @@
         </li>
         <li class="ultrabetonPromo__listItem">
           <IconArrowSmall class="ultrabetonPromo__arrow" />
-          <span>Подобен природному камню.</span>
+          <span>Подобен натуральному камню.</span>
+        </li>
+        <li class="ultrabetonPromo__listItem">
+          <IconArrowSmall class="ultrabetonPromo__arrow" />
+          <span>Супер прочный и надежный.</span>
         </li>
       </ul>
     </div>
@@ -60,19 +64,41 @@
   &__subtitle {
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: 1%;
     max-width: 800px;
     font-family: "Montserrat-Bold", sans-serif;
     line-height: 0.8;
     letter-spacing: 2px;
-    font-size: 140px;
+    font-size: 160px;
     color: $white-mask-four;
+
+    @media (max-width: 1024px) {
+      left: 3%;
+      font-size: 100px;
+      line-height: 1;
+    }
+
+    @media (max-width: 767px) {
+      // top: 20px;
+      font-size: 80px;
+      // word-break: break-all;
+    }
+
+    @media (max-width: 576px) {
+      // font-size: 40px;
+      word-break: break-all;
+    }
   }
 
   &__buttonLink {
     position: absolute;
     bottom: 10%;
     right: 10%;
+
+    @media (max-width: 1024px) {
+      bottom: 5%;
+      right: 5%;
+    }
   }
 
   &__textBox {
@@ -92,6 +118,10 @@
     background-size: 500% 800%;
     -webkit-animation: background-fade 20s ease-in-out infinite;
     -moz-animation: background-fade 20s ease-in-out infinite;
+
+    @media (max-width: 576px) {
+      padding: 20px;
+    }
   }
 
   &__title {
@@ -100,6 +130,11 @@
     line-height: 1;
     letter-spacing: 2px;
     font-size: 56px;
+
+    @media (max-width: 576px) {
+      font-size: 32px;
+      letter-spacing: 0;
+    }
   }
 
   &__list {
@@ -108,11 +143,19 @@
     flex-direction: column;
     margin-top: 150px;
     padding-left: 100px;
+
+    @media (max-width: 576px) {
+      padding-left: 10px;
+    }
   }
 
   &__listItem {
     display: flex;
-    align-items: center;
+    // align-items: center;
+
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
   }
 
   &__arrow {
