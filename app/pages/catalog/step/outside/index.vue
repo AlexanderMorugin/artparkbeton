@@ -31,6 +31,7 @@
     />
 
     <UltrabetonPromo />
+    <CatalogCarousel />
   </ContainerPage>
 </template>
 

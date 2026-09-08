@@ -2,7 +2,11 @@
   <section class="ultrabetonPromo">
     <div class="ultrabetonPromo__overlay" />
     <div class="ultrabetonPromo__subtitle">Как это возможно?</div>
-    <ButtonLinkIcon class="ultrabetonPromo__buttonLink" />
+    <ButtonLinkIcon
+      place="promo"
+      route="/company/ultrabeton"
+      class="ultrabetonPromo__buttonLink"
+    />
     <div class="ultrabetonPromo__textBox">
       <h2 class="ultrabetonPromo__title">Ультрабетон</h2>
 
@@ -38,10 +42,7 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-  border-radius: 10px;
   overflow: hidden;
-
-  // border: 1px solid red;
 
   @media (max-width: 767px) {
     background-size: cover;
@@ -79,13 +80,10 @@
     }
 
     @media (max-width: 767px) {
-      // top: 20px;
       font-size: 80px;
-      // word-break: break-all;
     }
 
     @media (max-width: 576px) {
-      // font-size: 40px;
       word-break: break-all;
     }
   }
@@ -132,8 +130,12 @@
     font-size: 56px;
 
     @media (max-width: 576px) {
-      font-size: 32px;
+      font-size: 42px;
       letter-spacing: 0;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 32px;
     }
   }
 
@@ -144,6 +146,10 @@
     margin-top: 150px;
     padding-left: 100px;
 
+    @media (max-width: 767px) {
+      padding-left: 20px;
+    }
+
     @media (max-width: 576px) {
       padding-left: 10px;
     }
@@ -151,7 +157,6 @@
 
   &__listItem {
     display: flex;
-    // align-items: center;
 
     @media (max-width: 576px) {
       font-size: 12px;
