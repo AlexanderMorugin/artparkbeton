@@ -23,6 +23,15 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      title: "Арт П.А.Р.К",
+      meta: [
+        // {
+        //   name: "viewport",
+        //   content:
+        //     "width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no",
+        // },
+        { name: "description", content: "Изделия из ультрабетона." },
+      ],
       link: [{ rel: "icon", type: "image/png", href: "/logo/logo-fav.png" }],
       htmlAttrs: {
         lang: "ru",

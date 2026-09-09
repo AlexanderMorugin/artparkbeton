@@ -11,6 +11,6 @@ import { catalog } from "~/mock/catalog";
 
 <style lang="scss" scoped>
 .catalogCarousel {
-  margin-top: 40px;
+  margin-top: 100px;
 }
 </style>

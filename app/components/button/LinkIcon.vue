@@ -41,7 +41,7 @@ const props = defineProps<{
   justify-content: center;
   align-items: center;
   transition: 0.2s ease;
-  z-index: 10;
+  z-index: 1;
 
   &_promo {
     background: $orange-mask-four;

@@ -81,14 +81,11 @@ onMounted(() => {
   margin-top: 20px;
 }
 .embla {
+  min-width: 100%;
   max-width: 80vw;
   margin: auto;
   --slide-spacing: 1rem;
   --slide-size: 300px;
-
-  @media (max-width: 767px) {
-    --slide-size: 255px;
-  }
 }
 .embla__viewport {
   overflow: hidden;
@@ -99,7 +96,6 @@ onMounted(() => {
   margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
-  transform: translate3d(0, 0, 0);
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);

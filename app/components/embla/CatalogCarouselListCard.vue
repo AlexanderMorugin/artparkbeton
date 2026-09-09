@@ -57,7 +57,6 @@ const props = defineProps<{
 .emblaCatalogCarouselListCard {
   position: relative;
   display: block;
-  width: 100%;
   min-height: 200px;
   background: $gradient-white-two;
   border-radius: $br-m;
@@ -79,7 +78,7 @@ const props = defineProps<{
     text-align: center;
     z-index: 2;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-size: 24px;
     }
   }
