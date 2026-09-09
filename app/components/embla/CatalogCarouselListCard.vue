@@ -59,9 +59,7 @@ const props = defineProps<{
   display: block;
   width: 100%;
   min-height: 200px;
-  // background: $white-mask-four;
-  background: $gradient-blue-two;
-
+  background: $gradient-white-two;
   border-radius: $br-m;
   overflow: hidden;
   user-select: none;
@@ -77,7 +75,7 @@ const props = defineProps<{
     font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 28px;
     letter-spacing: 2px;
-    color: $white-mask-two;
+    color: $white-mask-one;
     text-align: center;
     z-index: 2;
 

@@ -37,6 +37,8 @@ const props = defineProps<{
 }>();
 
 const [emblaRef, emblaApi] = emblaCarouselVue({
+  dragFree: true,
+  loop: true,
   align: "start",
 });
 
@@ -79,18 +81,13 @@ onMounted(() => {
   margin-top: 20px;
 }
 .embla {
-  max-width: 92vw;
-  // max-width: 90vw;
+  max-width: 80vw;
+  margin: auto;
   --slide-spacing: 1rem;
-  --slide-size: 340px;
-  // --slide-size-m: 280px;
-  --slide-size-m: 90%;
+  --slide-size: 300px;
 
-  // border: 1px solid red;
-
-  @media (max-width: 768px) {
-    // max-width: 85vw;
-    width: 100%;
+  @media (max-width: 767px) {
+    --slide-size: 255px;
   }
 }
 .embla__viewport {
@@ -100,20 +97,11 @@ onMounted(() => {
   display: flex;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
-
-  // width: 90%;
 }
 .embla__slide {
-  // min-width: 0;
+  transform: translate3d(0, 0, 0);
   flex: 0 0 var(--slide-size);
+  min-width: 0;
   padding-left: var(--slide-spacing);
-  // padding-top: 30px;
-
-  // min-height: 200px;
-  // border: 1px solid yellow;
-
-  @media (max-width: 768px) {
-    flex: 0 0 var(--slide-size-m);
-  }
 }
 </style>
