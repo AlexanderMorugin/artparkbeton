@@ -149,14 +149,4 @@ onMounted(() => {
     }
   }
 }
-
-.top-enter-active,
-.top-leave-active {
-  transition: all 0.3s ease;
-}
-.top-enter-from,
-.top-leave-to {
-  opacity: 0;
-  transform: translateY(100%);
-}
 </style>

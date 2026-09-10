@@ -4,3 +4,11 @@ export interface Portfolio {
   image: string;
   route: string;
 }
+
+export interface PortfolioList {
+  id: number;
+  title: string;
+  imageBig: string;
+  imageNormal: string;
+  imageThumb: string;
+}

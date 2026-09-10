@@ -2,6 +2,7 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Наши ступени" />
+    <PortfolioCurrentList />
   </ContainerPage>
 </template>
 

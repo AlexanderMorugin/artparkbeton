@@ -1,15 +1,20 @@
 <template>
-  <section class="portfolioList">
-    <PortfolioListCard v-for="item in portfolio" :key="item.id" :item="item" />
+  <section class="portfolioCurrentList">
+    <PortfolioCurrentListCard
+      v-for="item in portfolioStep"
+      :key="item.id"
+      :item="item"
+      :list="portfolioStep"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { portfolio } from "~/mock/portfolio/portfolio";
+import { portfolioStep } from "~/mock/portfolio/portfolio-step";
 </script>
 
 <style lang="scss" scoped>
-.portfolioList {
+.portfolioCurrentList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
@@ -26,6 +31,7 @@ import { portfolio } from "~/mock/portfolio/portfolio";
 
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
+    row-gap: 20px;
   }
 }
 </style>
