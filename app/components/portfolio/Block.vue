@@ -49,14 +49,13 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<!-- <script setup lang="ts"></script> -->
 
 <style lang="scss" scoped>
 .portfolioBlock {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
-  // background: $white-mask-one;
   margin-top: 20px;
   padding: 5px;
 
@@ -71,7 +70,7 @@
     gap: 5px;
 
     @media (max-width: 767px) {
-      grid-template-rows: repeat(8, 5vw);
+      grid-template-rows: repeat(8, 8vw);
     }
   }
 
@@ -79,13 +78,13 @@
     background: $black-one;
     border-radius: $br-xs;
     overflow: hidden;
-    // border: 1px solid red;
 
     &_one {
       grid-column-start: 1;
       grid-column-end: 5;
       grid-row-start: 1;
       grid-row-end: 5;
+      animation: opacity-move 8s ease infinite;
     }
 
     &_two {
@@ -93,6 +92,7 @@
       grid-column-end: 9;
       grid-row-start: 1;
       grid-row-end: 5;
+      animation: opacity-move 9s ease infinite;
     }
 
     &_three {
@@ -100,6 +100,7 @@
       grid-column-end: 9;
       grid-row-start: 5;
       grid-row-end: 9;
+      animation: opacity-move 10s ease infinite;
     }
 
     &_four {
@@ -107,6 +108,7 @@
       grid-column-end: 6;
       grid-row-start: 1;
       grid-row-end: 9;
+      animation: opacity-move 11s ease infinite;
     }
 
     &_five {
@@ -114,6 +116,7 @@
       grid-column-end: 9;
       grid-row-start: 1;
       grid-row-end: 5;
+      animation: opacity-move 12s ease infinite;
     }
 
     &_six {
@@ -121,6 +124,7 @@
       grid-column-end: 9;
       grid-row-start: 5;
       grid-row-end: 9;
+      animation: opacity-move 13s ease infinite;
     }
   }
 
@@ -129,6 +133,21 @@
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+}
+
+@keyframes opacity-move {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 </style>

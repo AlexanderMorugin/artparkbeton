@@ -37,7 +37,7 @@
   position: relative;
   width: 100%;
   height: 400px;
-  margin-top: 40px;
+  margin-top: 100px;
   background-image: url("/images/company/ultrabeton/ultrabeton-1000-800.webp");
   background-repeat: no-repeat;
   background-position: right;

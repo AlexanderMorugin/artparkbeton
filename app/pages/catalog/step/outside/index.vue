@@ -29,10 +29,9 @@
       :isState="isInstallationBlockOpen"
       @toggleOpening="toggleOpening('installation')"
     />
-
     <UltrabetonPromo />
-    <CatalogCarousel />
     <CatalogPortfolio />
+    <CatalogCarousel />
   </ContainerPage>
 </template>
 
