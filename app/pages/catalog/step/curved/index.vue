@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
-import { catalogStepCurved } from "~/mock/steps/catalog-step-curved";
+import { catalogStepCurved } from "~/mock/step/catalog-step-curved";
 
 const route = useRoute();
 

@@ -5,10 +5,12 @@ export interface Portfolio {
   route: string;
 }
 
-export interface PortfolioList {
+export interface IPortfolioImageList {
   id: number;
   title: string;
-  imageBig: string;
-  imageNormal: string;
-  imageThumb: string;
+  image1920: string;
+  image1080: string;
+  image1000: string;
+  image550: string;
+  image100: string;
 }

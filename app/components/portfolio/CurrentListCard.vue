@@ -5,18 +5,18 @@
   >
     <div class="portfolioCurrentListCard__imageBlock">
       <img
-        :src="item.imageNormal"
+        :src="item.image550"
         :alt="item.title"
         class="portfolioCurrentListCard__image"
       />
     </div>
-    <span class="portfolioCurrentListCard__title">
+    <!-- <span class="portfolioCurrentListCard__title">
       {{ item.title }}
-    </span>
+    </span> -->
   </div>
 
   <!-- Модалка картинки -->
-  <Teleport to="#teleports">
+  <!-- <Teleport to="#teleports">
     <Transition name="top">
       <ModalCatalogImage
         v-if="isPortfolioImageModalOpen"
@@ -24,7 +24,7 @@
         @closeModal="isPortfolioImageModalOpen = false"
       />
     </Transition>
-  </Teleport>
+  </Teleport> -->
 </template>
 
 <script setup lang="ts">

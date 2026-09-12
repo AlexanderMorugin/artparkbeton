@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import { catalogStepOutsideOptions } from "~/mock/steps/catalog-step-outside";
+import { catalogStepOutsideOptions } from "~/mock/step/step-list";
 
 const props = defineProps<{
   name: string;

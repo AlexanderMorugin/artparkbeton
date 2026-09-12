@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { catalogStepInside } from "~/mock/steps/catalog-step-inside";
+import { catalogStepInside } from "~/mock/step/catalog-step-inside";
 import { SITE } from "~/mock/meta";
 
 const route = useRoute();

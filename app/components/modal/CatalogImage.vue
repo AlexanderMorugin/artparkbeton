@@ -7,16 +7,16 @@
         class="emblaModalCatalogImage__close"
       />
 
-      <EmblaCatalogCard :list="props.list" :isModal="true" />
+      <EmblaCatalogCard :imageList="props.imageList" :isModal="true" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { CatalogList } from "~/types/catalog";
+import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
-  list: CatalogList[];
+  imageList: IPortfolioImageList[];
 }>();
 
 const emits = defineEmits(["closeModal"]);

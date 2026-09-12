@@ -3,12 +3,12 @@
     <div class="emblaCatalogCard__viewport" ref="emblaRef">
       <div class="emblaCatalogCard__container">
         <div
-          v-for="item in props.list"
+          v-for="item in props.imageList"
           :key="item.id"
           class="emblaCatalogCard__slide"
         >
           <img
-            :src="item.imageNormal"
+            :src="item.image550"
             :alt="item.title"
             :class="[
               'emblaCatalogCard__slideImage',
@@ -36,31 +36,31 @@
 
     <EmblaCatalogThumbs
       :isModal="props.isModal"
-      :list="props.list"
+      :list="props.imageList"
       :activeThumb="activeThumb"
       @goToSlide="goToSlide"
     />
   </section>
 
   <!-- Модалка картинки -->
-  <Teleport to="#teleports">
+  <!-- <Teleport to="#teleports">
     <Transition name="top">
       <ModalCatalogImage
         v-if="isImageModalOpen"
-        :list="props.list"
+        :imageList="props.imageList"
         @closeModal="isImageModalOpen = false"
       />
     </Transition>
-  </Teleport>
+  </Teleport> -->
 </template>
 
 <script setup lang="ts">
 import type { EmblaCarouselType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-vue";
-import type { CatalogList } from "~/types/catalog";
+import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
-  list: CatalogList[];
+  imageList: IPortfolioImageList[];
   isModal: boolean;
 }>();
 
@@ -79,7 +79,7 @@ const onSelect = (emblaApi: EmblaCarouselType) => {
   scrollPrevDisabled.value = !emblaApi.canScrollPrev();
 };
 
-const goToSlide = (slide: CatalogList) => {
+const goToSlide = (slide: IPortfolioImageList) => {
   if (!emblaApi.value) return;
 
   activeThumb.value = slide.id;

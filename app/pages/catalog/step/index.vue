@@ -2,12 +2,13 @@
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени и подступенки" />
-    <StepCatalog />
+    <CatalogListCardImage :list="stepList" />
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
+import { stepList } from "~/mock/step/step-list";
 
 const route = useRoute();
 

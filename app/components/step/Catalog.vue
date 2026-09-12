@@ -1,27 +1,19 @@
-<template>
+<!-- <template>
   <section class="stepCatalog">
     <CatalogPictureCard
-      float="left"
-      route="/catalog/step/inside"
-      title="Ступени для лестницы"
-      image="/images/catalog/step/inside/steps-inside-1-n.webp"
-    />
-    <CatalogPictureCard
-      float="right"
-      route="/catalog/step/outside"
-      title="Ступени для крыльца"
-      image="/images/catalog/step/outside/steps-outside-1-n.webp"
-    />
-    <CatalogPictureCard
-      float="center"
-      route="/catalog/step/curved"
-      title="Ступени криволинейные"
-      image="/images/catalog/step/curved/steps-curved-1-n.webp"
+      v-for="item in stepList"
+      :key="item.id"
+      :float="item.float"
+      :route="item.route"
+      :title="item.title"
+      :image="item.image"
     />
   </section>
 </template>
 
-<!-- <script setup lang="ts"></script> -->
+<script setup lang="ts">
+import { stepList } from "~/mock/step/step-list";
+</script>
 
 <style lang="scss" scoped>
 .stepCatalog {
@@ -29,4 +21,4 @@
   flex-direction: column;
   gap: 20px;
 }
-</style>
+</style> -->

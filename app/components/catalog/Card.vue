@@ -1,20 +1,20 @@
 <template>
-  <div class="stepCard">
-    <EmblaCatalogCard :list="props.list" :isModal="false" />
+  <div class="catalogCard">
+    <EmblaCatalogCard :imageList="props.imageList" :isModal="false" />
     <StepDetails />
   </div>
 </template>
 
 <script setup lang="ts">
-import type { CatalogList } from "~/types/catalog";
+import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
-  list: CatalogList[];
+  imageList: IPortfolioImageList[];
 }>();
 </script>
 
 <style lang="scss" scoped>
-.stepCard {
+.catalogCard {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;

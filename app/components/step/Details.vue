@@ -5,7 +5,7 @@
     />
     <div class="stepDetails__priceBox">
       <AnimationCircle />
-      <StepPriceBlock :list="catalogStepOutsideSize" />
+      <StepPriceBlock :list="stepOutsideCardPrices" />
       <p class="stepDetails__text">
         Стоимость подступёнка в цену ступени не включена и расчитывается от 800
         руб./п.м. Помимо размера, дополнительно на цену влияет цвет и узор
@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { catalogStepOutsideSize } from "~/mock/steps/catalog-step-outside";
+import { stepOutsideCardPrices } from "~/mock/step/outside/step-outside-card-prices";
 </script>
 
 <style lang="scss" scoped>

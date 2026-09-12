@@ -2,25 +2,23 @@
   <div
     :class="[
       'catalogPictureCard',
-      { catalogPictureCard_right: props.float === 'right' },
-      { catalogPictureCard_center: props.float === 'center' },
+      { catalogPictureCard_right: props.item.float === 'right' },
+      { catalogPictureCard_center: props.item.float === 'center' },
     ]"
   >
-    <NuxtLink :to="props.route" class="catalogPictureCard__link">
+    <NuxtLink :to="props.item.route" class="catalogPictureCard__link">
       <div class="catalogPictureCard__imageBlock">
         <img
-          :src="props.image"
-          :alt="props.title"
+          :src="props.item.image"
+          :alt="props.item.title"
           class="catalogPictureCard__image"
         />
       </div>
       <div class="catalogPictureCard__textBlock">
         <div class="catalogPictureCard__titleBlock">
-          <TitleBlock :title="props.title" />
+          <TitleBlock :title="props.item.title" />
           <div class="catalogPictureCard__subtitle">
-            Купить ступени для лестницы из бетона. Купить ступени в Москве по
-            привлекательной стоимости Купить ступени для лестницы из бетона.
-            Купить ступени в Москве по привлекательной стоимости
+            {{ props.item.subtitle }}
           </div>
         </div>
 
@@ -33,11 +31,10 @@
 </template>
 
 <script setup lang="ts">
+import type { ICatalogListCardImage } from "~/types/catalog";
+
 const props = defineProps<{
-  float: string;
-  route: string;
-  title: string;
-  image: string;
+  item: ICatalogListCardImage;
 }>();
 </script>
 

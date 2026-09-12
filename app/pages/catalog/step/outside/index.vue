@@ -2,42 +2,42 @@
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для крыльца" />
-    <StepCard :list="catalogStepOutside" />
-    <StepDescription name="description" :isState="isDescriptionBlockOpen" />
-    <StepOptions
+    <CatalogCard :imageList="stepOutsideCardImages" />
+    <!-- <StepDescription name="description" :isState="isDescriptionBlockOpen" /> -->
+    <!-- <StepOptions
       name="options"
       :isState="isOptionsBlockOpen"
       @toggleOpening="toggleOpening('options')"
-    />
-    <StepTime
+    /> -->
+    <!-- <StepTime
       name="time"
       :isState="isTimeBlockOpen"
       @toggleOpening="toggleOpening('time')"
-    />
-    <StepDelivery
+    /> -->
+    <!-- <StepDelivery
       name="delivery"
       :isState="isDeliveryBlockOpen"
       @toggleOpening="toggleOpening('delivery')"
-    />
-    <StepPayment
+    /> -->
+    <!-- <StepPayment
       name="payment"
       :isState="isPaymentBlockOpen"
       @toggleOpening="toggleOpening('payment')"
-    />
-    <StepInstallation
+    /> -->
+    <!-- <StepInstallation
       name="installation"
       :isState="isInstallationBlockOpen"
       @toggleOpening="toggleOpening('installation')"
-    />
-    <UltrabetonPromo />
-    <CatalogPortfolio />
-    <CatalogCarousel />
+    /> -->
+    <!-- <UltrabetonPromo /> -->
+    <!-- <CatalogPortfolio /> -->
+    <!-- <CatalogCarousel /> -->
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
-import { catalogStepOutside } from "~/mock/steps/catalog-step-outside";
 import { SITE } from "~/mock/meta";
+import { stepOutsideCardImages } from "~/mock/step/outside/step-outside-card-images";
 
 const route = useRoute();
 

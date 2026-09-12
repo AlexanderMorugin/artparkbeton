@@ -13,7 +13,7 @@
       @click="emits('goToSlide', item)"
     >
       <img
-        :src="item.imageThumb"
+        :src="item.image100"
         :alt="item.title"
         class="emblaCatalogThumbs__image"
       />
@@ -22,16 +22,16 @@
 </template>
 
 <script setup lang="ts">
-import type { CatalogList } from "~/types/catalog";
+import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
-  list: CatalogList[];
+  list: IPortfolioImageList[];
   activeThumb: number;
   isModal: boolean;
 }>();
 
 const emits = defineEmits<{
-  goToSlide: [slide: CatalogList];
+  goToSlide: [slide: IPortfolioImageList];
 }>();
 </script>
 
