@@ -79,6 +79,7 @@ const props = defineProps<{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease;
   }
 
   &__textBlock {
@@ -104,5 +105,8 @@ const props = defineProps<{
       padding-right: 10px;
     }
   }
+}
+.catalogPictureCard__link:hover .catalogPictureCard__image {
+  transform: scale(1.2);
 }
 </style>

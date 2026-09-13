@@ -2,19 +2,19 @@
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени криволинейные" />
-    <StepCard :list="catalogStepCurved" />
+    <!-- <StepCard :list="catalogStepCurved" />
     <StepDescription />
     <StepOptions />
     <StepTime />
     <StepDelivery />
     <StepPayment />
-    <StepInstallation />
+    <StepInstallation /> -->
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
-import { catalogStepCurved } from "~/mock/step/catalog-step-curved";
+// import { catalogStepCurved } from "~/mock/step/catalog-step-curved";
 
 const route = useRoute();
 

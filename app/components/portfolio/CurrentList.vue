@@ -4,10 +4,10 @@
       <TitleBlock title="Ступени для крыльца" />
       <div class="portfolioCurrentList__grid">
         <PortfolioCurrentListCard
-          v-for="item in stepOutsidePortfolio"
+          v-for="item in props.imageList"
           :key="item.id"
           :item="item"
-          :list="stepOutsidePortfolio"
+          :imageList="props.imageList"
         />
       </div>
     </div>
@@ -39,7 +39,11 @@
 </template>
 
 <script setup lang="ts">
-import { stepOutsidePortfolio } from "~/mock/step/outside/step-outside-portfolio";
+import type { IPortfolioImageList } from "~/types/portfolio";
+
+const props = defineProps<{
+  imageList: IPortfolioImageList[];
+}>();
 </script>
 
 <style lang="scss" scoped>

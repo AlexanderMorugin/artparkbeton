@@ -35,6 +35,9 @@
               { emblaProductImageCarousel__slideImage_modal: props.isModal },
             ]"
           />
+          <span class="emblaProductImageCarousel__title">
+            {{ item.title }}
+          </span>
         </div>
       </div>
 
@@ -59,7 +62,7 @@
     <EmblaProductImageThumbs
       v-if="props.imageList.length > 1"
       :isModal="props.isModal"
-      :list="props.imageList"
+      :imageList="props.imageList"
       :activeThumb="activeThumb"
       @goToSlide="goToSlide"
     />
@@ -171,12 +174,27 @@ onMounted(() => {
   &__slideImage {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 
     &_modal {
       height: 100vh;
     }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 6px 20px;
+    backdrop-filter: blur(15px) brightness(90%);
+    line-height: 1;
+    text-align: center;
   }
 }
 </style>

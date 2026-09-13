@@ -28,7 +28,8 @@ export const stepOutsideCardImages = [
   },
   {
     id: 3,
-    title: "Ступени для крыльца",
+    title:
+      "Ступени для крыльца. Ступени для крыльца. Ступени для крыльца. Ступени для крыльца",
     image1920: "/images/catalog/step/outside/step-outside-1-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-1-1080-1920.webp",
     image1000: "/images/catalog/step/outside/step-outside-1-1000-563.webp",

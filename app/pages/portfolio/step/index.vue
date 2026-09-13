@@ -2,12 +2,13 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Наши ступени" />
-    <PortfolioCurrentList />
+    <PortfolioCurrentList :imageList="stepOutsidePortfolio" />
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
+import { stepOutsidePortfolio } from "~/mock/step/outside/step-outside-portfolio";
 
 const route = useRoute();
 

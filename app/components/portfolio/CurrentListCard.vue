@@ -10,29 +10,29 @@
         class="portfolioCurrentListCard__image"
       />
     </div>
-    <!-- <span class="portfolioCurrentListCard__title">
+    <span class="portfolioCurrentListCard__title">
       {{ item.title }}
-    </span> -->
+    </span>
   </div>
 
   <!-- Модалка картинки -->
-  <!-- <Teleport to="#teleports">
+  <Teleport to="#teleports">
     <Transition name="top">
-      <ModalCatalogImage
+      <ModalProductImageFullScreen
         v-if="isPortfolioImageModalOpen"
-        :list="props.list"
+        :imageList="props.imageList"
         @closeModal="isPortfolioImageModalOpen = false"
       />
     </Transition>
-  </Teleport> -->
+  </Teleport>
 </template>
 
 <script setup lang="ts">
-import type { PortfolioList } from "~/types/portfolio";
+import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
-  item: PortfolioList;
-  list: PortfolioList[];
+  item: IPortfolioImageList;
+  imageList: IPortfolioImageList[];
 }>();
 
 const isPortfolioImageModalOpen = ref(false);
@@ -42,14 +42,15 @@ const isPortfolioImageModalOpen = ref(false);
 .portfolioCurrentListCard {
   display: flex;
   flex-direction: column;
+  background: $white-mask-five;
+  border-radius: $br-m;
+  overflow: hidden;
   cursor: pointer;
 
   &__imageBlock {
     display: block;
     width: 100%;
     height: 210px;
-    border-radius: $br-m;
-    overflow: hidden;
   }
 
   &__image {

@@ -6,7 +6,7 @@
     ]"
   >
     <button
-      v-for="item in props.list"
+      v-for="item in props.imageList"
       :key="item.id"
       :class="[
         'emblaProductImageThumbs__button',
@@ -30,7 +30,7 @@
 import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
-  list: IPortfolioImageList[];
+  imageList: IPortfolioImageList[];
   activeThumb: number;
   isModal: boolean;
 }>();
