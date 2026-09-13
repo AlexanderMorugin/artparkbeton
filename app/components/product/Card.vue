@@ -1,6 +1,6 @@
 <template>
-  <div class="catalogCard">
-    <EmblaCatalogCard :imageList="props.imageList" :isModal="false" />
+  <div class="productCard">
+    <EmblaProductImageCarousel :imageList="props.imageList" :isModal="false" />
     <StepDetails />
   </div>
 </template>
@@ -14,7 +14,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-.catalogCard {
+.productCard {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;

@@ -1,13 +1,13 @@
 <template>
-  <div class="emblaModalCatalogImage" click.stop>
-    <div class="emblaModalCatalogImage__container">
+  <div class="modalProductImageFullScreen" click.stop>
+    <div class="modalProductImageFullScreen__container">
       <HeaderNavButton
         name="close"
         @click="emits('closeModal')"
-        class="emblaModalCatalogImage__close"
+        class="modalProductImageFullScreen__close"
       />
 
-      <EmblaCatalogCard :imageList="props.imageList" :isModal="true" />
+      <EmblaProductImageCarousel :imageList="props.imageList" :isModal="true" />
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ const emits = defineEmits(["closeModal"]);
 </script>
 
 <style lang="scss" scoped>
-.emblaModalCatalogImage {
+.modalProductImageFullScreen {
   position: fixed;
   width: 100%;
   height: 100%;

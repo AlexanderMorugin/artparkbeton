@@ -1,21 +1,26 @@
 <template>
   <div
-    :class="['emblaCatalogThumbs', { emblaCatalogThumbs_modal: props.isModal }]"
+    :class="[
+      'emblaProductImageThumbs',
+      { emblaProductImageThumbs_modal: props.isModal },
+    ]"
   >
     <button
       v-for="item in props.list"
       :key="item.id"
       :class="[
-        'emblaCatalogThumbs__button',
-        { emblaCatalogThumbs__button_active: props.activeThumb === item.id },
-        { emblaCatalogThumbs__button_modal: props.isModal },
+        'emblaProductImageThumbs__button',
+        {
+          emblaProductImageThumbs__button_active: props.activeThumb === item.id,
+        },
+        { emblaProductImageThumbs__button_modal: props.isModal },
       ]"
       @click="emits('goToSlide', item)"
     >
       <img
         :src="item.image100"
         :alt="item.title"
-        class="emblaCatalogThumbs__image"
+        class="emblaProductImageThumbs__image"
       />
     </button>
   </div>
@@ -36,7 +41,7 @@ const emits = defineEmits<{
 </script>
 
 <style lang="scss" scoped>
-.emblaCatalogThumbs {
+.emblaProductImageThumbs {
   display: flex;
   justify-content: center;
   align-items: center;

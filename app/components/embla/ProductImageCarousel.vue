@@ -1,40 +1,63 @@
 <template>
-  <section class="emblaCatalogCard">
-    <div class="emblaCatalogCard__viewport" ref="emblaRef">
-      <div class="emblaCatalogCard__container">
+  <section class="emblaProductImageCarousel">
+    <div class="emblaProductImageCarousel__viewport" ref="emblaRef">
+      <div class="emblaProductImageCarousel__container">
+        <!-- Карусель не в модалке -->
         <div
+          v-if="!props.isModal"
           v-for="item in props.imageList"
           :key="item.id"
-          class="emblaCatalogCard__slide"
+          class="emblaProductImageCarousel__slide"
+          @click="isImageModalOpen = true"
         >
           <img
-            :src="item.image550"
+            :src="isScreenMobile ? item.image550 : item.image1000"
             :alt="item.title"
             :class="[
-              'emblaCatalogCard__slideImage',
-              { emblaCatalogCard__slideImage_modal: props.isModal },
+              'emblaProductImageCarousel__slideImage',
+              { emblaProductImageCarousel__slideImage_modal: props.isModal },
+            ]"
+          />
+        </div>
+
+        <!-- Карусель в модалке -->
+        <div
+          v-if="props.isModal"
+          v-for="item in props.imageList"
+          :key="item.id"
+          class="emblaProductImageCarousel__slide"
+        >
+          <img
+            :src="isScreenMobile ? item.image1080 : item.image1920"
+            :alt="item.title"
+            :class="[
+              'emblaProductImageCarousel__slideImage',
+              { emblaProductImageCarousel__slideImage_modal: props.isModal },
             ]"
           />
         </div>
       </div>
 
       <EmblaButtonControl
+        v-if="props.imageList.length > 1"
         :canScroll="canScrollPrev"
         direction="prev"
         @scroll="scrollPrev"
       />
       <EmblaButtonControl
+        v-if="props.imageList.length > 1"
         :canScroll="canScrollNext"
         direction="next"
         @scroll="scrollNext"
       />
-      <EmblaButtonFullScreen
+      <!-- <EmblaButtonFullScreen
         v-if="!props.isModal"
         @openImageModal="isImageModalOpen = true"
-      />
+      /> -->
     </div>
 
-    <EmblaCatalogThumbs
+    <EmblaProductImageThumbs
+      v-if="props.imageList.length > 1"
       :isModal="props.isModal"
       :list="props.imageList"
       :activeThumb="activeThumb"
@@ -43,15 +66,15 @@
   </section>
 
   <!-- Модалка картинки -->
-  <!-- <Teleport to="#teleports">
+  <Teleport to="#teleports">
     <Transition name="top">
-      <ModalCatalogImage
+      <ModalProductImageFullScreen
         v-if="isImageModalOpen"
         :imageList="props.imageList"
         @closeModal="isImageModalOpen = false"
       />
     </Transition>
-  </Teleport> -->
+  </Teleport>
 </template>
 
 <script setup lang="ts">
@@ -63,6 +86,8 @@ const props = defineProps<{
   imageList: IPortfolioImageList[];
   isModal: boolean;
 }>();
+
+const { isScreenMobile } = useResizeMobile();
 
 const [emblaRef, emblaApi] = useEmblaCarousel();
 
@@ -115,7 +140,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.emblaCatalogCard {
+.emblaProductImageCarousel {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -136,6 +161,11 @@ onMounted(() => {
     position: relative;
     flex: 0 0 100%;
     min-width: 0;
+    min-height: 282px;
+
+    @media (max-width: 576px) {
+      min-height: 162px;
+    }
   }
 
   &__slideImage {

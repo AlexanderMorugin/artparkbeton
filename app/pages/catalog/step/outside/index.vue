@@ -2,7 +2,7 @@
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для крыльца" />
-    <CatalogCard :imageList="stepOutsideCardImages" />
+    <ProductCard :imageList="stepOutsideCardImages" />
     <!-- <StepDescription name="description" :isState="isDescriptionBlockOpen" /> -->
     <!-- <StepOptions
       name="options"
