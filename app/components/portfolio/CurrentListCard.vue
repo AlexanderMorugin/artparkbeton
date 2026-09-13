@@ -44,6 +44,7 @@ const isPortfolioImageModalOpen = ref(false);
   flex-direction: column;
   background: $white-mask-five;
   border-radius: $br-m;
+  height: fit-content;
   overflow: hidden;
   cursor: pointer;
 
@@ -62,6 +63,8 @@ const isPortfolioImageModalOpen = ref(false);
 
   &__title {
     text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 </style>

@@ -3,22 +3,22 @@
     <div class="portfolioBlock__grid">
       <div class="portfolioBlock__element portfolioBlock__element_one">
         <img
-          src="/images/catalog/step/outside/steps-outside-5-n.webp"
-          alt="image"
+          :src="props.imageList[0]?.image550"
+          :alt="props.imageList[0]?.title"
           class="portfolioBlock__image"
         />
       </div>
       <div class="portfolioBlock__element portfolioBlock__element_two">
         <img
-          src="/images/catalog/step/outside/steps-outside-1-n.webp"
-          alt="image"
+          :src="props.imageList[1]?.image550"
+          :alt="props.imageList[1]?.title"
           class="portfolioBlock__image"
         />
       </div>
       <div class="portfolioBlock__element portfolioBlock__element_three">
         <img
-          src="/images/catalog/step/outside/steps-outside-2-n.webp"
-          alt="image"
+          :src="props.imageList[2]?.image550"
+          :alt="props.imageList[2]?.title"
           class="portfolioBlock__image"
         />
       </div>
@@ -26,22 +26,22 @@
     <div class="portfolioBlock__grid">
       <div class="portfolioBlock__element portfolioBlock__element_four">
         <img
-          src="/images/catalog/step/outside/steps-outside-3-n.webp"
-          alt="image"
+          :src="props.imageList[3]?.image550"
+          :alt="props.imageList[3]?.title"
           class="portfolioBlock__image"
         />
       </div>
       <div class="portfolioBlock__element portfolioBlock__element_five">
         <img
-          src="/images/catalog/step/outside/steps-outside-4-n.webp"
-          alt="image"
+          :src="props.imageList[4]?.image550"
+          :alt="props.imageList[4]?.title"
           class="portfolioBlock__image"
         />
       </div>
       <div class="portfolioBlock__element portfolioBlock__element_six">
         <img
-          src="/images/catalog/step/outside/steps-outside-5-n.webp"
-          alt="image"
+          :src="props.imageList[5]?.image550"
+          :alt="props.imageList[5]?.title"
           class="portfolioBlock__image"
         />
       </div>
@@ -49,7 +49,13 @@
   </div>
 </template>
 
-<!-- <script setup lang="ts"></script> -->
+<script setup lang="ts">
+import type { IPortfolioForCard } from "~/types/product";
+
+const props = defineProps<{
+  imageList: IPortfolioForCard[];
+}>();
+</script>
 
 <style lang="scss" scoped>
 .portfolioBlock {

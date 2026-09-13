@@ -2,8 +2,16 @@
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для крыльца" />
-    <ProductCard :imageList="stepOutsideCardImages" />
-    <!-- <StepDescription name="description" :isState="isDescriptionBlockOpen" /> -->
+    <ProductCard
+      :imageList="stepOutsideCardImages"
+      :details="stepOutsideCardDetails"
+      :prices="stepOutsideCardPrices"
+    />
+    <ProductDescription
+      name="description"
+      :isState="isDescriptionBlockOpen"
+      :description="stepOutsideCardDescription"
+    />
     <!-- <StepOptions
       name="options"
       :isState="isOptionsBlockOpen"
@@ -30,14 +38,18 @@
       @toggleOpening="toggleOpening('installation')"
     /> -->
     <!-- <UltrabetonPromo /> -->
-    <!-- <CatalogPortfolio /> -->
+    <ProductPortfolioForCard :imageList="stepOutsidePortfolioForCard" />
     <!-- <CatalogCarousel /> -->
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
+import { stepOutsideCardDescription } from "~/mock/step/outside/step-outside-card-description";
+import { stepOutsideCardDetails } from "~/mock/step/outside/step-outside-card-details";
 import { stepOutsideCardImages } from "~/mock/step/outside/step-outside-card-images";
+import { stepOutsideCardPrices } from "~/mock/step/outside/step-outside-card-prices";
+import { stepOutsidePortfolioForCard } from "~/mock/step/outside/step-outside-portfolio-for-card";
 
 const route = useRoute();
 

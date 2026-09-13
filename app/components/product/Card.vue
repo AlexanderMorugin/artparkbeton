@@ -1,15 +1,18 @@
 <template>
   <div class="productCard">
     <EmblaProductImageCarousel :imageList="props.imageList" :isModal="false" />
-    <StepDetails />
+    <ProductDetails :details="props.details" :prices="props.prices" />
   </div>
 </template>
 
 <script setup lang="ts">
 import type { IPortfolioImageList } from "~/types/portfolio";
+import type { IProductDetails, IProductPrices } from "~/types/product";
 
 const props = defineProps<{
   imageList: IPortfolioImageList[];
+  details: IProductDetails;
+  prices: IProductPrices[];
 }>();
 </script>
 

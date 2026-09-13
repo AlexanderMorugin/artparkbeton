@@ -1,54 +1,54 @@
 <template>
-  <div class="stepPriceBlock">
-    <div class="stepPriceBlock__titleBox">
-      <span class="stepPriceBlock__title">Размеры</span>
+  <div class="productPriceBlock">
+    <div class="productPriceBlock__titleBox">
+      <span class="productPriceBlock__title">Размеры</span>
     </div>
     <div
-      v-for="item in props.list"
+      v-for="item in props.prices"
       :key="item.id"
       :class="[
-        'stepPriceBlock__sizes',
+        'productPriceBlock__sizes',
         {
-          stepPriceBlock__sizes_min:
+          productPriceBlock__sizes_min:
             item.sizeName === 'Min' || item.sizeName === 'Max',
         },
       ]"
     >
       <span
         :class="[
-          'stepPriceBlock__accent',
+          'productPriceBlock__accent',
           {
-            stepPriceBlock__accent_min:
+            productPriceBlock__accent_min:
               item.sizeName === 'Min' || item.sizeName === 'Max',
           },
         ]"
         >{{ item.sizeName }} размер</span
       >
-      <div class="stepPriceBlock__grid">
-        <div class="stepPriceBlock__gridCenter stepPriceBlock__gridLine">
-          <span class="stepPriceBlock__gridName">мм</span>
+      <div class="productPriceBlock__grid">
+        <div class="productPriceBlock__gridCenter productPriceBlock__gridLine">
+          <span class="productPriceBlock__gridName">д * ш * в</span>
         </div>
-        <div class="stepPriceBlock__gridCenter stepPriceBlock__gridLine">
-          <span class="stepPriceBlock__gridName">вес</span>
+        <div class="productPriceBlock__gridCenter productPriceBlock__gridLine">
+          <span class="productPriceBlock__gridName">вес</span>
         </div>
-        <div class="stepPriceBlock__gridRight stepPriceBlock__gridLine">
-          <span class="stepPriceBlock__gridName">цена / шт</span>
+        <div class="productPriceBlock__gridRight productPriceBlock__gridLine">
+          <span class="productPriceBlock__gridName">цена / шт</span>
         </div>
-        <div class="stepPriceBlock__gridLeft">
+        <div class="productPriceBlock__gridLeft">
           <span
             >{{ item.sizeOptions
             }}<span v-if="item.sizePrice !== 'договорная'">, мм</span></span
           >
         </div>
-        <div class="stepPriceBlock__gridCenter">
+        <div class="productPriceBlock__gridCenter">
           <span>{{ item.sizeWeight }}</span>
         </div>
-        <div class="stepPriceBlock__gridRight">
+        <div class="productPriceBlock__gridRight">
           <span
             :class="[
-              'stepPriceBlock__accent',
+              'productPriceBlock__accent',
               {
-                stepPriceBlock__accent_min:
+                productPriceBlock__accent_min:
                   item.sizeName === 'Min' || item.sizeName === 'Max',
               },
             ]"
@@ -61,15 +61,15 @@
 </template>
 
 <script setup lang="ts">
-import type { CatalogStep } from "~/types/catalog";
+import type { IProductPrices } from "~/types/product";
 
 const props = defineProps<{
-  list: CatalogStep[];
+  prices: IProductPrices[];
 }>();
 </script>
 
 <style lang="scss" scoped>
-.stepPriceBlock {
+.productPriceBlock {
   display: flex;
   flex-direction: column;
   max-width: 370px;

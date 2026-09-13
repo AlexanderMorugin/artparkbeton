@@ -19,6 +19,7 @@ const props = defineProps<{ name: string }>();
   height: 36px;
   border-radius: 50%;
   border: 1px solid $white-mask-three;
+  backdrop-filter: blur(15px) grayscale(50%) brightness(70%);
 
   @media (max-width: 390px) {
     width: 32px;
