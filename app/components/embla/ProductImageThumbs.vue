@@ -56,7 +56,7 @@ const emits = defineEmits<{
     margin-left: auto;
     margin-right: auto;
     padding: 4px;
-    backdrop-filter: blur(15px) grayscale(50%) brightness(50%);
+    // backdrop-filter: blur(15px) grayscale(50%) brightness(50%);
   }
 
   &__button {
@@ -67,7 +67,7 @@ const emits = defineEmits<{
 
     &_modal {
       border-radius: 0;
-      border: 1px solid $black-mask-two;
+      // border: 1px solid $black-mask-two;
     }
 
     &_active {

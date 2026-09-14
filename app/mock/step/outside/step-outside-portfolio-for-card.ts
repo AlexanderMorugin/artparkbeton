@@ -12,12 +12,12 @@ export const stepOutsidePortfolioForCard = [
   {
     id: 2,
     title: "Фото 3",
-    image550: "/images/catalog/step/outside/step-outside-11-1000-563.webp",
+    image550: "/images/catalog/step/outside/step-outside-11-550-310.webp",
   },
   {
     id: 3,
     title: "Фото 4",
-    image550: "/images/catalog/step/outside/step-outside-19-1000-563.webp",
+    image550: "/images/catalog/step/outside/step-outside-19-550-310.webp",
   },
   {
     id: 4,

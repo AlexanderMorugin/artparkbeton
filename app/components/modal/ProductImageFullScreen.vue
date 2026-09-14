@@ -25,14 +25,15 @@ const emits = defineEmits(["closeModal"]);
 <style lang="scss" scoped>
 .modalProductImageFullScreen {
   position: fixed;
+  // width: 100vw;
+  // height: 100vh;
   width: 100%;
   height: 100%;
   top: 0;
   right: 0;
-  animation: filter 3s ease;
   backdrop-filter: blur(15px) grayscale(50%) brightness(50%);
-  overflow-y: auto;
   z-index: 10;
+  overflow: hidden;
 
   &__container {
     position: relative;

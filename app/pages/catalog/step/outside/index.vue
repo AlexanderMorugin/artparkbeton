@@ -39,7 +39,7 @@
     /> -->
     <!-- <UltrabetonPromo /> -->
     <ProductPortfolioForCard :imageList="stepOutsidePortfolioForCard" />
-    <!-- <CatalogCarousel /> -->
+    <CatalogCarousel />
   </ContainerPage>
 </template>
 

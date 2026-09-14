@@ -13,18 +13,18 @@
     <span class="portfolioCurrentListCard__title">
       {{ item.title }}
     </span>
-  </div>
 
-  <!-- Модалка картинки -->
-  <Teleport to="#teleports">
-    <Transition name="top">
-      <ModalProductImageFullScreen
-        v-if="isPortfolioImageModalOpen"
-        :imageList="props.imageList"
-        @closeModal="isPortfolioImageModalOpen = false"
-      />
-    </Transition>
-  </Teleport>
+    <!-- Модалка картинки -->
+    <Teleport to="#teleports">
+      <Transition name="top">
+        <ModalProductImageFullScreen
+          v-if="isPortfolioImageModalOpen"
+          :imageList="props.imageList"
+          @closeModal="isPortfolioImageModalOpen = false"
+        />
+      </Transition>
+    </Teleport>
+  </div>
 </template>
 
 <script setup lang="ts">
