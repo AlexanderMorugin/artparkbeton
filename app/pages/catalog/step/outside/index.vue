@@ -7,49 +7,67 @@
       :details="stepOutsideCardDetails"
       :prices="stepOutsideCardPrices"
     />
-    <ProductDescription
+    <ProductOptionCard
       name="description"
+      title="Описание"
       :isState="isDescriptionBlockOpen"
-      :description="stepOutsideCardDescription"
+      :data="stepOutsideCardDescription"
     />
-    <!-- <StepOptions
+    <ProductOptionCard
       name="options"
+      title="Характеристики"
       :isState="isOptionsBlockOpen"
+      :data="stepOutsideCardOptions"
       @toggleOpening="toggleOpening('options')"
-    /> -->
-    <!-- <StepTime
+    />
+    <ProductOptionCard
       name="time"
+      title="Сроки"
       :isState="isTimeBlockOpen"
+      :data="timeOfWork"
       @toggleOpening="toggleOpening('time')"
-    /> -->
-    <!-- <StepDelivery
+    />
+    <ProductOptionCard
       name="delivery"
+      title="Доставка"
       :isState="isDeliveryBlockOpen"
+      :data="delivery"
       @toggleOpening="toggleOpening('delivery')"
-    /> -->
-    <!-- <StepPayment
+    />
+    <ProductOptionCard
       name="payment"
+      title="Оплата"
       :isState="isPaymentBlockOpen"
+      :data="payment"
       @toggleOpening="toggleOpening('payment')"
-    /> -->
-    <!-- <StepInstallation
+    />
+    <ProductOptionCard
       name="installation"
+      title="Монтаж"
       :isState="isInstallationBlockOpen"
+      :data="installation"
       @toggleOpening="toggleOpening('installation')"
-    /> -->
-    <!-- <UltrabetonPromo /> -->
+    />
+  </ContainerPage>
+  <UltrabetonPromo />
+  <ContainerPage>
     <ProductPortfolioForCard :imageList="stepOutsidePortfolioForCard" />
     <CatalogCarousel />
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
+import { delivery } from "~/mock/delivery";
 import { SITE } from "~/mock/meta";
 import { stepOutsideCardDescription } from "~/mock/step/outside/step-outside-card-description";
 import { stepOutsideCardDetails } from "~/mock/step/outside/step-outside-card-details";
 import { stepOutsideCardImages } from "~/mock/step/outside/step-outside-card-images";
+import { stepOutsideCardOptions } from "~/mock/step/outside/step-outside-card-options";
 import { stepOutsideCardPrices } from "~/mock/step/outside/step-outside-card-prices";
 import { stepOutsidePortfolioForCard } from "~/mock/step/outside/step-outside-portfolio-for-card";
+import { timeOfWork } from "~/mock/time-of-work";
+import { payment } from "~/mock/payment";
+import { installation } from "~/mock/installation";
 
 const route = useRoute();
 

@@ -1,16 +1,16 @@
 <template>
-  <ul class="blockOption">
-    <li
+  <div class="productOptionBlock">
+    <div
       v-if="props.name === 'options' || props.name === 'payment'"
       v-for="(item, i) in props.data"
       :key="i"
-      class="blockOption__item"
+      class="productOptionBlock__item"
     >
-      <span class="blockOption__name">{{ item.optionName }}</span>
-      <div class="blockOption__text">
+      <span class="productOptionBlock__name">{{ item.optionName }}</span>
+      <div class="productOptionBlock__text">
         <div v-for="(n, i) in item.optionDescription" :key="i">
           <span>{{ n }}</span>
-          <span class="blockOption__slash">
+          <span class="productOptionBlock__slash">
             {{
               i < item.optionDescription.length - 1
                 ? `&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;`
@@ -19,34 +19,50 @@
           </span>
         </div>
       </div>
-    </li>
+    </div>
 
-    <li
-      v-if="props.name === 'time' || props.name === 'delivery'"
+    <div
+      v-if="props.name === 'delivery'"
       v-for="(item, i) in props.data"
       :key="i"
-      class="blockOption__item"
+      class="productOptionBlock__item"
     >
-      <span class="blockOption__name">{{ item.optionName }}</span>
-      <div class="blockOption__textPlane">
+      <span class="productOptionBlock__name">{{ item.optionName }}</span>
+      <div class="productOptionBlock__textPlane">
         <span>{{ item.optionDescription }}</span>
         <span>{{ item.optionDescriptionTwo }}</span>
       </div>
-    </li>
-  </ul>
+    </div>
+
+    <div
+      v-if="
+        props.name === 'time' ||
+        props.name === 'description' ||
+        props.name === 'installation'
+      "
+      class="productOptionBlock__description"
+    >
+      <p>
+        {{ props.data[0]?.optionDescription }}
+      </p>
+      <p>
+        {{ props.data[0]?.optionDescriptionTwo }}
+      </p>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import type { CatalogStepOptions } from "~/types/catalog";
+import type { IProductOptions } from "~/types/product";
 
 const props = defineProps<{
   name: string;
-  data: CatalogStepOptions[];
+  data: IProductOptions[];
 }>();
 </script>
 
 <style lang="scss" scoped>
-.blockOption {
+.productOptionBlock {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -75,10 +91,6 @@ const props = defineProps<{
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
-
-    // @media (max-width: 576px) {
-    //   font-size: 14px;
-    // }
   }
 
   &__slash {
@@ -97,6 +109,12 @@ const props = defineProps<{
     @media (max-width: 576px) {
       font-size: 14px;
     }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }
 </style>

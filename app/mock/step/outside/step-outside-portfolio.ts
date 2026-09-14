@@ -9,8 +9,7 @@ export const stepOutsidePortfolio = [
   },
   {
     id: 1,
-    title:
-      "Фото 2 Фото 2 Фото 2 Фото 2 Фото 2 Фото 2 Фото 2 Фото 2 Фото 2 Фото 2",
+    title: "Фото 2",
     image1920: "/images/catalog/step/outside/step-outside-2-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-2-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-2-550-310.webp",

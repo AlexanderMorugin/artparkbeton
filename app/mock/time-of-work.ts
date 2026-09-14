@@ -1,6 +1,5 @@
-export const time = [
+export const timeOfWork = [
   {
-    optionName: "Время изготовления",
     optionDescription:
       "Сроки изготовления зависят от сложности и объема работы, а также от степени загруженности нашей мастерской. Все детали уточняются в общении.",
     optionDescriptionTwo:

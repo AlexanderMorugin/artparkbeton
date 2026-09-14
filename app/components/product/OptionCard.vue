@@ -4,24 +4,26 @@
     :isState="props.isState"
     @toggleOpening="emits('toggleOpening')"
   >
-    <TitleCatalogBlock title="Оплата" />
+    <TitleCatalogBlock :title="props.title" />
     <TransitionGroup name="list" tag="div">
-      <StepLine v-if="props.isState" />
-      <StepOptionBlock
+      <ProductLine v-if="props.isState" />
+      <ProductOptionBlock
         v-if="props.isState"
         :name="props.name"
-        :data="payment"
+        :data="props.data"
       />
     </TransitionGroup>
   </BlockOption>
 </template>
 
-<script setup lang="ts">
-import { payment } from "~/mock/payment";
+<script lang="ts" setup>
+import type { IProductOptions } from "~/types/product";
 
 const props = defineProps<{
   name: string;
+  title: string;
   isState: boolean;
+  data: IProductOptions[];
 }>();
 
 const emits = defineEmits(["toggleOpening"]);

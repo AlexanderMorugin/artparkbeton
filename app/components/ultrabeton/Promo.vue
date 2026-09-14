@@ -36,8 +36,9 @@
 .ultrabetonPromo {
   position: relative;
   width: 100%;
+  max-width: $screen-xxl;
   height: 400px;
-  margin-top: 100px;
+  margin: 100px auto 0px auto;
   background-image: url("/images/company/ultrabeton/ultrabeton-1000-800.webp");
   background-repeat: no-repeat;
   background-position: right;

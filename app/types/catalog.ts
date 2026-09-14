@@ -5,12 +5,6 @@ export interface Catalog {
   route: string;
 }
 
-export interface CatalogStepOptions {
-  optionName: string;
-  optionDescription: string[] | string;
-  optionDescriptionTwo?: string;
-}
-
 export interface ICatalogListCardImage {
   id: number;
   float: string;

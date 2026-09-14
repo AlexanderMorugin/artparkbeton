@@ -1,9 +1,9 @@
 <template>
-  <div class="stepLine" />
+  <div class="productLine" />
 </template>
 
 <style lang="scss" scoped>
-.stepLine {
+.productLine {
   height: 1px;
   background: $white-mask-four;
 }

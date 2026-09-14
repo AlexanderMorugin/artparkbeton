@@ -12,11 +12,10 @@ export interface IProductPrices {
   sizeCurrency: string;
 }
 
-export interface IProductDescription {
-  textOne: string;
-  textTwo: string;
-  textThree: string;
-  textFour: string;
+export interface IProductOptions {
+  optionName?: string;
+  optionDescription: string[] | string;
+  optionDescriptionTwo?: string;
 }
 
 export interface IPortfolioForCard {
