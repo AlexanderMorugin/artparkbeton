@@ -1,4 +1,4 @@
-export interface Catalog {
+export interface ICatalog {
   id: number;
   title: string;
   subtitle: string;

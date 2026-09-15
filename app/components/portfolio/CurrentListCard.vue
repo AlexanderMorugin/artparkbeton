@@ -5,7 +5,7 @@
   >
     <div class="portfolioCurrentListCard__imageBlock">
       <img
-        :src="item.image550"
+        :src="isScreenMobile ? item.image300 : item.image550"
         :alt="item.title"
         class="portfolioCurrentListCard__image"
       />
@@ -35,6 +35,8 @@ const props = defineProps<{
   imageList: IPortfolioImageList[];
 }>();
 
+const { isScreenMobile } = useResizeMobile();
+
 const isPortfolioImageModalOpen = ref(false);
 </script>
 
@@ -51,7 +53,6 @@ const isPortfolioImageModalOpen = ref(false);
   &__imageBlock {
     display: block;
     width: 100%;
-    height: 210px;
   }
 
   &__image {

@@ -1,7 +1,7 @@
 <template>
   <section class="portfolioCurrentList">
     <div class="portfolioCurrentList__container">
-      <TitleBlock title="Ступени для крыльца" />
+      <TitleBlock :title="props.title" />
       <div class="portfolioCurrentList__grid">
         <PortfolioCurrentListCard
           v-for="item in props.imageList"
@@ -11,30 +11,6 @@
         />
       </div>
     </div>
-
-    <!-- <div class="portfolioCurrentList__container">
-      <TitleBlock title="Ступени для лестницы" />
-      <div class="portfolioCurrentList__grid">
-        <PortfolioCurrentListCard
-          v-for="item in portfolioStepInside"
-          :key="item.id"
-          :item="item"
-          :list="portfolioStepInside"
-        />
-      </div>
-    </div> -->
-
-    <!-- <div class="portfolioCurrentList__container">
-      <TitleBlock title="Ступени криволинейные" />
-      <div class="portfolioCurrentList__grid">
-        <PortfolioCurrentListCard
-          v-for="item in portfolioStepCurved"
-          :key="item.id"
-          :item="item"
-          :list="portfolioStepCurved"
-        />
-      </div>
-    </div> -->
   </section>
 </template>
 
@@ -42,6 +18,7 @@
 import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
+  title: string;
   imageList: IPortfolioImageList[];
 }>();
 </script>
@@ -61,7 +38,8 @@ const props = defineProps<{
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 40px;
     padding-bottom: 1rem;
 
     @media (max-width: 1280px) {
@@ -70,7 +48,8 @@ const props = defineProps<{
 
     @media (max-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      column-gap: 10px;
+      row-gap: 30px;
     }
   }
 }

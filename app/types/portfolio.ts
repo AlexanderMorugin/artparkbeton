@@ -12,5 +12,6 @@ export interface IPortfolioImageList {
   image1080: string;
   image1000?: string;
   image550: string;
+  image300?: string;
   image100: string;
 }

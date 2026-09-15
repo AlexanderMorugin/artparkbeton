@@ -5,6 +5,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-1-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-1-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-1-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-1-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-1-100-56.webp",
   },
   {
@@ -13,6 +14,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-2-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-2-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-2-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-2-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-2-100-56.webp",
   },
   {
@@ -21,6 +23,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-3-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-3-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-3-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-3-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-3-100-56.webp",
   },
   {
@@ -29,6 +32,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-4-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-4-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-4-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-4-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-4-100-56.webp",
   },
   {
@@ -37,6 +41,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-5-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-5-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-5-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-5-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-5-100-56.webp",
   },
   {
@@ -45,6 +50,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-6-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-6-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-6-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-6-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-6-100-56.webp",
   },
   {
@@ -53,6 +59,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-7-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-7-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-7-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-7-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-7-100-56.webp",
   },
   {
@@ -61,6 +68,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-8-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-8-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-8-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-8-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-8-100-56.webp",
   },
   {
@@ -69,6 +77,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-9-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-9-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-9-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-9-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-9-100-56.webp",
   },
   {
@@ -77,6 +86,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-10-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-10-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-10-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-10-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-10-100-56.webp",
   },
   {
@@ -85,6 +95,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-11-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-11-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-11-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-11-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-11-100-56.webp",
   },
   {
@@ -93,6 +104,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-12-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-12-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-12-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-12-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-12-100-56.webp",
   },
   {
@@ -101,6 +113,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-13-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-13-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-13-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-13-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-13-100-56.webp",
   },
   {
@@ -109,6 +122,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-14-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-14-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-14-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-14-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-14-100-56.webp",
   },
   {
@@ -117,6 +131,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-15-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-15-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-15-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-15-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-15-100-56.webp",
   },
   {
@@ -125,6 +140,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-16-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-16-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-16-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-16-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-16-100-56.webp",
   },
   {
@@ -133,6 +149,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-17-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-17-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-17-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-17-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-17-100-56.webp",
   },
   {
@@ -141,6 +158,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-18-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-18-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-18-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-18-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-18-100-56.webp",
   },
   {
@@ -149,6 +167,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-19-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-19-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-19-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-19-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-19-100-56.webp",
   },
   {
@@ -157,6 +176,7 @@ export const stepOutsidePortfolio = [
     image1920: "/images/catalog/step/outside/step-outside-20-1920-1080.webp",
     image1080: "/images/catalog/step/outside/step-outside-20-1080-1920.webp",
     image550: "/images/catalog/step/outside/step-outside-20-550-310.webp",
+    image300: "/images/catalog/step/outside/step-outside-20-300-169.webp",
     image100: "/images/catalog/step/outside/step-outside-20-100-56.webp",
   },
 ];

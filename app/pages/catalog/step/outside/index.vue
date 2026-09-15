@@ -2,6 +2,11 @@
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для крыльца" />
+    <ProductPageBlock
+      :imageList="stepOutsideCardImages"
+      :details="stepOutsideCardDetails"
+      :prices="stepOutsideCardPrices"
+    />
     <ProductCard
       :imageList="stepOutsideCardImages"
       :details="stepOutsideCardDetails"
@@ -51,7 +56,10 @@
   </ContainerPage>
   <UltrabetonPromo />
   <ContainerPage>
-    <ProductPortfolioForCard :imageList="stepOutsidePortfolioForCard" />
+    <ProductPortfolioForCard
+      path="/portfolio/step"
+      :imageList="stepOutsidePortfolioForCard"
+    />
     <CatalogCarousel />
   </ContainerPage>
 </template>

@@ -1,11 +1,19 @@
 <template>
   <section class="catalog">
-    <CatalogListCard v-for="item in catalog" :key="item.id" :item="item" />
+    <CatalogListCard
+      v-for="item in props.catalog"
+      :key="item.id"
+      :item="item"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { catalog } from "~/mock/catalog";
+import type { ICatalog } from "~/types/catalog";
+
+const props = defineProps<{
+  catalog: ICatalog[];
+}>();
 </script>
 
 <style lang="scss" scoped>

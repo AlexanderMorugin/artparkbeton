@@ -1,7 +1,5 @@
 <template>
-  <h1 class="titlePage">
-    <span class="titlePage__title">{{ props.title }}</span>
-  </h1>
+  <h1 v-if="props.title" class="titlePage">{{ props.title }}</h1>
 </template>
 
 <script lang="ts" setup>
@@ -12,41 +10,35 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .titlePage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 48px;
+  letter-spacing: 4px;
+  text-align: center;
+  animation: fall-down 1s ease-in-out;
+  opacity: 0.9;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    $white-one 44.5%,
+    $orange-one 66.35%
+  );
+  color: transparent;
   padding-top: 20px;
   padding-bottom: 20px;
 
-  &__title {
-    width: 100%;
-    font-family: "Montserrat-Bold", sans-serif;
-    font-size: 48px;
-    letter-spacing: 4px;
-    text-align: center;
-    animation: fall-down 1s ease-in-out;
-    opacity: 0.9;
-    background-clip: text;
-    background-image: linear-gradient(
-      90deg,
-      $white-one 44.5%,
-      $orange-one 66.35%
-    );
-    color: transparent;
+  @media (max-width: 1920px) {
+    font-size: 60px;
+  }
 
-    @media (max-width: 1920px) {
-      font-size: 60px;
-    }
+  @media (max-width: 1600px) {
+    font-size: 40px;
+  }
 
-    @media (max-width: 1600px) {
-      font-size: 40px;
-    }
-
-    @media (max-width: 576px) {
-      font-size: 28px;
-      line-height: 44px;
-      letter-spacing: 2px;
-    }
+  @media (max-width: 576px) {
+    font-size: 28px;
+    line-height: 44px;
+    letter-spacing: 2px;
   }
 }
 

@@ -48,10 +48,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Catalog } from "~/types/catalog";
+import type { ICatalog } from "~/types/catalog";
 
 const props = defineProps<{
-  item: Catalog;
+  item: ICatalog;
 }>();
 </script>
 
@@ -62,7 +62,6 @@ const props = defineProps<{
   flex-direction: column;
   justify-content: space-between;
   min-height: 250px;
-  // background: $white-one;
   background: $white-mask-four;
   border-radius: $br-m;
   padding: 1rem;

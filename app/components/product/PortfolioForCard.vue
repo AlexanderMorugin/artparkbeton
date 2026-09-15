@@ -1,6 +1,6 @@
 <template>
   <section class="productPortfolioForCard">
-    <ButtonLinkToPage path="/portfolio/step" title="Смотреть портфолио" />
+    <ButtonLinkToPage :path="props.path" title="Смотреть портфолио" />
     <PortfolioBlock :imageList="props.imageList" />
   </section>
 </template>
@@ -9,6 +9,7 @@
 import type { IPortfolioForCard } from "~/types/product";
 
 const props = defineProps<{
+  path: string;
   imageList: IPortfolioForCard[];
 }>();
 </script>

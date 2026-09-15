@@ -91,9 +91,18 @@ const props = defineProps<{
   &__subtitle {
     color: $white-mask-one;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding-top: 20px;
-    padding-bottom: 20px;
     border-top: 1px solid $white-mask-three;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+    @media (max-width: 767px) {
+      -webkit-line-clamp: 2;
+    }
   }
 
   &__forward {

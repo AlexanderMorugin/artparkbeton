@@ -2,12 +2,13 @@
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Каталог" />
-    <Catalog />
+    <Catalog :catalog="catalog" />
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
+import { catalog } from "~/mock/catalog";
 
 const route = useRoute();
 
