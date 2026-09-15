@@ -2,7 +2,7 @@ export const stepInsidePortfolioForCard = [
   {
     id: 0,
     title: "Фото 1",
-    image550: "/images/catalog/step/inside/step-inside-1-550-310.webp",
+    image550: "/images/catalog/step/inside/step-inside-4-550-310.webp",
   },
   {
     id: 1,
@@ -12,17 +12,17 @@ export const stepInsidePortfolioForCard = [
   {
     id: 2,
     title: "Фото 3",
-    image550: "/images/catalog/step/inside/step-inside-3-550-310.webp",
+    image550: "/images/catalog/step/inside/step-inside-5-550-310.webp",
   },
   {
     id: 3,
     title: "Фото 4",
-    image550: "/images/catalog/step/inside/step-inside-4-550-310.webp",
+    image550: "/images/catalog/step/inside/step-inside-3-550-310.webp",
   },
   {
     id: 4,
     title: "Фото 5",
-    image550: "/images/catalog/step/inside/step-inside-5-550-310.webp",
+    image550: "/images/catalog/step/inside/step-inside-1-550-310.webp",
   },
   {
     id: 5,
