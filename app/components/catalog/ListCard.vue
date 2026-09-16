@@ -13,8 +13,8 @@
       class="catalogListCard__clip catalogListCard__clip_step"
     />
     <IconTile
-      v-if="item.route === '/tile'"
-      class="catalogListCard__clip catalogListCard__clip_tile"
+      v-if="item.route === '/plate'"
+      class="catalogListCard__clip catalogListCard__clip_plate"
     />
     <IconSill
       v-if="item.route === '/sill'"
@@ -132,7 +132,7 @@ const props = defineProps<{
       height: 200px;
     }
 
-    &_tile {
+    &_plate {
       bottom: -20px;
       left: -6px;
       width: 150px;
