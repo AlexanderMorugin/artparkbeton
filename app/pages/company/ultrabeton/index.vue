@@ -23,7 +23,7 @@ const breadcrumbs = [
   },
   {
     name: "Ультрабетон",
-    path: "/ultrabeton",
+    path: "/company/ultrabeton",
     content: "last",
   },
 ];

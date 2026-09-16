@@ -19,16 +19,3 @@ const breadcrumbs = [
     <TitlePage title="Компания" />
   </ContainerPage>
 </template>
-
-<!-- <style lang="scss" scoped>
-.title {
-  width: 100%;
-  text-align: center;
-}
-.container {
-  display: grid;
-  align-items: center;
-  outline: 1px solid red;
-  height: 100%;
-}
-</style> -->

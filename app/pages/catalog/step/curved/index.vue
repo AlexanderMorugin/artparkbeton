@@ -93,7 +93,7 @@ const breadcrumbs = [
   },
   {
     name: "Криволинейные",
-    path: "/curved",
+    path: "/catalog/step/curved",
     content: "last",
   },
 ];

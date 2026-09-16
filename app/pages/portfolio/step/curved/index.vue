@@ -32,7 +32,7 @@ const breadcrumbs = [
   },
   {
     name: "криволинейные",
-    path: "/curved",
+    path: "/portfolio/step/curved",
     content: "last",
   },
 ];

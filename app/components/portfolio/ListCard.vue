@@ -13,16 +13,17 @@
     </div>
 
     <div class="portfolioListCard__forward">
+      <span class="portfolioListCard__text">Смотреть галерею</span>
       <ButtonForward />
     </div>
   </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import type { Portfolio } from "~/types/portfolio";
+import type { IPortfolio } from "~/types/portfolio";
 
 const props = defineProps<{
-  item: Portfolio;
+  item: IPortfolio;
 }>();
 </script>
 
@@ -53,6 +54,13 @@ const props = defineProps<{
   &__forward {
     display: flex;
     justify-content: right;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__text {
+    position: relative;
+    letter-spacing: 1px;
   }
 
   &__imageBlock {

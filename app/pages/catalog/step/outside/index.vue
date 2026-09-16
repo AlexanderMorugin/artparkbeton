@@ -97,7 +97,7 @@ const breadcrumbs = [
   },
   {
     name: "Для крыльца",
-    path: "/outside",
+    path: "/catalog/step/outside",
     content: "last",
   },
 ];

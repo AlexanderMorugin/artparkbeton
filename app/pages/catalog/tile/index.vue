@@ -15,7 +15,7 @@ const breadcrumbs = [
   { name: "Каталог", path: "/catalog", content: "2" },
   {
     name: "Плитка",
-    path: "/tile",
+    path: "/catalog/tile",
     content: "last",
   },
 ];

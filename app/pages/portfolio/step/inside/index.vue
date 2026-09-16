@@ -32,7 +32,7 @@ const breadcrumbs = [
   },
   {
     name: "Для лестницы",
-    path: "/inside",
+    path: "/portfolio/step/inside",
     content: "last",
   },
 ];
