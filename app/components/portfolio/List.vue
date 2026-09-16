@@ -1,11 +1,19 @@
 <template>
   <section class="portfolioList">
-    <PortfolioListCard v-for="item in portfolio" :key="item.id" :item="item" />
+    <PortfolioListCard
+      v-for="item in props.portfolioList"
+      :key="item.id"
+      :item="item"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { portfolio } from "~/mock/portfolio/portfolio";
+import type { IPortfolioList } from "~/types/portfolio";
+
+const props = defineProps<{
+  portfolioList: IPortfolioList[];
+}>();
 </script>
 
 <style lang="scss" scoped>

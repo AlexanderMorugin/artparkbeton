@@ -1,4 +1,4 @@
-export interface Portfolio {
+export interface IPortfolioList {
   id: number;
   title: string;
   image: string;

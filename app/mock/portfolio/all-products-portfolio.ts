@@ -1,4 +1,4 @@
-export const portfolio = [
+export const allProductsPortfolio = [
   {
     id: 1,
     title: "Ступени",

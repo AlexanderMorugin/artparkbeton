@@ -2,12 +2,13 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Наши работы" />
-    <PortfolioList />
+    <PortfolioList :portfolioList="allProductsPortfolio" />
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
+import { allProductsPortfolio } from "~/mock/portfolio/all-products-portfolio";
 
 const route = useRoute();
 

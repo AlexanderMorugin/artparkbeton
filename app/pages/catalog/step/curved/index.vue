@@ -52,7 +52,8 @@
   <UltrabetonPromo />
   <ContainerPage>
     <ProductPortfolioForCard
-      path="/portfolio/step"
+      title="Смотреть портфолио"
+      path="/portfolio/step/curved"
       :imageList="stepCurvedPortfolioForCard"
     />
     <CatalogCarousel />

@@ -7,7 +7,8 @@ export const stepOutsidePortfolioForCard = [
   {
     id: 1,
     title: "Фото 2",
-    image550: "/images/catalog/step/outside/step-outside-13-550-310.webp",
+
+    image550: "/images/catalog/step/outside/step-outside-21-550-310.webp",
   },
   {
     id: 2,
