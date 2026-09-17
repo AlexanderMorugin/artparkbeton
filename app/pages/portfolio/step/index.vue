@@ -26,11 +26,3 @@ const breadcrumbs = [
   },
 ];
 </script>
-
-<style lang="scss" scoped>
-.protfolioBlockList {
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-}
-</style>

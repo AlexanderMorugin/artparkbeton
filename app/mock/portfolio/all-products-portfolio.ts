@@ -5,12 +5,12 @@ export const allProductsPortfolio = [
     image: "/images/catalog/step/outside/step-outside-1-550-310.webp",
     route: "/step",
   },
-  // {
-  //   id: 2,
-  //   title: "Плитка",
-  //   image: "/images/catalog/step/outside/steps-outside-1-n.webp",
-  //   route: "/tile",
-  // },
+  {
+    id: 2,
+    title: "Плитка, бордюры",
+    image: "/images/catalog/step/outside/step-outside-1-550-310.webp",
+    route: "/plate",
+  },
   // {
   //   id: 3,
   //   title: "Балюстрады",

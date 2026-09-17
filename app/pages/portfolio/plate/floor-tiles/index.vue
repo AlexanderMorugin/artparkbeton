@@ -1,8 +1,8 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Ступени для крыльца" />
-    <PortfolioCurrentList title="Портфолио" :imageList="stepOutsidePortfolio" />
+    <TitlePage title="Напольная плитка" />
+    <PortfolioCurrentList title="Портфолио" :imageList="stepCurvedPortfolio" />
     <ProductPortfolioForCard
       title="Другие ступени"
       path="/portfolio/step"
@@ -14,7 +14,7 @@
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
 import { stepStepsPortfolioForCard } from "~/mock/portfolio/all-steps-portfolio-for-card";
-import { stepOutsidePortfolio } from "~/mock/step/outside/step-outside-portfolio";
+import { stepCurvedPortfolio } from "~/mock/step/curved/step-curved-portfolio";
 
 const route = useRoute();
 
@@ -26,13 +26,13 @@ const breadcrumbs = [
     content: "2",
   },
   {
-    name: "Ступени",
-    path: "/portfolio/step",
+    name: "Плитка",
+    path: "/portfolio/plate",
     content: "3",
   },
   {
-    name: "Для крыльца",
-    path: "/portfolio/step/outside",
+    name: "Напольная",
+    path: "/portfolio/plate/floor-tiles",
     content: "last",
   },
 ];

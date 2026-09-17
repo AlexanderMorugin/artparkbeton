@@ -92,7 +92,7 @@ const props = defineProps<{
 
 const { isScreenMobile } = useResizeMobile();
 
-const [emblaRef, emblaApi] = useEmblaCarousel();
+const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
 const activeThumb = ref(0);
 const isImageModalOpen = ref(false);
@@ -116,11 +116,11 @@ const goToSlide = (slide: IPortfolioImageList) => {
 
 const scrollNext = () => {
   activeThumb.value = activeThumb.value + 1;
-  emblaApi?.value?.scrollNext();
+  emblaApi.value?.scrollNext();
 };
 const scrollPrev = () => {
   activeThumb.value = activeThumb.value - 1;
-  emblaApi?.value?.scrollPrev();
+  emblaApi.value?.scrollPrev();
 };
 
 function updateButtonStates(emblaApi: EmblaCarouselType) {
