@@ -10,7 +10,7 @@ export const plateList = [
   },
   {
     id: 2,
-    float: "right",
+    float: "center",
     route: "/catalog/plate/paving-slabs",
     title: "Тротуарная плитка",
     subtitle:
@@ -19,7 +19,7 @@ export const plateList = [
   },
   {
     id: 3,
-    float: "center",
+    float: "right",
     route: "/catalog/plate/floor-tiles",
     title: "Напольная плитка",
     subtitle:
@@ -28,7 +28,7 @@ export const plateList = [
   },
   {
     id: 4,
-    float: "left",
+    float: "center",
     route: "/catalog/plate/paving-stone",
     title: "Брусчатка",
     subtitle:
@@ -37,11 +37,20 @@ export const plateList = [
   },
   {
     id: 5,
-    float: "center",
+    float: "left",
     route: "/catalog/plate/curbs",
     title: "Бордюры",
     subtitle:
       "Краткое описание Бордюры. Краткое описание Бордюры. Краткое описание Бордюры. Краткое описание Бордюры. Краткое описание Бордюры. Краткое описание Бордюры.",
+    image: "/images/catalog/step/curved/step-curved-1-550-310.webp",
+  },
+  {
+    id: 6,
+    float: "center",
+    route: "/catalog/plate/facade-tile",
+    title: "Фасадная плитка",
+    subtitle:
+      "Краткое описание Фасадная плитка. Краткое описание Фасадная плитка. Краткое описание Фасадная плитка. Краткое описание Фасадная плитка. Краткое описание Фасадная плитка. Краткое описание Фасадная плитка.",
     image: "/images/catalog/step/curved/step-curved-1-550-310.webp",
   },
 ];

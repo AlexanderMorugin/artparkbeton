@@ -1,0 +1,38 @@
+export const facadeTilePortfolio = [
+  {
+    id: 0,
+    title: "Фото 1",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-1-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-1-1080-1920.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-1-550-310.webp",
+    image300: "/images/catalog/plate/facade-tile/facade-tile-1-300-169.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-1-100-56.webp",
+  },
+  {
+    id: 1,
+    title: "Фото 2",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-2-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-2-1080-1920.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-2-550-310.webp",
+    image300: "/images/catalog/plate/facade-tile/facade-tile-2-300-169.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-2-100-56.webp",
+  },
+  {
+    id: 2,
+    title: "Фото 3",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-3-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-3-1080-1920.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-3-550-310.webp",
+    image300: "/images/catalog/plate/facade-tile/facade-tile-3-300-169.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-3-100-56.webp",
+  },
+  {
+    id: 3,
+    title: "Фото 4",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-4-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-4-1080-1920.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-4-550-310.webp",
+    image300: "/images/catalog/plate/facade-tile/facade-tile-4-300-169.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-4-100-56.webp",
+  },
+];

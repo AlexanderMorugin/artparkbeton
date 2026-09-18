@@ -72,7 +72,6 @@ import { stepCurvedCardOptions } from "~/mock/step/curved/step-curved-card-optio
 import { stepCurvedCardPrices } from "~/mock/step/curved/step-curved-card-prices";
 import { stepCurvedPortfolioForCard } from "~/mock/step/curved/step-curved-portfolio-for-card";
 import { timeOfWork } from "~/mock/time-of-work";
-// import { catalogStepCurved } from "~/mock/step/catalog-step-curved";
 
 const route = useRoute();
 

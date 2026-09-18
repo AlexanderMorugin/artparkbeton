@@ -8,7 +8,7 @@ export const allProductsPortfolio = [
   {
     id: 2,
     title: "Плитка, бордюры",
-    image: "/images/catalog/step/outside/step-outside-1-550-310.webp",
+    image: "/images/catalog/plate/paving-slabs/paving-slabs-12-550-310.webp",
     route: "/plate",
   },
   // {

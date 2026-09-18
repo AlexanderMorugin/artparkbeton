@@ -8,7 +8,7 @@ export const allPlatesPortfolio = [
   {
     id: 2,
     title: "Тротуарная плитка",
-    image: "/images/catalog/step/inside/step-inside-2-550-310.webp",
+    image: "/images/catalog/plate/paving-slabs/paving-slabs-13-550-310.webp",
     route: "/plate/paving-slabs",
   },
   {
@@ -20,7 +20,7 @@ export const allPlatesPortfolio = [
   {
     id: 4,
     title: "Брусчатка",
-    image: "/images/catalog/step/curved/step-curved-2-550-310.webp",
+    image: "/images/catalog/plate/paving-stone/paving-stone-1-550-310.webp",
     route: "/plate/paving-stone",
   },
   {
@@ -28,5 +28,11 @@ export const allPlatesPortfolio = [
     title: "Бордюры",
     image: "/images/catalog/step/curved/step-curved-2-550-310.webp",
     route: "/plate/curbs",
+  },
+  {
+    id: 6,
+    title: "Фасадная плитка",
+    image: "/images/catalog/plate/facade-tile/facade-tile-2-550-310.webp",
+    route: "/plate/facade-tile",
   },
 ];
