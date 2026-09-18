@@ -2,7 +2,7 @@ export const allPlatesPortfolio = [
   {
     id: 1,
     title: "Шаговые плиты",
-    image: "/images/catalog/step/outside/step-outside-5-550-310.webp",
+    image: "/images/catalog/plate/stepping-slabs/stepping-slabs-3-550-310.webp",
     route: "/plate/stepping-slabs",
   },
   {
