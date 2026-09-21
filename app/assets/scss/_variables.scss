@@ -20,16 +20,21 @@ $orange-mask-three: rgba(255, 147, 0, 0.4);
 $orange-mask-four: rgba(255, 147, 0, 0.2);
 $orange-mask-five: rgba(255, 147, 0, 0.1);
 
-$deep-blue-one: #254666;
+$deep-blue-one: rgb(37, 70, 102);
 $deep-blue-two: rgb(50, 96, 138);
 $deep-blue-three: rgb(21, 167, 235);
+$deep-blue-mask-one: rgba(37, 70, 102, 0.8);
+$deep-blue-mask-two: rgba(37, 70, 102, 0.6);
+$deep-blue-mask-three: rgba(37, 70, 102, 0.4);
 
 $mask-trasparent: rgba(0, 0, 0, 0);
 
+$gradient-page-primary: linear-gradient(135deg, $orange-mask-three 0%, $black-one 30%);
 $gradient-white-one: linear-gradient(to left, $mask-trasparent 0%, $mask-trasparent 30%, $white-mask-three 100%);
 $gradient-white-two: linear-gradient(to right, $white-mask-three 0%, $white-mask-four 100%);
-$gradient-white-three: linear-gradient(to right, $white-mask-one 0%, $white-mask-three 100%);
+$gradient-white-three: linear-gradient(to right, $black-mask-five 0%, $white-mask-three 100%);
 $gradient-blue-one: linear-gradient(148deg, $white-mask-five 10%, $deep-blue-one 100%);
+$gradient-black-one: linear-gradient(to right, $mask-trasparent 0%, $mask-trasparent 30%, $black-mask-three 100%);
 
 $shadow-one: rgba(38, 39, 39, 0.2) 0px 7px 29px 0px;
 

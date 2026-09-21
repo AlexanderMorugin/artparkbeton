@@ -1,33 +1,24 @@
 <template>
-  <div
-    :class="[
-      'catalogPictureCard',
-      { catalogPictureCard_right: props.item.float === 'right' },
-      { catalogPictureCard_center: props.item.float === 'center' },
-    ]"
-  >
-    <NuxtLink :to="props.item.route" class="catalogPictureCard__link">
-      <div class="catalogPictureCard__imageBlock">
-        <img
-          :src="props.item.image"
-          :alt="props.item.title"
-          class="catalogPictureCard__image"
-        />
+  <NuxtLink :to="props.item.route" class="catalogPictureCard">
+    <div class="catalogPictureCard__imageBlock">
+      <img
+        :src="props.item.image"
+        :alt="props.item.title"
+        class="catalogPictureCard__image"
+      />
+      <div class="catalogPictureCard__forward">
+        <ButtonForward />
       </div>
-      <div class="catalogPictureCard__textBlock">
-        <div class="catalogPictureCard__titleBlock">
-          <TitleBlock :title="props.item.title" />
-          <div class="catalogPictureCard__subtitle">
-            {{ props.item.subtitle }}
-          </div>
-        </div>
-
-        <div class="catalogPictureCard__forward">
-          <ButtonForward />
+    </div>
+    <div class="catalogPictureCard__textBlock">
+      <div class="catalogPictureCard__titleBlock">
+        <TitleBlock :title="props.item.title" />
+        <div class="catalogPictureCard__subtitle">
+          {{ props.item.subtitle }}
         </div>
       </div>
-    </NuxtLink>
-  </div>
+    </div>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
@@ -41,37 +32,20 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .catalogPictureCard {
   display: flex;
-
-  &_right {
-    justify-content: right;
-  }
-
-  &_center {
-    justify-content: center;
-  }
-
-  &__link {
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    gap: 20px;
-    max-width: 1000px;
-    background: $white-mask-five;
-    border-radius: $br-l;
-    padding: 20px;
-
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
-      padding: 10px;
-    }
-  }
+  flex-direction: column;
+  gap: 20px;
+  background: $white-mask-five;
+  border-radius: $br-l;
+  padding: 6px;
 
   &__imageBlock {
-    height: 350px;
+    position: relative;
+    height: 300px;
     border-radius: $br-m;
     overflow: hidden;
 
     @media (max-width: 767px) {
-      height: 260px;
+      height: 200px;
     }
   }
 
@@ -82,10 +56,23 @@ const props = defineProps<{
     transition: 0.5s ease;
   }
 
+  &__forward {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
   &__textBlock {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    @media (max-width: 767px) {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
   }
 
   &__subtitle {
@@ -96,26 +83,20 @@ const props = defineProps<{
     border-top: 1px solid $white-mask-three;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    transition: 0.2s ease;
 
     @media (max-width: 767px) {
       -webkit-line-clamp: 2;
     }
   }
-
-  &__forward {
-    display: flex;
-    justify-content: right;
-
-    @media (max-width: 767px) {
-      padding-bottom: 10px;
-      padding-right: 10px;
-    }
-  }
 }
-.catalogPictureCard__link:hover .catalogPictureCard__image {
-  transform: scale(1.2);
+.catalogPictureCard:hover .catalogPictureCard__image {
+  transform: scale(1.05);
+}
+.catalogPictureCard:hover .catalogPictureCard__subtitle {
+  border-top: 1px solid $orange-one;
 }
 </style>

@@ -46,6 +46,9 @@ const emits = defineEmits(["closeModal"]);
     position: absolute;
     top: 20px;
     right: 20px;
+    box-shadow:
+      0 3.27px 19.64px rgba(0, 0, 0, 0.12),
+      0 0.82px 2.45px rgba(0, 0, 0, 0.05);
     z-index: 11;
   }
 }

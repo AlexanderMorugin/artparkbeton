@@ -1,6 +1,5 @@
 <template>
   <NuxtLink :to="`/catalog${item.route}`" class="catalogListCard">
-    <div class="catalogListCard__titleHide">{{ item.title }}</div>
     <div class="catalogListCard__titleBlock">
       <div class="catalogListCard__title">
         <TitleCatalogListCard :title="item.title" />
@@ -16,14 +15,26 @@
       v-if="item.route === '/plate'"
       class="catalogListCard__clip catalogListCard__clip_plate"
     />
+    <IconSteppingSlabs
+      v-if="item.route === '/stepping-slabs'"
+      class="catalogListCard__clip catalogListCard__clip_steppingSlabs"
+    />
     <IconSill
       v-if="item.route === '/sill'"
       class="catalogListCard__clip catalogListCard__clip_sill"
     />
-    <IconInterior
+    <IconVazon
+      v-if="item.route === '/vazon'"
+      class="catalogListCard__clip catalogListCard__clip_vazon"
+    />
+    <IconBarbecue
+      v-if="item.route === '/barbecue'"
+      class="catalogListCard__clip catalogListCard__clip_barbecue"
+    />
+    <!-- <IconInterior
       v-if="item.route === '/interior'"
       class="catalogListCard__clip catalogListCard__clip_interior"
-    />
+    /> -->
     <IconSouvenir
       v-if="item.route === '/souvenir'"
       class="catalogListCard__clip catalogListCard__clip_souvenir"
@@ -69,26 +80,7 @@ const props = defineProps<{
   transition: 0.2s ease;
 
   &:hover {
-    background: $white-mask-three;
-  }
-
-  &__titleHide {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Montserrat-Bold", sans-serif;
-    font-size: 32px;
-    letter-spacing: 2px;
-    color: $white-mask-one;
-    text-align: center;
-    z-index: 2;
-    transition: 0.8s ease;
-    opacity: 0;
-
-    @media (max-width: 768px) {
-      font-size: 24px;
-    }
+    box-shadow: rgba(255, 255, 255, 0.6) 2px 2px 15px;
   }
 
   &__titleBlock {
@@ -99,6 +91,7 @@ const props = defineProps<{
   &__title {
     min-height: 75px;
     border-bottom: 1px solid $white-mask-three;
+    transition: 0.2s ease;
 
     @media (max-width: 1024px) {
       min-height: 62px;
@@ -140,6 +133,14 @@ const props = defineProps<{
       transform: rotate(157deg);
     }
 
+    &_steppingSlabs {
+      bottom: -30px;
+      left: -30px;
+      width: 150px;
+      height: 150px;
+      transform: rotate(90deg);
+    }
+
     &_baluster {
       bottom: -44px;
       left: -20px;
@@ -149,6 +150,20 @@ const props = defineProps<{
 
     &_sill {
       bottom: -20px;
+      left: 20px;
+      width: 140px;
+      height: 140px;
+    }
+
+    &_vazon {
+      bottom: -20px;
+      left: 20px;
+      width: 130px;
+      height: 130px;
+    }
+
+    &_barbecue {
+      bottom: -30px;
       left: 20px;
       width: 140px;
       height: 140px;
@@ -184,11 +199,15 @@ const props = defineProps<{
   }
 }
 
-.catalogListCard:hover .catalogListCard__titleBlock {
-  opacity: 0;
+.catalogListCard:hover .catalogListCard__title {
+  border-bottom: 1px solid $orange-one;
 }
 
-.catalogListCard:hover .catalogListCard__titleHide {
-  opacity: 1;
-}
+// .catalogListCard:hover .catalogListCard__titleBlock {
+//   opacity: 0;
+// }
+
+// .catalogListCard:hover .catalogListCard__titleHide {
+//   opacity: 1;
+// }
 </style>

@@ -30,10 +30,10 @@
 <script setup lang="ts">
 import emblaCarouselVue from "embla-carousel-vue";
 import type { EmblaCarouselType } from "embla-carousel";
-import type { Catalog } from "~/types/catalog";
+import type { ICatalog } from "~/types/catalog";
 
 const props = defineProps<{
-  catalog: Catalog[];
+  catalog: ICatalog[];
 }>();
 
 const [emblaRef, emblaApi] = emblaCarouselVue({

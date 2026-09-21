@@ -9,10 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import type { IPortfolioList } from "~/types/portfolio";
+import type { IPortfolio } from "~/types/portfolio";
 
 const props = defineProps<{
-  portfolioList: IPortfolioList[];
+  portfolioList: IPortfolio[];
 }>();
 </script>
 

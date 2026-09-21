@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { SITE } from "~/mock/meta";
-import { steppingSlabsPortfolio } from "~/mock/plate/stepping-slabs/stepping-slabs-portfolio";
+import { steppingSlabsPortfolio } from "~/mock/stepping-slabs/stepping-slabs-portfolio";
 import { stepStepsPortfolioForCard } from "~/mock/portfolio/all-steps-portfolio-for-card";
 
 const route = useRoute();
@@ -29,13 +29,8 @@ const breadcrumbs = [
     content: "2",
   },
   {
-    name: "Плитка",
-    path: "/portfolio/plate",
-    content: "3",
-  },
-  {
-    name: "Шаговая",
-    path: "/portfolio/plate/curved",
+    name: "Шаговые",
+    path: "/portfolio/plate/stepping-slabs",
     content: "last",
   },
 ];

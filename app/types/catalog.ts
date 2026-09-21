@@ -7,7 +7,6 @@ export interface ICatalog {
 
 export interface ICatalogListCardImage {
   id: number;
-  float: string;
   route: string;
   title: string;
   subtitle: string;

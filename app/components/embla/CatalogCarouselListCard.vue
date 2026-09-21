@@ -7,17 +7,30 @@
       class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_step"
     />
     <IconTile
-      v-if="item.route === '/tile'"
+      v-if="item.route === '/plate'"
       class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_tile"
     />
     <IconSill
       v-if="item.route === '/sill'"
       class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_sill"
     />
-    <IconInterior
+    <IconSteppingSlabs
+      v-if="item.route === '/stepping-slabs'"
+      class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_slabs"
+    />
+
+    <IconVazon
+      v-if="item.route === '/vazon'"
+      class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_sill"
+    />
+    <IconBarbecue
+      v-if="item.route === '/barbecue'"
+      class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_barbecue"
+    />
+    <!-- <IconInterior
       v-if="item.route === '/interior'"
       class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_interior"
-    />
+    /> -->
     <IconSouvenir
       v-if="item.route === '/souvenir'"
       class="emblaCatalogCarouselListCard__clip emblaCatalogCarouselListCard__clip_souvenir"
@@ -46,10 +59,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Catalog } from "~/types/catalog";
+import type { ICatalog } from "~/types/catalog";
 
 const props = defineProps<{
-  item: Catalog;
+  item: ICatalog;
 }>();
 </script>
 
@@ -58,6 +71,7 @@ const props = defineProps<{
   position: relative;
   display: block;
   min-height: 200px;
+  // height: 200px;
   background: $gradient-white-two;
   border-radius: $br-m;
   overflow: hidden;
@@ -66,20 +80,22 @@ const props = defineProps<{
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: grab;
+  padding: 10px 10px;
 
   &__title {
-    position: absolute;
-    top: 30px;
-    right: 10px;
+    // position: absolute;
+    position: relative;
+    // top: 30px;
+    // right: 10px;
     font-family: "Montserrat-SemiBold", sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: 2px;
     color: $white-mask-one;
     text-align: center;
     z-index: 2;
 
     @media (max-width: 767px) {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 
@@ -102,6 +118,14 @@ const props = defineProps<{
       height: 200px;
     }
 
+    &_slabs {
+      bottom: -30px;
+      left: -30px;
+      width: 150px;
+      height: 150px;
+      transform: rotate(90deg);
+    }
+
     &_tile {
       bottom: -20px;
       left: -6px;
@@ -119,6 +143,13 @@ const props = defineProps<{
 
     &_sill {
       bottom: -20px;
+      left: 20px;
+      width: 140px;
+      height: 140px;
+    }
+
+    &_barbecue {
+      bottom: -30px;
       left: 20px;
       width: 140px;
       height: 140px;

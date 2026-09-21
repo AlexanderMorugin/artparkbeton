@@ -36,30 +36,32 @@ const props = defineProps<{
   min-height: 250px;
   background: $gradient-white-three;
   border-radius: $br-m;
-  padding: 1rem;
+  border: 1px solid $white-mask-four;
   overflow: hidden;
   transition: 0.2s ease;
+  // padding: 2px;
 
   &:hover {
     box-shadow: rgba(255, 255, 255, 0.6) 0px 5px 15px;
   }
 
   &__title {
-    text-align: end;
-    height: 38px;
-    border-bottom: 1px solid $white-mask-three;
-    transition: 0.2s ease;
+    padding: 10px;
   }
 
   &__forward {
+    position: relative;
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 20px;
+    background: $gradient-black-one;
+    padding: 16px 20px;
   }
 
   &__text {
     position: relative;
+    font-size: 14px;
     letter-spacing: 1px;
   }
 
@@ -68,7 +70,7 @@ const props = defineProps<{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 210px;
+    height: 170px;
   }
 
   &__image {
@@ -77,8 +79,5 @@ const props = defineProps<{
     object-fit: cover;
     display: block;
   }
-}
-.portfolioListCard:hover .portfolioListCard__title {
-  border-bottom: 1px solid $orange-four;
 }
 </style>

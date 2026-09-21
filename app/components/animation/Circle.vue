@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 
   @media (max-width: 576px) {
     bottom: -150px;

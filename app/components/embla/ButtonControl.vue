@@ -13,6 +13,7 @@
       :class="[
         'emblaButtonControl__icon',
         { emblaButtonControl__icon_prev: props.direction === 'prev' },
+        { emblaButtonControl__icon_next: props.direction === 'next' },
         { emblaButtonControl__icon_disabled: !props.canScroll },
       ]"
     />
@@ -42,6 +43,9 @@ const emits = defineEmits(["scroll"]);
   border-radius: 50%;
   border: 1px solid $white-one;
   backdrop-filter: blur(5px);
+  box-shadow:
+    0 3.27px 19.64px rgba(0, 0, 0, 0.12),
+    0 0.82px 2.45px rgba(0, 0, 0, 0.05);
   z-index: 1;
   transition: 0.2s ease;
 
@@ -83,6 +87,34 @@ const emits = defineEmits(["scroll"]);
     &_disabled {
       fill: $white-mask-three;
     }
+  }
+}
+.emblaButtonControl:hover .emblaButtonControl__icon_prev {
+  animation: trans-prev 0.25s ease-in-out;
+}
+.emblaButtonControl:hover .emblaButtonControl__icon_next {
+  animation: trans-next 0.25s ease-in-out;
+}
+@keyframes trans-prev {
+  0% {
+    transform: rotate(180deg) translateX(0);
+  }
+  50% {
+    transform: rotate(180deg) translateX(5px);
+  }
+  100% {
+    transform: rotate(180deg) translateX(0);
+  }
+}
+@keyframes trans-next {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 </style>

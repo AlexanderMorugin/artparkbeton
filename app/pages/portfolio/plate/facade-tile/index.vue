@@ -31,8 +31,8 @@ const breadcrumbs = [
     content: "3",
   },
   {
-    name: "Тротуарная",
-    path: "/portfolio/plate/paving-slabs",
+    name: "Фасадная",
+    path: "/portfolio/plate/facade-tile",
     content: "last",
   },
 ];
