@@ -1,8 +1,6 @@
 export const stepList = [
   {
     id: 1,
-
-    float: "left",
     route: "/catalog/step/outside",
     title: "Ступени для крыльца",
     subtitle:
@@ -11,7 +9,6 @@ export const stepList = [
   },
   {
     id: 2,
-    float: "right",
     route: "/catalog/step/inside",
     title: "Ступени для лестницы",
     subtitle:
@@ -20,7 +17,6 @@ export const stepList = [
   },
   {
     id: 3,
-    float: "center",
     route: "/catalog/step/curved",
     title: "Ступени криволинейные",
     subtitle:

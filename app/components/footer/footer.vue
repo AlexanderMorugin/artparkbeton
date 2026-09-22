@@ -15,8 +15,6 @@
   </footer>
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss" scoped>
 .footer {
   position: relative;
@@ -31,12 +29,13 @@
     display: grid;
     grid-template-columns: 1fr 400px;
     grid-template-areas: "nav contact";
-    gap: 20px;
+    gap: 100px;
     padding-top: 20px;
 
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;
       grid-template-areas: "contact" "nav";
+      gap: 40px;
     }
   }
 }

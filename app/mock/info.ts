@@ -1,4 +1,5 @@
 export const COMPANY_NAME = "Арт П.А.Р.К.";
+export const COMPANY_UR = "ООО «Алла+Коля=Любовь»";
 export const ADDRESS =
   "142601, Московская область, г. Орехово-Зуево, ул. Кирова, д. 54а";
 export const PHONE_NUMBER_PRIMARY = "+7 985 343-56-65";

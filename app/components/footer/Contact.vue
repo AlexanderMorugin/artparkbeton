@@ -59,6 +59,7 @@ import {
   &__barChat {
     display: flex;
     gap: 10px;
+    padding-top: 40px;
 
     @media (max-width: 767px) {
       justify-content: center;

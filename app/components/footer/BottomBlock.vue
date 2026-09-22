@@ -1,7 +1,7 @@
 <template>
   <div class="footerBottomBlock">
     <span class="footerBottomBlock__company"
-      >ООО «Алла+Коля=Любовь» {{ fullYear }}</span
+      >{{ COMPANY_UR }} {{ fullYear }}</span
     >
     <div class="footerBottomBlock__links">
       <NuxtLink to="/doc/requisites" class="footerBottomBlock__link"
@@ -18,6 +18,8 @@
 </template>
 
 <script setup lang="ts">
+import { COMPANY_UR } from "~/mock/info";
+
 const { fullYear } = useDate();
 </script>
 
@@ -27,7 +29,6 @@ const { fullYear } = useDate();
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  // border-top: 1px solid $white-mask-three;
   padding-top: 20px;
   margin-top: 40px;
 
@@ -36,7 +37,8 @@ const { fullYear } = useDate();
   }
 
   &__company {
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
   }
 
   &__links {
@@ -52,7 +54,6 @@ const { fullYear } = useDate();
     width: fit-content;
     font-size: 14px;
     line-height: 22px;
-    // color: var(--white-primary);
     border-bottom: 1px dashed $white-mask-three;
   }
 }
