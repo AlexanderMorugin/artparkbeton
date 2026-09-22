@@ -1,8 +1,8 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Ступени криволинейные" />
-    <PortfolioCurrentList title="Портфолио" :imageList="stepCurvedPortfolio" />
+    <TitlePage title="Ступени криволинейные" subtitle="Портфолио" />
+    <PortfolioCurrentList :imageList="stepCurvedPortfolio" />
     <ProductPortfolioForCard
       title="Другие ступени"
       path="/portfolio/step"

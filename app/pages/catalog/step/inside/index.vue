@@ -1,7 +1,7 @@
 <template>
   <ContainerPage class="page-padding-bottom">
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Ступени для лестницы" />
+    <TitlePage title="Ступени для лестницы" subtitle="Каталог" />
     <ProductCard
       :imageList="stepInsideCardImages"
       :details="stepInsideCardDetails"

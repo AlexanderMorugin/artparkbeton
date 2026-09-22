@@ -1,11 +1,8 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Шаговые плиты" />
-    <PortfolioCurrentList
-      title="Портфолио"
-      :imageList="steppingSlabsPortfolio"
-    />
+    <TitlePage title="Шаговые плиты" subtitle="Портфолио" />
+    <PortfolioCurrentList :imageList="steppingSlabsPortfolio" />
     <ProductPortfolioForCard
       title="Другие ступени"
       path="/portfolio/step"
@@ -30,7 +27,7 @@ const breadcrumbs = [
   },
   {
     name: "Шаговые",
-    path: "/portfolio/plate/stepping-slabs",
+    path: "/portfolio/stepping-slabs",
     content: "last",
   },
 ];

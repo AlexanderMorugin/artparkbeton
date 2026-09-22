@@ -1,8 +1,8 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Фасадная плитка" />
-    <PortfolioCurrentList title="Портфолио" :imageList="facadeTilePortfolio" />
+    <TitlePage title="Фасадная плитка" subtitle="Портфолио" />
+    <PortfolioCurrentList :imageList="facadeTilePortfolio" />
     <ProductPortfolioForCard
       title="Другие ступени"
       path="/portfolio/step"

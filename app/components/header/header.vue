@@ -53,7 +53,8 @@ const openChatModal = () => (isChatModalOpen.value = true);
   top: 0;
   width: 100%;
   animation: filter 3s ease;
-  backdrop-filter: blur(15px) grayscale(50%) brightness(50%);
+  // backdrop-filter: blur(15px) grayscale(50%) brightness(50%);
+  backdrop-filter: blur(15px) brightness(80%);
   z-index: 3;
   border-bottom: 1px solid $white-mask-three;
 

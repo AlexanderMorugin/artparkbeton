@@ -59,6 +59,9 @@ const props = defineProps<{
       letter-spacing: 0;
       gap: 2px;
     }
+    @media (max-width: 390px) {
+      font-size: 10px;
+    }
   }
 
   &__link {

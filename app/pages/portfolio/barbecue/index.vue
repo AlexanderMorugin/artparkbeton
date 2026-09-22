@@ -1,7 +1,7 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Балюстрады" subtitle="Каталог" />
+    <TitlePage title="Барбекю" subtitle="Портфолио" />
   </ContainerPage>
 </template>
 
@@ -12,10 +12,14 @@ const route = useRoute();
 
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },
-  { name: "Каталог", path: "/catalog", content: "2" },
   {
-    name: "Балюстрады",
-    path: "/catalog/baluster",
+    name: "Портфолио",
+    path: "/portfolio",
+    content: "2",
+  },
+  {
+    name: "Барбекю",
+    path: "/portfolio/barbecue",
     content: "last",
   },
 ];

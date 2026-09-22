@@ -1,7 +1,7 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Сувениры" />
+    <TitlePage title="Сувениры" subtitle="Каталог" />
   </ContainerPage>
 </template>
 

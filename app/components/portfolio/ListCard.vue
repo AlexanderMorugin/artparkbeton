@@ -36,10 +36,8 @@ const props = defineProps<{
   min-height: 250px;
   background: $gradient-white-three;
   border-radius: $br-m;
-  border: 1px solid $white-mask-four;
   overflow: hidden;
   transition: 0.2s ease;
-  // padding: 2px;
 
   &:hover {
     box-shadow: rgba(255, 255, 255, 0.6) 0px 5px 15px;

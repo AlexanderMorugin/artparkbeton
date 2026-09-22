@@ -1,15 +1,12 @@
 <template>
   <section class="portfolioCurrentList">
-    <div class="portfolioCurrentList__container">
-      <TitleBlock :title="props.title" />
-      <div class="portfolioCurrentList__grid">
-        <PortfolioCurrentListCard
-          v-for="item in props.imageList"
-          :key="item.id"
-          :item="item"
-          :imageList="props.imageList"
-        />
-      </div>
+    <div class="portfolioCurrentList__grid">
+      <PortfolioCurrentListCard
+        v-for="item in props.imageList"
+        :key="item.id"
+        :item="item"
+        :imageList="props.imageList"
+      />
     </div>
   </section>
 </template>
@@ -18,7 +15,6 @@
 import type { IPortfolioImageList } from "~/types/portfolio";
 
 const props = defineProps<{
-  title: string;
   imageList: IPortfolioImageList[];
 }>();
 </script>
@@ -28,12 +24,6 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 100px;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
 
   &__grid {
     display: grid;

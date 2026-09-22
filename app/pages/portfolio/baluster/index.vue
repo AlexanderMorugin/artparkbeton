@@ -1,7 +1,7 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Наши балюстрады" />
+    <TitlePage title="Балюстрады" subtitle="Портфолио" />
   </ContainerPage>
 </template>
 
@@ -19,7 +19,7 @@ const breadcrumbs = [
   },
   {
     name: "Балюстрады",
-    path: "/baluster",
+    path: "/portfolio/baluster",
     content: "last",
   },
 ];
