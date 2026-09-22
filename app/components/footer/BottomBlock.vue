@@ -5,7 +5,7 @@
     >
     <div class="footerBottomBlock__links">
       <NuxtLink to="/doc/requisites" class="footerBottomBlock__link"
-        >Данные о продавце</NuxtLink
+        >Данные о производителе</NuxtLink
       >
       <NuxtLink to="/doc/privacy" class="footerBottomBlock__link"
         >Политика конфиденциальности</NuxtLink
@@ -29,6 +29,7 @@ const { fullYear } = useDate();
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+  border-top: 1px solid $white-mask-three;
   padding-top: 20px;
   margin-top: 40px;
 
@@ -54,7 +55,7 @@ const { fullYear } = useDate();
     width: fit-content;
     font-size: 14px;
     line-height: 22px;
-    border-bottom: 1px dashed $white-mask-three;
+    // border-bottom: 1px dashed $white-mask-three;
   }
 }
 </style>

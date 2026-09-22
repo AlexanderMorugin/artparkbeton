@@ -1,7 +1,8 @@
 <template>
-  <ContainerPage>
-    <h1 class="title">Главная страница</h1>
-  </ContainerPage>
+  <!-- <ContainerPage> -->
+  <!-- <h1 class="title">Главная страница</h1> -->
+  <HeroBlock />
+  <!-- </ContainerPage> -->
 </template>
 
 <style lang="scss" scoped>

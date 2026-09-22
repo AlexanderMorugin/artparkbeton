@@ -18,10 +18,11 @@
 <style lang="scss" scoped>
 .footer {
   position: relative;
+  margin-top: 80px;
   padding-bottom: 40px;
 
   &__container {
-    border-top: 1px solid $white-mask-three;
+    // border-top: 1px solid $white-mask-three;
     padding-top: 40px;
   }
 
@@ -30,7 +31,7 @@
     grid-template-columns: 1fr 400px;
     grid-template-areas: "nav contact";
     gap: 100px;
-    padding-top: 20px;
+    padding-top: 60px;
 
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;

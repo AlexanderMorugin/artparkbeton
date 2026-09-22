@@ -21,7 +21,7 @@ const props = defineProps<{
   width: 100%;
   animation: fall-down 1s ease-in-out;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 
   &__title {
     font-family: "Montserrat-Bold", sans-serif;

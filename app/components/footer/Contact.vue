@@ -67,7 +67,7 @@ import {
   }
 
   &__text {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 </style>
