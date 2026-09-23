@@ -2,6 +2,7 @@
   <BlockOption
     :name="props.name"
     :isState="props.isState"
+    :isButton="props.isButton"
     @toggleOpening="emits('toggleOpening')"
   >
     <TitleCatalogBlock :title="props.title" />
@@ -23,6 +24,7 @@ const props = defineProps<{
   name: string;
   title: string;
   isState: boolean;
+  isButton: boolean;
   data: IProductOptions[];
 }>();
 

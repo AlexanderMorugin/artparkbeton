@@ -10,7 +10,7 @@
 
     <div class="heroBlockCompanyName__titleSubnameBox">
       <span class="heroBlockCompanyName__titleSubname"
-        >Производство и монтаж</span
+        >Мастерская - производство</span
       >
     </div>
   </div>
@@ -103,8 +103,12 @@
     }
 
     @media (max-width: 767px) {
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 10px;
     }
   }
 

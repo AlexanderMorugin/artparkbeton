@@ -10,12 +10,14 @@
     <ProductOptionCard
       name="description"
       title="Описание"
+      :isButton="false"
       :isState="isDescriptionBlockOpen"
       :data="stepCurvedCardDescription"
     />
     <ProductOptionCard
       name="options"
       title="Характеристики"
+      :isButton="true"
       :isState="isOptionsBlockOpen"
       :data="stepCurvedCardOptions"
       @toggleOpening="toggleOpening('options')"
@@ -23,6 +25,7 @@
     <ProductOptionCard
       name="time"
       title="Сроки"
+      :isButton="false"
       :isState="isTimeBlockOpen"
       :data="timeOfWork"
       @toggleOpening="toggleOpening('time')"
@@ -30,6 +33,7 @@
     <ProductOptionCard
       name="delivery"
       title="Доставка"
+      :isButton="false"
       :isState="isDeliveryBlockOpen"
       :data="delivery"
       @toggleOpening="toggleOpening('delivery')"
@@ -37,6 +41,7 @@
     <ProductOptionCard
       name="payment"
       title="Оплата"
+      :isButton="false"
       :isState="isPaymentBlockOpen"
       :data="payment"
       @toggleOpening="toggleOpening('payment')"
@@ -44,6 +49,7 @@
     <ProductOptionCard
       name="installation"
       title="Монтаж"
+      :isButton="false"
       :isState="isInstallationBlockOpen"
       :data="installation"
       @toggleOpening="toggleOpening('installation')"
@@ -77,10 +83,10 @@ const route = useRoute();
 
 const isDescriptionBlockOpen = ref(true);
 const isOptionsBlockOpen = ref(false);
-const isTimeBlockOpen = ref(false);
-const isDeliveryBlockOpen = ref(false);
-const isPaymentBlockOpen = ref(false);
-const isInstallationBlockOpen = ref(false);
+const isTimeBlockOpen = ref(true);
+const isDeliveryBlockOpen = ref(true);
+const isPaymentBlockOpen = ref(true);
+const isInstallationBlockOpen = ref(true);
 
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },

@@ -3,9 +3,6 @@
     :class="[
       'blockOption',
       {
-        blockOption_isOpen: props.name === 'description',
-      },
-      {
         blockOption_isPadding: props.isState,
       },
     ]"
@@ -28,7 +25,7 @@
     <IconPayment v-if="props.name === 'payment'" class="blockOption__icon" />
 
     <ButtonOptionToogle
-      v-if="props.name !== 'description'"
+      v-if="props.isButton"
       :isState="props.isState"
       @click="emits('toggleOpening')"
     />
@@ -39,6 +36,7 @@
 const props = defineProps<{
   name: string;
   isState: boolean;
+  isButton: boolean;
 }>();
 
 const emits = defineEmits(["toggleOpening"]);

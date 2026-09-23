@@ -42,10 +42,10 @@
       "
       class="productOptionBlock__description"
     >
-      <p>
+      <p v-if="props.data[0]?.optionDescription">
         {{ props.data[0]?.optionDescription }}
       </p>
-      <p>
+      <p v-if="props.data[0]?.optionDescriptionTwo">
         {{ props.data[0]?.optionDescriptionTwo }}
       </p>
     </div>
