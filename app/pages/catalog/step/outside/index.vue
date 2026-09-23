@@ -1,7 +1,9 @@
 <template>
-  <ContainerPage class="page-padding-bottom">
+  <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени для крыльца" subtitle="Каталог" />
+  </ContainerPage>
+  <ContainerPage mobileWidth="mobile">
     <ProductPageBlock
       :imageList="stepOutsideCardImages"
       :details="stepOutsideCardDetails"
@@ -12,6 +14,8 @@
       :details="stepOutsideCardDetails"
       :prices="stepOutsideCardPrices"
     />
+  </ContainerPage>
+  <ContainerPage>
     <ProductOptionCard
       name="description"
       title="Описание"
@@ -116,11 +120,11 @@ const breadcrumbs = [
 
 const toggleOpening = (arg: string) => {
   if (arg === "options") isOptionsBlockOpen.value = !isOptionsBlockOpen.value;
-  if (arg === "time") isTimeBlockOpen.value = !isTimeBlockOpen.value;
-  if (arg === "delivery")
-    isDeliveryBlockOpen.value = !isDeliveryBlockOpen.value;
-  if (arg === "payment") isPaymentBlockOpen.value = !isPaymentBlockOpen.value;
-  if (arg === "installation")
-    isInstallationBlockOpen.value = !isInstallationBlockOpen.value;
+  // if (arg === "time") isTimeBlockOpen.value = !isTimeBlockOpen.value;
+  // if (arg === "delivery")
+  //   isDeliveryBlockOpen.value = !isDeliveryBlockOpen.value;
+  // if (arg === "payment") isPaymentBlockOpen.value = !isPaymentBlockOpen.value;
+  // if (arg === "installation")
+  //   isInstallationBlockOpen.value = !isInstallationBlockOpen.value;
 };
 </script>
