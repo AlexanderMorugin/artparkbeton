@@ -1,84 +1,74 @@
 <template>
-  <ContainerPage>
-    <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Ступени для крыльца" subtitle="Каталог" />
-  </ContainerPage>
-  <ContainerPage mobileWidth="mobile">
-    <ProductPageBlock
-      :imageList="stepOutsideCardImages"
-      :details="stepOutsideCardDetails"
-      :prices="stepOutsideCardPrices"
-    />
-    <ProductCard
-      :imageList="stepOutsideCardImages"
-      :details="stepOutsideCardDetails"
-      :prices="stepOutsideCardPrices"
-    />
-  </ContainerPage>
-  <ContainerPage>
-    <ProductOptionCard
-      name="description"
-      title="Описание"
-      :isButton="false"
-      :isState="isDescriptionBlockOpen"
-      :data="stepOutsideCardDescription"
-    />
-    <ProductOptionCard
-      name="options"
-      title="Характеристики"
-      :isButton="true"
-      :isState="isOptionsBlockOpen"
-      :data="stepOutsideCardOptions"
-      @toggleOpening="toggleOpening('options')"
-    />
-    <ProductOptionCard
-      name="time"
-      title="Сроки"
-      :isButton="false"
-      :isState="isTimeBlockOpen"
-      :data="timeOfWork"
-      @toggleOpening="toggleOpening('time')"
-    />
-    <ProductOptionCard
-      name="delivery"
-      title="Доставка"
-      :isButton="false"
-      :isState="isDeliveryBlockOpen"
-      :data="delivery"
-      @toggleOpening="toggleOpening('delivery')"
-    />
-    <ProductOptionCard
-      name="payment"
-      title="Оплата"
-      :isButton="false"
-      :isState="isPaymentBlockOpen"
-      :data="payment"
-      @toggleOpening="toggleOpening('payment')"
-    />
-    <!-- <ProductOptionCard
-      name="installation"
-      title="Монтаж"
-      :isState="isInstallationBlockOpen"
-      :data="installation"
-      @toggleOpening="toggleOpening('installation')"
-    /> -->
-    <ProductOptionCard
-      name="installation"
-      title="Монтаж"
-      :isButton="false"
-      :isState="isInstallationBlockOpen"
-      :data="installation"
-    />
-  </ContainerPage>
-  <UltrabetonPromo />
-  <ContainerPage>
-    <ProductPortfolioForCard
-      title="Смотреть портфолио"
-      path="/portfolio/step/outside"
-      :imageList="stepOutsidePortfolioForCard"
-    />
+  <div>
+    <ContainerPage>
+      <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
+      <TitlePage title="Ступени для крыльца" subtitle="Каталог" />
+    </ContainerPage>
+    <ContainerPage emblaMobileWidth="emblaMobileWidth">
+      <ProductCard
+        :imageList="stepOutsideCardImages"
+        :details="stepOutsideCardDetails"
+        :prices="stepOutsideCardPrices"
+      />
+      <ContainerPageMobile>
+        <ProductOptionCard
+          name="description"
+          title="Описание"
+          :isButton="false"
+          :isState="isDescriptionBlockOpen"
+          :data="stepOutsideCardDescription"
+        />
+      </ContainerPageMobile>
+    </ContainerPage>
+
+    <ContainerPage>
+      <ProductOptionCard
+        name="options"
+        title="Характеристики"
+        :isButton="true"
+        :isState="isOptionsBlockOpen"
+        :data="stepOutsideCardOptions"
+        @toggleOpening="toggleOpening('options')"
+      />
+      <ProductOptionCard
+        name="time"
+        title="Сроки"
+        :isButton="false"
+        :isState="isTimeBlockOpen"
+        :data="timeOfWork"
+      />
+      <ProductOptionCard
+        name="delivery"
+        title="Доставка"
+        :isButton="false"
+        :isState="isDeliveryBlockOpen"
+        :data="delivery"
+      />
+      <ProductOptionCard
+        name="payment"
+        title="Оплата"
+        :isButton="false"
+        :isState="isPaymentBlockOpen"
+        :data="payment"
+      />
+      <ProductOptionCard
+        name="installation"
+        title="Монтаж"
+        :isButton="false"
+        :isState="isInstallationBlockOpen"
+        :data="installation"
+      />
+    </ContainerPage>
+    <UltrabetonPromo />
+    <ContainerPage>
+      <ProductPortfolioForCard
+        title="Смотреть портфолио"
+        path="/portfolio/step/outside"
+        :imageList="stepOutsidePortfolioForCard"
+      />
+    </ContainerPage>
     <CatalogCarousel />
-  </ContainerPage>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -120,11 +110,5 @@ const breadcrumbs = [
 
 const toggleOpening = (arg: string) => {
   if (arg === "options") isOptionsBlockOpen.value = !isOptionsBlockOpen.value;
-  // if (arg === "time") isTimeBlockOpen.value = !isTimeBlockOpen.value;
-  // if (arg === "delivery")
-  //   isDeliveryBlockOpen.value = !isDeliveryBlockOpen.value;
-  // if (arg === "payment") isPaymentBlockOpen.value = !isPaymentBlockOpen.value;
-  // if (arg === "installation")
-  //   isInstallationBlockOpen.value = !isInstallationBlockOpen.value;
 };
 </script>

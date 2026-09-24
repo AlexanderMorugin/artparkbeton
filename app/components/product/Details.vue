@@ -29,6 +29,11 @@ const props = defineProps<{
   flex-direction: column;
   gap: 20px;
 
+  @media (max-width: 576px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   &__priceBox {
     position: relative;
     display: grid;

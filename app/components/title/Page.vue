@@ -23,6 +23,10 @@ const props = defineProps<{
   padding-top: 20px;
   padding-bottom: 40px;
 
+  @media (max-width: 576px) {
+    padding-bottom: 20px;
+  }
+
   &__title {
     font-family: "Montserrat-Bold", sans-serif;
     font-size: 48px;

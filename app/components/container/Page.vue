@@ -2,7 +2,7 @@
   <div
     :class="[
       'containerPage',
-      { containerPage_mobile: props.mobileWidth === 'mobile' },
+      { containerPage_mobile: props.emblaMobileWidth === 'emblaMobileWidth' },
     ]"
   >
     <slot />
@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
-  mobileWidth?: string;
+  emblaMobileWidth?: string;
 }>();
 </script>
 
@@ -24,7 +24,7 @@ const props = defineProps<{
   overflow: hidden;
 
   &_mobile {
-    @media (max-width: 767px) {
+    @media (max-width: 576px) {
       padding-left: 0;
       padding-right: 0;
     }
