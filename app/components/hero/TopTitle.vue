@@ -24,7 +24,7 @@
     color: transparent;
     background-image: linear-gradient(
       90deg,
-      #ffffff80 30%,
+      rgba(255, 255, 255, 0.502) 30%,
       #ffffff 37%,
       #ffffff80 80%
     );

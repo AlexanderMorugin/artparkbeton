@@ -29,8 +29,12 @@
     >
       <span class="productOptionBlock__name">{{ item.optionName }}</span>
       <div class="productOptionBlock__textPlane">
-        <span>{{ item.optionDescription }}</span>
-        <span>{{ item.optionDescriptionTwo }}</span>
+        <p v-if="item?.optionDescription">
+          {{ item?.optionDescription }}
+        </p>
+        <p v-if="item?.optionDescriptionTwo">
+          {{ item?.optionDescriptionTwo }}
+        </p>
       </div>
     </div>
 
@@ -42,12 +46,20 @@
       "
       class="productOptionBlock__description"
     >
-      <p v-if="props.data[0]?.optionDescription">
+      <div class="productOptionBlock__textPlane">
+        <p v-if="props.data[0]?.optionDescription">
+          {{ props.data[0]?.optionDescription }}
+        </p>
+        <p v-if="props.data[0]?.optionDescriptionTwo">
+          {{ props.data[0]?.optionDescriptionTwo }}
+        </p>
+      </div>
+      <!-- <p v-if="props.data[0]?.optionDescription">
         {{ props.data[0]?.optionDescription }}
       </p>
       <p v-if="props.data[0]?.optionDescriptionTwo">
         {{ props.data[0]?.optionDescriptionTwo }}
-      </p>
+      </p> -->
     </div>
   </div>
 </template>
@@ -91,6 +103,10 @@ const props = defineProps<{
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
   }
 
   &__slash {

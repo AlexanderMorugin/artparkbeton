@@ -23,16 +23,17 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Арт П.А.Р.К",
+      title: "Мастерская Арт П.А.Р.К - Производитель изделий из ультрабетона.",
       meta: [
-        // {
-        //   name: "viewport",
-        //   content:
-        //     "width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no",
-        // },
-        { name: "description", content: "Изделия из ультрабетона." },
+        {
+          name: "description",
+          content:
+            "Мастерская Арт П.А.Р.К - Производитель изделий из ультрабетона.",
+        },
       ],
-      link: [{ rel: "icon", type: "image/png", href: "/logo/logo-fav.png" }],
+      link: [
+        { rel: "icon", type: "image/png", href: "/logo/favicon-2-512-512.png" },
+      ],
       htmlAttrs: {
         lang: "ru",
       },
