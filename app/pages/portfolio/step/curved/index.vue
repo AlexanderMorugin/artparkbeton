@@ -12,7 +12,14 @@
 </template>
 
 <script lang="ts" setup>
-import { SITE } from "~/mock/meta";
+import {
+  PORTFOLIO_STEP_CURVED_DESCRIPTION,
+  PORTFOLIO_STEP_CURVED_IMAGE,
+  PORTFOLIO_STEP_CURVED_TITLE,
+  SITE,
+  SITE_AUTHOR,
+  SITE_NAME,
+} from "~/mock/meta";
 import { stepStepsPortfolioForCard } from "~/mock/portfolio/all-steps-portfolio-for-card";
 import { stepCurvedPortfolio } from "~/mock/step/curved/step-curved-portfolio";
 
@@ -36,4 +43,22 @@ const breadcrumbs = [
     content: "last",
   },
 ];
+
+useHead({
+  link: [{ rel: "canonical", href: `${SITE}${route.path}` }],
+});
+
+useSeoMeta({
+  title: `${PORTFOLIO_STEP_CURVED_TITLE}`,
+  description: `${PORTFOLIO_STEP_CURVED_DESCRIPTION}`,
+  author: `${SITE_AUTHOR}`,
+  robots: "index, follow",
+  ogTitle: `${PORTFOLIO_STEP_CURVED_TITLE}`,
+  ogDescription: `${PORTFOLIO_STEP_CURVED_DESCRIPTION}`,
+  ogImage: `${PORTFOLIO_STEP_CURVED_IMAGE}`,
+  ogUrl: `${SITE}${route.path}`,
+  ogSiteName: `${SITE_NAME}`,
+  ogType: "website",
+  ogLocale: "ru_RU",
+});
 </script>

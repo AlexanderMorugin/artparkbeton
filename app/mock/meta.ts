@@ -45,6 +45,46 @@ export const PORTFOLIO_DESCRIPTION = `Портфолио изделий из у�
 export const PORTFOLIO_IMAGE =
   "https://artparkbeton.ru/images/meta/meta-portfolio-1200-630.jpg";
 
+export const PORTFOLIO_STEP_TITLE = `Портфолио ступеней из ультрабетона мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_DESCRIPTION = `Портфолио ступеней из ультрабетона мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-step-1200-630.jpg";
+
+export const PORTFOLIO_STEP_OUTSIDE_TITLE = `Портфолио ступеней для крыльца мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_OUTSIDE_DESCRIPTION = `Портфолио ступеней для крыльца мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_OUTSIDE_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-step-outside-1200-630.jpg";
+
+export const PORTFOLIO_STEP_INSIDE_TITLE = `Портфолио ступеней для лестницы мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_INSIDE_DESCRIPTION = `Портфолио ступеней для лестницы мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_INSIDE_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-step-inside-1200-630.jpg";
+
+export const PORTFOLIO_STEP_CURVED_TITLE = `Портфолио криволинейных ступеней мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_CURVED_DESCRIPTION = `Портфолио криволинейных ступеней мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEP_CURVED_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-step-curved-1200-630.jpg";
+
+export const PORTFOLIO_PLATE_TITLE = `Портфолио плитки из ультрабетона мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_DESCRIPTION = `Портфолио плитки из ультрабетона мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-plate-1200-630.jpg";
+
+export const PORTFOLIO_PLATE_PAVING_STONE_TITLE = `Портфолио брусчатки из ультрабетона мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_PAVING_STONE_DESCRIPTION = `Портфолио брусчатки из ультрабетона мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_PAVING_STONE_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-plate-paving-stone-1200-630.jpg";
+
+export const PORTFOLIO_PLATE_PAVING_SLABS_TITLE = `Портфолио тротуарной плитки мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_PAVING_SLABS_DESCRIPTION = `Портфолио тротуарной плитки мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_PAVING_SLABS_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-plate-paving-slabs-1200-630.jpg";
+
+export const PORTFOLIO_PLATE_FACADE_TILE_TITLE = `Портфолио фасадной плитки мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_FACADE_TILE_DESCRIPTION = `Портфолио фасадной плитки мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_PLATE_FACADE_TILE_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-plate-facade-tile-1200-630.jpg";
+
 export const CONTACT_TITLE = `Контакты мастерской изделий из ультрабетона ${COMPANY_NAME}`;
 export const CONTACT_DESCRIPTION = `Где находится мастерская ${COMPANY_NAME} Как добраться, связаться. Узнать адрес, время работы.`;
 export const CONTACT_IMAGE =
