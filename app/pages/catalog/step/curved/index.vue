@@ -74,7 +74,14 @@
 <script lang="ts" setup>
 import { delivery } from "~/mock/delivery";
 import { installation } from "~/mock/installation";
-import { SITE } from "~/mock/meta";
+import {
+  SITE,
+  SITE_AUTHOR,
+  SITE_NAME,
+  STEP_CURVED_DESCRIPTION,
+  STEP_CURVED_IMAGE,
+  STEP_CURVED_TITLE,
+} from "~/mock/meta";
 import { payment } from "~/mock/payment";
 import { stepCurvedCardDescription } from "~/mock/step/curved/step-curved-card-description";
 import { stepCurvedCardDetails } from "~/mock/step/curved/step-curved-card-details";
@@ -111,4 +118,22 @@ const breadcrumbs = [
 const toggleOpening = (arg: string) => {
   if (arg === "options") isOptionsBlockOpen.value = !isOptionsBlockOpen.value;
 };
+
+useHead({
+  link: [{ rel: "canonical", href: `${SITE}${route.path}` }],
+});
+
+useSeoMeta({
+  title: `${STEP_CURVED_TITLE}`,
+  description: `${STEP_CURVED_DESCRIPTION}`,
+  author: `${SITE_AUTHOR}`,
+  robots: "index, follow",
+  ogTitle: `${STEP_CURVED_TITLE}`,
+  ogDescription: `${STEP_CURVED_DESCRIPTION}`,
+  ogImage: `${STEP_CURVED_IMAGE}`,
+  ogUrl: `${SITE}${route.path}`,
+  ogSiteName: `${SITE_NAME}`,
+  ogType: "website",
+  ogLocale: "ru_RU",
+});
 </script>

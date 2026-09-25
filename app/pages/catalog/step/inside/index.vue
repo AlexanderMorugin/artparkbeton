@@ -73,7 +73,14 @@
 <script lang="ts" setup>
 import { delivery } from "~/mock/delivery";
 import { installation } from "~/mock/installation";
-import { SITE } from "~/mock/meta";
+import {
+  SITE,
+  SITE_AUTHOR,
+  SITE_NAME,
+  STEP_INSIDE_DESCRIPTION,
+  STEP_INSIDE_IMAGE,
+  STEP_INSIDE_TITLE,
+} from "~/mock/meta";
 import { payment } from "~/mock/payment";
 import { stepInsideCardDescription } from "~/mock/step/inside/step-inside-card-description";
 import { stepInsideCardDetails } from "~/mock/step/inside/step-inside-card-details";
@@ -110,4 +117,22 @@ const breadcrumbs = [
 const toggleOpening = (arg: string) => {
   if (arg === "options") isOptionsBlockOpen.value = !isOptionsBlockOpen.value;
 };
+
+useHead({
+  link: [{ rel: "canonical", href: `${SITE}${route.path}` }],
+});
+
+useSeoMeta({
+  title: `${STEP_INSIDE_TITLE}`,
+  description: `${STEP_INSIDE_DESCRIPTION}`,
+  author: `${SITE_AUTHOR}`,
+  robots: "index, follow",
+  ogTitle: `${STEP_INSIDE_TITLE}`,
+  ogDescription: `${STEP_INSIDE_DESCRIPTION}`,
+  ogImage: `${STEP_INSIDE_IMAGE}`,
+  ogUrl: `${SITE}${route.path}`,
+  ogSiteName: `${SITE_NAME}`,
+  ogType: "website",
+  ogLocale: "ru_RU",
+});
 </script>

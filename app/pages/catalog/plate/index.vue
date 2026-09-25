@@ -7,7 +7,14 @@
 </template>
 
 <script lang="ts" setup>
-import { SITE } from "~/mock/meta";
+import {
+  PLATE_DESCRIPTION,
+  PLATE_IMAGE,
+  PLATE_TITLE,
+  SITE,
+  SITE_AUTHOR,
+  SITE_NAME,
+} from "~/mock/meta";
 import { plateList } from "~/mock/plate/plate-list";
 
 const route = useRoute();
@@ -21,4 +28,22 @@ const breadcrumbs = [
     content: "last",
   },
 ];
+
+useHead({
+  link: [{ rel: "canonical", href: `${SITE}${route.path}` }],
+});
+
+useSeoMeta({
+  title: `${PLATE_TITLE}`,
+  description: `${PLATE_DESCRIPTION}`,
+  author: `${SITE_AUTHOR}`,
+  robots: "index, follow",
+  ogTitle: `${PLATE_TITLE}`,
+  ogDescription: `${PLATE_DESCRIPTION}`,
+  ogImage: `${PLATE_IMAGE}`,
+  ogUrl: `${SITE}${route.path}`,
+  ogSiteName: `${SITE_NAME}`,
+  ogType: "website",
+  ogLocale: "ru_RU",
+});
 </script>
