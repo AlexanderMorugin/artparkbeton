@@ -1,8 +1,19 @@
 <template>
-  <!-- <ContainerPage> -->
-  <!-- <h1 class="title">Главная страница</h1> -->
-  <HeroBlock />
-  <!-- </ContainerPage> -->
+  <div>
+    <HeroBlock />
+    <ContainerPage>
+      <CatalogMainBlock />
+    </ContainerPage>
+    <UltrabetonPromo />
+    <ContainerPage>
+      <ProductPortfolioForCard
+        place="main"
+        title="Портфолио наших работ"
+        path="/portfolio"
+        :imageList="stepCurvedPortfolioForCard"
+      />
+    </ContainerPage>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -14,6 +25,7 @@ import {
   SITE_AUTHOR,
   SITE_NAME,
 } from "~/mock/meta";
+import { stepCurvedPortfolioForCard } from "~/mock/step/curved/step-curved-portfolio-for-card";
 
 useHead({
   link: [{ rel: "canonical", href: `${SITE}` }],

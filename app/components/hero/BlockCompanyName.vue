@@ -22,7 +22,7 @@
   left: 2%;
   right: 10%;
   bottom: 2%;
-  z-index: 4;
+  z-index: 2;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas: "logo name" "logo subname";
