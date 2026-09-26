@@ -4,6 +4,7 @@ $white-mask-two: rgba(255, 255, 255, 0.6);
 $white-mask-three: rgba(255, 255, 255, 0.4);
 $white-mask-four: rgba(255, 255, 255, 0.2);
 $white-mask-five: rgba(255, 255, 255, 0.1);
+$white-mask-six: rgba(255, 255, 255, 0.03);
 
 $black-one: #262727;
 $black-mask-one: rgba(38, 39, 39, 0.05);
@@ -39,11 +40,13 @@ $gradient-page-primary: linear-gradient(
 $gradient-white-one: linear-gradient(to left, $mask-trasparent 0%, $mask-trasparent 30%, $white-mask-three 100%);
 $gradient-white-two: linear-gradient(to right, $white-mask-three 0%, $white-mask-four 100%);
 $gradient-white-three: linear-gradient(to right, $black-mask-five 0%, $white-mask-three 100%);
+$gradient-white-four: linear-gradient(to bottom, $white-mask-six 50%, $white-mask-five 100%);
 $gradient-blue-one: linear-gradient(148deg, $white-mask-five 10%, $deep-blue-one 100%);
 $gradient-black-one: linear-gradient(to right, $mask-trasparent 0%, $mask-trasparent 30%, $black-mask-three 100%);
 
 $shadow-one: rgba(38, 39, 39, 0.2) 0px 7px 29px 0px;
 
+$br-xxs: 4px;
 $br-xs: 6px;
 $br-s: 8px;
 $br-m: 10px;
