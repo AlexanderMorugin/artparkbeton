@@ -40,6 +40,26 @@ export const PLATE_DESCRIPTION = `Каталог плитки из ультра�
 export const PLATE_IMAGE =
   "https://artparkbeton.ru/images/meta/meta-plate-1200-630.jpg";
 
+export const PLATE_PAVING_SLABS_TITLE = `Каталог тротуарной плитки мастерской ${COMPANY_NAME}`;
+export const PLATE_PAVING_SLABS_DESCRIPTION = `Каталог тротуарной плитки мастерской ${COMPANY_NAME}`;
+export const PLATE_PAVING_SLABS_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-plate-paving-slabs-1200-630.jpg";
+
+export const PLATE_PAVING_STONE_TITLE = `Каталог брусчатки мастерской ${COMPANY_NAME}`;
+export const PLATE_PAVING_STONE_DESCRIPTION = `Каталог брусчатки мастерской ${COMPANY_NAME}`;
+export const PLATE_PAVING_STONE_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-plate-paving-stone-1200-630.jpg";
+
+export const PLATE_FACADE_TILE_TITLE = `Каталог фасадной плитки мастерской ${COMPANY_NAME}`;
+export const PLATE_FACADE_TILE_DESCRIPTION = `Каталог фасадной плитки мастерской ${COMPANY_NAME}`;
+export const PLATE_FACADE_TILE_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-plate-facade-tile-1200-630.jpg";
+
+export const STEPPING_SLABS_TITLE = `Каталог шаговых плит мастерской ${COMPANY_NAME}`;
+export const STEPPING_SLABS_DESCRIPTION = `Каталог шаговых плит мастерской ${COMPANY_NAME}`;
+export const STEPPING_SLABS_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-stepping-slabs-1200-630.jpg";
+
 export const PORTFOLIO_TITLE = `Портфолио изделий из ультрабетона мастерской ${COMPANY_NAME}`;
 export const PORTFOLIO_DESCRIPTION = `Портфолио изделий из ультрабетона мастерской ${COMPANY_NAME}`;
 export const PORTFOLIO_IMAGE =
@@ -84,6 +104,11 @@ export const PORTFOLIO_PLATE_FACADE_TILE_TITLE = `Портфолио фасад�
 export const PORTFOLIO_PLATE_FACADE_TILE_DESCRIPTION = `Портфолио фасадной плитки мастерской ${COMPANY_NAME}`;
 export const PORTFOLIO_PLATE_FACADE_TILE_IMAGE =
   "https://artparkbeton.ru/images/meta/meta-portfolio-plate-facade-tile-1200-630.jpg";
+
+export const PORTFOLIO_STEPPING_SLABS_TITLE = `Портфолио шаговых плит мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEPPING_SLABS_DESCRIPTION = `Портфолио шаговых плит мастерской ${COMPANY_NAME}`;
+export const PORTFOLIO_STEPPING_SLABS_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-portfolio-stepping-slabs-1200-630.jpg";
 
 export const CONTACT_TITLE = `Контакты мастерской изделий из ультрабетона ${COMPANY_NAME}`;
 export const CONTACT_DESCRIPTION = `Где находится мастерская ${COMPANY_NAME} Как добраться, связаться. Узнать адрес, время работы.`;

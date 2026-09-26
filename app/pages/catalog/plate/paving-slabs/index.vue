@@ -6,7 +6,14 @@
 </template>
 
 <script lang="ts" setup>
-import { SITE } from "~/mock/meta";
+import {
+  PLATE_PAVING_SLABS_DESCRIPTION,
+  PLATE_PAVING_SLABS_IMAGE,
+  PLATE_PAVING_SLABS_TITLE,
+  SITE,
+  SITE_AUTHOR,
+  SITE_NAME,
+} from "~/mock/meta";
 
 const route = useRoute();
 
@@ -24,4 +31,22 @@ const breadcrumbs = [
     content: "last",
   },
 ];
+
+useHead({
+  link: [{ rel: "canonical", href: `${SITE}${route.path}` }],
+});
+
+useSeoMeta({
+  title: `${PLATE_PAVING_SLABS_TITLE}`,
+  description: `${PLATE_PAVING_SLABS_DESCRIPTION}`,
+  author: `${SITE_AUTHOR}`,
+  robots: "index, follow",
+  ogTitle: `${PLATE_PAVING_SLABS_TITLE}`,
+  ogDescription: `${PLATE_PAVING_SLABS_DESCRIPTION}`,
+  ogImage: `${PLATE_PAVING_SLABS_IMAGE}`,
+  ogUrl: `${SITE}${route.path}`,
+  ogSiteName: `${SITE_NAME}`,
+  ogType: "website",
+  ogLocale: "ru_RU",
+});
 </script>
