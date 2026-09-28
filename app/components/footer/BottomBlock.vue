@@ -1,61 +1,74 @@
 <template>
   <div class="footerBottomBlock">
-    <span class="footerBottomBlock__company"
-      >{{ COMPANY_UR }} {{ fullYear }}</span
+    <div class="footerBottomBlock__companyBlock">
+      <span>{{ fullYear }} {{ COMPANY_UR }}</span>
+      <span>ИНН: {{ COMPANY_INN }}</span>
+    </div>
+    <span class="footerBottomBlock__companySpan"
+      >Данный интернет-сайт носит информационный характер и ни при каких
+      условиях не является публичной офертой. Для получения информации о
+      стоимости товаров, обращайтесь по указанным телефонам.</span
     >
-    <div class="footerBottomBlock__links">
-      <NuxtLink to="/doc/requisites" class="footerBottomBlock__link"
-        >Данные о производителе</NuxtLink
-      >
+    <div class="footerBottomBlock__linkBlock">
       <NuxtLink to="/doc/privacy" class="footerBottomBlock__link"
         >Политика конфиденциальности</NuxtLink
-      >
-      <NuxtLink to="/doc/cooperation" class="footerBottomBlock__link"
-        >Сотрудничество</NuxtLink
       >
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { COMPANY_UR } from "~/mock/info";
+import { COMPANY_INN, COMPANY_UR } from "~/mock/info";
 
 const { fullYear } = useDate();
 </script>
 
 <style lang="scss" scoped>
 .footerBottomBlock {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 290px 1fr 290px;
+  gap: 20px;
   border-top: 1px solid $white-mask-three;
   padding-top: 20px;
   margin-top: 40px;
+  font-size: 14px;
+  color: $white-mask-one;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 290px 1fr;
+  }
 
   @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__companyBlock {
+    display: flex;
     flex-direction: column;
   }
 
-  &__company {
-    font-size: 14px;
-    line-height: 22px;
+  &__companySpan {
+    font-size: 12px;
   }
 
-  &__links {
+  &__linkBlock {
     display: flex;
-    gap: 10px;
+    justify-content: end;
+    height: fit-content;
 
-    @media (max-width: 767px) {
-      flex-direction: column;
+    @media (max-width: 1024px) {
+      justify-content: start;
     }
   }
 
   &__link {
-    width: fit-content;
     font-size: 14px;
-    line-height: 22px;
-    // border-bottom: 1px dashed $white-mask-three;
+    color: $white-mask-one;
+    transition: 0.2s ease;
+
+    &:hover {
+      color: $white-one;
+    }
   }
 }
 </style>

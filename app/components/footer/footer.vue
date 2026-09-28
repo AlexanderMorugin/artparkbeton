@@ -22,7 +22,6 @@
   padding-bottom: 40px;
 
   &__container {
-    // border-top: 1px solid $white-mask-three;
     padding-top: 40px;
   }
 

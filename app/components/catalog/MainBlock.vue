@@ -19,14 +19,14 @@ import { catalog } from "~/mock/catalog";
 
 <style lang="scss" scoped>
 .catalogMainBlock {
-  margin-top: 100px;
+  margin-top: 60px;
 
   &__container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 20px;
     row-gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     background: $gradient-white-four;
     padding: 30px 20px;
     border-radius: $br-xxs;

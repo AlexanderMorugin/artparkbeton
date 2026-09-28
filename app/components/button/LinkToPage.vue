@@ -29,9 +29,10 @@ const props = defineProps<{
   display: flex;
   width: 100%;
   max-width: 500px;
-  height: 66px;
+  height: 36px;
 
   &_main {
+    height: 66px;
     max-width: 100%;
 
     @media (max-width: 1024px) {

@@ -1,5 +1,6 @@
 export const COMPANY_NAME = "Арт П.А.Р.К";
-export const COMPANY_UR = "ООО «Алла+Коля=Ультрабетон»";
+export const COMPANY_UR = "ИП Родин Николай Леонидович";
+export const COMPANY_INN = "642101519180";
 export const ADDRESS =
   "142601, Московская область, г. Орехово-Зуево, ул. Кирова, д. 54а";
 export const PHONE_NUMBER_PRIMARY = "+7 985 343-56-65";

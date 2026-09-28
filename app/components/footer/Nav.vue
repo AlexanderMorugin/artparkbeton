@@ -56,8 +56,10 @@ import {
   grid-area: nav;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 40px;
-  row-gap: 40px;
+  gap: 20px;
+
+  // column-gap: 40px;
+  // row-gap: 40px;
 
   @media (max-width: 767px) {
     grid-template-columns: repeat(2, 1fr);

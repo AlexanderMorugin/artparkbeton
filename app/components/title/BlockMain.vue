@@ -10,9 +10,8 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .titleBlockMain {
-  font-family: "Montserrat-SemiBold", sans-serif;
+  font-family: "Montserrat-Bold", sans-serif;
   font-size: 32px;
-  // line-height: 1.2;
   letter-spacing: 4px;
   text-align: center;
   text-transform: uppercase;
@@ -20,8 +19,8 @@ const props = defineProps<{
   background-image: linear-gradient(
     to right,
     transparent 40%,
-    $white-one 50%,
-    $white-one 100%
+    $white-mask-one 50%,
+    $white-mask-one 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
