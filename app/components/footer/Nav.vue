@@ -58,9 +58,6 @@ import {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 
-  // column-gap: 40px;
-  // row-gap: 40px;
-
   @media (max-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
   }

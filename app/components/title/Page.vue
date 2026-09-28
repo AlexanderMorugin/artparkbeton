@@ -1,6 +1,16 @@
 <template>
   <div class="titlePage">
-    <h1 v-if="props.title" class="titlePage__title">{{ props.title }}</h1>
+    <h1
+      v-if="props.title"
+      class="titlePage__title"
+      :class="
+        props.isImportant === 'noImportant'
+          ? 'titlePage__title_noImportant'
+          : ''
+      "
+    >
+      {{ props.title }}
+    </h1>
     <span v-if="props.subtitle" class="titlePage__subtitle">{{
       props.subtitle
     }}</span>
@@ -11,6 +21,7 @@
 const props = defineProps<{
   title: string;
   subtitle?: string;
+  isImportant?: string;
 }>();
 </script>
 
@@ -53,6 +64,15 @@ const props = defineProps<{
     @media (max-width: 576px) {
       font-size: 28px;
       letter-spacing: 2px;
+    }
+
+    &_noImportant {
+      background-image: none;
+      color: $white-one;
+
+      @media (max-width: 576px) {
+        font-size: 20px;
+      }
     }
   }
 

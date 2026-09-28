@@ -1,8 +1,9 @@
 <template>
   <div class="footerBottomBlock">
     <div class="footerBottomBlock__companyBlock">
-      <span>{{ fullYear }} {{ COMPANY_UR }}</span>
-      <span>ИНН: {{ COMPANY_INN }}</span>
+      <span>{{ COMPANY_UR }}</span>
+      <span>{{ fullYear }}</span>
+      <!-- <span>ИНН: {{ COMPANY_INN }}</span> -->
     </div>
     <span class="footerBottomBlock__companySpan"
       >Данный интернет-сайт носит информационный характер и ни при каких
@@ -10,15 +11,18 @@
       стоимости товаров, обращайтесь по указанным телефонам.</span
     >
     <div class="footerBottomBlock__linkBlock">
-      <NuxtLink to="/doc/privacy" class="footerBottomBlock__link"
-        >Политика конфиденциальности</NuxtLink
+      <NuxtLink to="/requisites" class="footerBottomBlock__link"
+        >Реквизиты</NuxtLink
+      >
+      <NuxtLink to="/agreement" class="footerBottomBlock__link"
+        >Пользовательское соглашение</NuxtLink
       >
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { COMPANY_INN, COMPANY_UR } from "~/mock/info";
+import { COMPANY_UR } from "~/mock/info";
 
 const { fullYear } = useDate();
 </script>
@@ -26,8 +30,8 @@ const { fullYear } = useDate();
 <style lang="scss" scoped>
 .footerBottomBlock {
   display: grid;
-  grid-template-columns: 290px 1fr 290px;
-  gap: 20px;
+  grid-template-columns: 240px 1fr 240px;
+  gap: 40px;
   border-top: 1px solid $white-mask-three;
   padding-top: 20px;
   margin-top: 40px;
@@ -36,6 +40,7 @@ const { fullYear } = useDate();
 
   @media (max-width: 1024px) {
     grid-template-columns: 290px 1fr;
+    gap: 20px;
   }
 
   @media (max-width: 767px) {
@@ -49,15 +54,17 @@ const { fullYear } = useDate();
 
   &__companySpan {
     font-size: 12px;
+    color: $white-mask-three;
   }
 
   &__linkBlock {
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: end;
     height: fit-content;
 
     @media (max-width: 1024px) {
-      justify-content: start;
+      align-items: start;
     }
   }
 

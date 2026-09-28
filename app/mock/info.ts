@@ -1,6 +1,18 @@
 export const COMPANY_NAME = "Арт П.А.Р.К";
 export const COMPANY_UR = "ИП Родин Николай Леонидович";
+export const COMPANY_UR_FULL =
+  "Индивидуальный предприниматель Родин Николай Леонидович";
 export const COMPANY_INN = "642101519180";
+export const COMPANY_OGRN = "318645100098467";
+export const COMPANY_RAS_SCHET = "40802810100000833853";
+export const COMPANY_BANK = "АО «ТБанк»";
+export const COMPANY_BANK_INN = "7710140679";
+export const COMPANY_BANK_BIK = "044525974";
+export const COMPANY_BANK_KOR_SCHET = "30101810145250000974";
+export const COMPANY_BANK_ADDRESS_UR =
+  "127287, г. Москва, ул. Хуторская 2-я, д. 38А, стр. 26";
+export const ADDRESS_UR =
+  "143421, Московская область, г. Красногорск, с. Николо-Урюпино, ул. Полковника Глазунова, д. 2, кв. 68";
 export const ADDRESS =
   "142601, Московская область, г. Орехово-Зуево, ул. Кирова, д. 54а";
 export const PHONE_NUMBER_PRIMARY = "+7 985 343-56-65";
