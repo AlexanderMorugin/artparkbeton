@@ -70,12 +70,14 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .productPriceBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   max-width: 370px;
   border-radius: $br-s;
   border: 1px solid $white-mask-four;
   overflow: hidden;
+  z-index: 2;
 
   @media (max-width: 576px) {
     max-width: 100%;

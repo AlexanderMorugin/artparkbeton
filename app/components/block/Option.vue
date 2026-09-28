@@ -51,6 +51,7 @@ const emits = defineEmits(["toggleOpening"]);
   margin-top: 40px;
   padding: 10px;
   height: 100%;
+  z-index: 2;
 
   &_isPadding {
     padding-bottom: 30px;

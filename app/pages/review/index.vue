@@ -2,6 +2,7 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Отзывы" />
+    <ReviewBlock :reviews="reviews.reverse()" />
   </ContainerPage>
 </template>
 
@@ -14,6 +15,7 @@ import {
   SITE_AUTHOR,
   SITE_NAME,
 } from "~/mock/meta";
+import { reviews } from "~/mock/review";
 
 const route = useRoute();
 

@@ -25,9 +25,11 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .productDetails {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 2;
 
   @media (max-width: 576px) {
     padding-left: 1rem;

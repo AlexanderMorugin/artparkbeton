@@ -13,7 +13,7 @@
 import type { IPortfolioForCard } from "~/types/product";
 
 const props = defineProps<{
-  place: string;
+  place?: string;
   path: string;
   title: string;
   imageList: IPortfolioForCard[];

@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
-  place: string;
+  place?: string;
   path: string;
   title: string;
 }>();
