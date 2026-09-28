@@ -13,6 +13,7 @@
         :imageList="stepCurvedPortfolioForCard"
       />
     </ContainerPage>
+    <ReviewCarousel />
   </div>
 </template>
 

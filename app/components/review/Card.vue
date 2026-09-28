@@ -32,6 +32,8 @@ const props = defineProps<{
   border: 1px solid $white-mask-five;
   background: $gradient-blue-one;
   padding: 10px;
+  user-select: none;
+  cursor: grab;
 
   &__textBlock {
     display: flex;
