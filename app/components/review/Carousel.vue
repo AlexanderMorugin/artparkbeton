@@ -1,5 +1,5 @@
 <template>
-  <section class="catalogCarousel">
+  <section class="reviewCarousel">
     <ButtonLinkToPage
       path="/review"
       title="Отзывы клиентов"
@@ -15,7 +15,7 @@ import { reviews } from "~/mock/review";
 </script>
 
 <style lang="scss" scoped>
-.catalogCarousel {
+.reviewCarousel {
   max-width: $screen-xxl;
   margin: 0 auto;
   margin-top: 100px;

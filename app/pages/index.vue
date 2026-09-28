@@ -5,6 +5,7 @@
       <CatalogMainBlock />
     </ContainerPage>
     <UltrabetonPromo />
+    <ReviewCarousel />
     <ContainerPage>
       <ProductPortfolioForCard
         place="main"
@@ -13,7 +14,7 @@
         :imageList="stepCurvedPortfolioForCard"
       />
     </ContainerPage>
-    <ReviewCarousel />
+    <!-- <ReviewCarousel /> -->
   </div>
 </template>
 

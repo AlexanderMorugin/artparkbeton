@@ -34,7 +34,6 @@ const emits = defineEmits(["scroll"]);
   position: absolute;
   top: 0;
   bottom: 0;
-  // bottom: -65%;
   margin: auto;
   display: flex;
   justify-content: center;
