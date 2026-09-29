@@ -66,11 +66,17 @@
         :imageList="stepInsidePortfolioForCard"
       />
     </ContainerPage>
-    <CatalogCarousel />
+    <EmblaArrayCarouselBlock
+      path="/catalog"
+      title="Каталог изделий"
+      place="catalog"
+      :catalog="catalog"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
+import { catalog } from "~/mock/catalog";
 import { delivery } from "~/mock/delivery";
 import { installation } from "~/mock/installation";
 import {

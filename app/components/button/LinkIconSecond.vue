@@ -1,6 +1,12 @@
 <template>
   <div class="buttonLinkIconSecond">
-    <NuxtLink :to="props.route" class="buttonLinkIconSecond__content">
+    <NuxtLink
+      :to="props.route"
+      :class="[
+        'buttonLinkIconSecond__content',
+        { buttonLinkIconSecond__content_padding: props.isPadding },
+      ]"
+    >
       <span class="buttonLinkIconSecond__title">{{ props.title }}</span>
       <div class="buttonLinkIconSecond__iconBox">
         <IconArrowDouble class="buttonLinkIconSecond__icon" />
@@ -13,26 +19,24 @@
 const props = defineProps<{
   route: string;
   title: string;
+  isPadding?: boolean;
 }>();
 </script>
 
 <style lang="scss" scoped>
 .buttonLinkIconSecond {
-  height: 36px;
-
-  // @media (max-width: 390px) {
-  //   height: 32px;
-  // }
+  width: fit-content;
+  height: 40px;
 
   &__content {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: fit-content;
-    // border: 1px solid red;
-    @media (max-width: 576px) {
-      padding-left: 1rem;
-      padding-right: 1rem;
+
+    &_padding {
+      @media (max-width: 576px) {
+        padding-left: 1rem;
+      }
     }
   }
 
@@ -49,7 +53,7 @@ const props = defineProps<{
     }
 
     @media (max-width: 390px) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
@@ -58,19 +62,32 @@ const props = defineProps<{
     align-items: end;
     width: 32px;
     height: 28px;
-    // border: 1px solid red;
+
+    @media (max-width: 1024px) {
+      height: 26px;
+    }
+
+    @media (max-width: 390px) {
+      height: 22px;
+    }
   }
+
   &__icon {
     fill: $white-mask-one;
     width: 24px;
     height: 24px;
+
+    @media (max-width: 390px) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 .buttonLinkIconSecond:hover .buttonLinkIconSecond__title {
   color: $white-one;
 }
 .buttonLinkIconSecond:hover .buttonLinkIconSecond__icon {
-  animation: move 0.5s ease;
+  animation: move 0.3s ease;
 }
 
 @keyframes move {
@@ -78,7 +95,7 @@ const props = defineProps<{
     transform: translateX(0);
   }
   50% {
-    transform: translateX(10px);
+    transform: translateX(6px);
   }
   100% {
     transform: translateX(0);

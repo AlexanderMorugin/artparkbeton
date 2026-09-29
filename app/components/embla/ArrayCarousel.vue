@@ -1,5 +1,5 @@
 <template>
-  <div class="emblaReviewCarousel">
+  <div class="emblaArrayCarousel">
     <EmblaButtonControl
       :canScroll="canScrollPrev"
       direction="prev"
@@ -14,10 +14,22 @@
     <div class="embla">
       <div class="embla__viewport" ref="emblaRef">
         <div class="embla__container">
+          <!-- Карусель каталога товаров -->
           <div
+            v-if="props.place === 'catalog'"
+            v-for="item in props.catalog"
+            :key="item.id"
+            class="embla__slide embla__slide_catalog"
+          >
+            <EmblaCatalogCarouselListCard :item="item" />
+          </div>
+
+          <!-- Карусель отзывов -->
+          <div
+            v-if="props.place === 'reviews'"
             v-for="item in props.reviews"
             :key="item.id"
-            class="embla__slide"
+            class="embla__slide embla__slide_reviews"
           >
             <ReviewCard :review="item" />
           </div>
@@ -30,10 +42,13 @@
 <script setup lang="ts">
 import emblaCarouselVue from "embla-carousel-vue";
 import type { EmblaCarouselType } from "embla-carousel";
+import type { ICatalog } from "~/types/catalog";
 import type { IReview } from "~/types/review";
 
 const props = defineProps<{
-  reviews: IReview[];
+  catalog?: ICatalog[];
+  reviews?: IReview[];
+  place: string;
 }>();
 
 const [emblaRef, emblaApi] = emblaCarouselVue({
@@ -74,20 +89,20 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-.emblaReviewCarousel {
+.emblaArrayCarousel {
   position: relative;
   display: flex;
   justify-content: center;
-  // margin-top: 16px;
 }
 .embla {
   min-width: 100%;
   max-width: 80vw;
   margin: auto;
   --slide-spacing: 1rem;
-  --slide-size: 600px;
-  --slide-size-tablet: 400px;
-  --slide-size-mobile: 300px;
+  --slide-size-catalog: 300px;
+  --slide-size-reviews: 600px;
+  --slide-size-reviews-tablet: 400px;
+  --slide-size-reviews-mobile: 300px;
 }
 .embla__viewport {
   overflow: hidden;
@@ -98,16 +113,23 @@ onMounted(() => {
   margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
-  flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
 
-  @media (max-width: 767px) {
-    flex: 0 0 var(--slide-size-tablet);
+  &_catalog {
+    flex: 0 0 var(--slide-size-catalog);
   }
 
-  @media (max-width: 576px) {
-    flex: 0 0 var(--slide-size-mobile);
+  &_reviews {
+    flex: 0 0 var(--slide-size-reviews);
+
+    @media (max-width: 767px) {
+      flex: 0 0 var(--slide-size-reviews-tablet);
+    }
+
+    @media (max-width: 576px) {
+      flex: 0 0 var(--slide-size-reviews-mobile);
+    }
   }
 }
 </style>

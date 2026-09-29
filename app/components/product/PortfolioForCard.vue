@@ -1,10 +1,6 @@
 <template>
   <section class="productPortfolioForCard">
-    <ButtonLinkToPage
-      :place="props.place"
-      :path="props.path"
-      :title="props.title"
-    />
+    <ButtonLinkIconSecond :route="props.path" :title="props.title" />
     <PortfolioBlock :imageList="props.imageList" />
   </section>
 </template>

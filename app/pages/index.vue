@@ -5,16 +5,20 @@
       <CatalogMainBlock />
     </ContainerPage>
     <UltrabetonPromo />
-    <ReviewCarousel />
+    <EmblaArrayCarouselBlock
+      path="/review"
+      title="Отзывы клиентов"
+      place="reviews"
+      :reviews="reviews"
+    />
     <ContainerPage>
       <ProductPortfolioForCard
         place="main"
-        title="Портфолио наших работ"
+        title="Портфолио работ"
         path="/portfolio"
         :imageList="stepCurvedPortfolioForCard"
       />
     </ContainerPage>
-    <!-- <ReviewCarousel /> -->
   </div>
 </template>
 
@@ -28,6 +32,7 @@ import {
   SITE_NAME,
 } from "~/mock/meta";
 import { stepCurvedPortfolioForCard } from "~/mock/step/curved/step-curved-portfolio-for-card";
+import { reviews } from "~/mock/review";
 
 useHead({
   link: [{ rel: "canonical", href: `${SITE}` }],

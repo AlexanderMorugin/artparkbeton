@@ -62,8 +62,8 @@ const props = defineProps<{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
-  margin-top: 20px;
-  padding: 5px;
+  // margin-top: 20px;
+  // padding: 5px;
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;

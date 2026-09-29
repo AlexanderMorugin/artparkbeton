@@ -1,20 +1,29 @@
 <template>
-  <section class="catalogCarousel">
-    <ButtonLinkToPage
-      path="/catalog"
-      title="Каталог изделий"
-      class="catalogCarousel__buttonLinkToPage"
+  <section class="ArrayCarouselBlock">
+    <ButtonLinkIconSecond isPadding :route="props.path" :title="props.title" />
+    <EmblaArrayCarousel
+      :catalog="props.catalog"
+      :reviews="props.reviews"
+      :place="props.place"
     />
-    <EmblaCatalogCarousel :catalog="catalog" />
   </section>
 </template>
 
 <script setup lang="ts">
-import { catalog } from "~/mock/catalog";
+import type { ICatalog } from "~/types/catalog";
+import type { IReview } from "~/types/review";
+
+const props = defineProps<{
+  catalog?: ICatalog[];
+  reviews?: IReview[];
+  path: string;
+  title: string;
+  place: string;
+}>();
 </script>
 
 <style lang="scss" scoped>
-.catalogCarousel {
+.ArrayCarouselBlock {
   max-width: $screen-xxl;
   margin: 0 auto;
   margin-top: 100px;
