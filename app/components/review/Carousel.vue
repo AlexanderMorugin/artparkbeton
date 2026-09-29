@@ -1,11 +1,6 @@
 <template>
   <section class="reviewCarousel">
-    <ButtonLinkToPage
-      path="/review"
-      title="Отзывы клиентов"
-      class="catalogCarousel__buttonLinkToPage"
-    />
-
+    <ButtonLinkIconSecond route="/review" title="Отзывы клиентов" />
     <EmblaReviewCarousel :reviews="reviews.reverse()" />
   </section>
 </template>
@@ -28,14 +23,14 @@ import { reviews } from "~/mock/review";
     padding-right: 0;
   }
 
-  &__buttonLinkToPage {
-    padding-left: 0;
-    padding-right: 0;
+  // &__buttonLinkToPage {
+  //   padding-left: 0;
+  //   padding-right: 0;
 
-    @media (max-width: 576px) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
+  //   @media (max-width: 576px) {
+  //     padding-left: 1rem;
+  //     padding-right: 1rem;
+  //   }
+  // }
 }
 </style>

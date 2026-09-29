@@ -78,7 +78,7 @@ onMounted(() => {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  // margin-top: 16px;
 }
 .embla {
   min-width: 100%;
