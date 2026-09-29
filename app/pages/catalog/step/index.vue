@@ -20,8 +20,6 @@ import { stepList } from "~/mock/step/step-list";
 
 const route = useRoute();
 
-// console.log(route);
-
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },
   { name: "Каталог", path: "/catalog", content: "2" },

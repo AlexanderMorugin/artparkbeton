@@ -1,19 +1,31 @@
 <template>
   <section class="contact">
-    <ContactMap />
-    <ContactInfo />
+    <div class="contact__grid">
+      <ContactMap />
+      <ContactInfo />
+    </div>
+    <ParagraphLarge center paddingTop>
+      Связаться с нами можно любыми указанами способами. Звоните по телефону в
+      часы работы мастерской. Пишите в мессенджеры и на почту круглосуточно.
+      Всегда рады ответить на ваши вопросы.
+    </ParagraphLarge>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 }
 </style>
