@@ -2,7 +2,7 @@
   <div>
     <HeroBlock />
     <ContainerPage>
-      <CatalogMainBlock />
+      <CatalogMainBlock :route="route.path" />
     </ContainerPage>
     <UltrabetonPromo />
     <EmblaArrayCarouselBlock
@@ -33,6 +33,8 @@ import {
 } from "~/mock/meta";
 import { stepCurvedPortfolioForCard } from "~/mock/step/curved/step-curved-portfolio-for-card";
 import { reviews } from "~/mock/review";
+
+const route = useRoute();
 
 useHead({
   link: [{ rel: "canonical", href: `${SITE}` }],

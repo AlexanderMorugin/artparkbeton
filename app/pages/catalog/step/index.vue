@@ -1,8 +1,9 @@
 <template>
-  <ContainerPage class="page-padding-bottom">
+  <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Ступени" subtitle="Каталог" />
     <CatalogListCardImage :list="stepList" />
+    <CatalogMainBlock :route="route.path" />
   </ContainerPage>
 </template>
 
@@ -18,6 +19,8 @@ import {
 import { stepList } from "~/mock/step/step-list";
 
 const route = useRoute();
+
+// console.log(route);
 
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },

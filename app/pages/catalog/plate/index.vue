@@ -3,6 +3,7 @@
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Плитка" subtitle="Каталог" />
     <CatalogListCardImage :list="plateList" />
+    <CatalogMainBlock :route="route.path" />
   </ContainerPage>
 </template>
 

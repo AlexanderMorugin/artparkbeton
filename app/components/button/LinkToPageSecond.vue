@@ -1,7 +1,13 @@
 <template>
-  <NuxtLink :to="props.path" class="buttonLinkToPageSecond">
+  <NuxtLink
+    :to="props.path"
+    :class="[
+      'buttonLinkToPageSecond',
+      { buttonLinkToPageSecond_active: isActive },
+    ]"
+  >
     <span class="buttonLinkToPageSecond__title">{{ props.title }}</span>
-    <IconArrowIos class="buttonLinkToPageSecond__icon" />
+    <IconArrowIos v-if="!isActive" class="buttonLinkToPageSecond__icon" />
   </NuxtLink>
 </template>
 
@@ -9,7 +15,11 @@
 const props = defineProps<{
   path: string;
   title: string;
+  route: string;
+  itemRoute: string;
 }>();
+
+const isActive = computed(() => props.route.slice(8) === props.itemRoute);
 </script>
 
 <style lang="scss" scoped>
@@ -25,6 +35,15 @@ const props = defineProps<{
 
   &:hover {
     background: $white-mask-four;
+  }
+
+  &_active {
+    background: $deep-blue-one;
+    cursor: default;
+
+    &:hover {
+      background: $deep-blue-one;
+    }
   }
 
   &__title {

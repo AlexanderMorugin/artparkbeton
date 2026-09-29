@@ -2,6 +2,7 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Столешницы" subtitle="Каталог" />
+    <CatalogMainBlock :route="route.path" />
   </ContainerPage>
 </template>
 

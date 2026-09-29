@@ -8,6 +8,8 @@
         :key="item.id"
         :path="`/catalog${item.route}`"
         :title="item.titleSmall"
+        :itemRoute="item.route"
+        :route="props.route"
       />
     </div>
   </section>
@@ -15,6 +17,10 @@
 
 <script setup lang="ts">
 import { catalog } from "~/mock/catalog";
+
+const props = defineProps<{
+  route: string;
+}>();
 </script>
 
 <style lang="scss" scoped>
