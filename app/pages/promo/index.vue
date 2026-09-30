@@ -2,6 +2,15 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Акции и скидки" />
+    <ParagraphLarge center paddingTop>
+      Жаркие цены сентября — скидка 20%
+    </ParagraphLarge>
+    <ParagraphLarge center paddingTop>
+      Скидка до 30% на ступени для второй лестницы
+    </ParagraphLarge>
+    <ParagraphLarge center paddingTop>
+      Скидка 25% на шаговые плиты
+    </ParagraphLarge>
   </ContainerPage>
 </template>
 

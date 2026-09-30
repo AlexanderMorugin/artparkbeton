@@ -13,9 +13,5 @@ const props = defineProps<{
   font-family: "Montserrat-SemiBold", sans-serif;
   font-size: 20px;
   letter-spacing: 1px;
-
-  // @media (max-width: 767px) {
-  //   font-size: 16px;
-  // }
 }
 </style>

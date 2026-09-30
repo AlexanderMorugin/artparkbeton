@@ -2,6 +2,10 @@
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
     <TitlePage title="Услуги" />
+    <ParagraphLarge center paddingTop>
+      Выезд на объект, замер, подбор цвета, подбор размера, индивидуальное
+      изготовление, изготовление изделия на объекте заказчика
+    </ParagraphLarge>
   </ContainerPage>
 </template>
 
