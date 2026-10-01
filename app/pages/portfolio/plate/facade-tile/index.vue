@@ -4,9 +4,9 @@
     <TitlePage title="Фасадная плитка" subtitle="Портфолио" />
     <PortfolioCurrentList :imageList="facadeTilePortfolio" />
     <ProductPortfolioForCard
-      title="Другие ступени"
-      path="/portfolio/step"
-      :imageList="stepStepsPortfolioForCard"
+      title="Другая плитка"
+      path="/portfolio/plate"
+      :imageList="allPlatePortfolioForCard"
     />
   </ContainerPage>
 </template>
@@ -21,7 +21,7 @@ import {
   SITE_NAME,
 } from "~/mock/meta";
 import { facadeTilePortfolio } from "~/mock/plate/facade-tile/facade-tile-portfolio";
-import { stepStepsPortfolioForCard } from "~/mock/portfolio/all-steps-portfolio-for-card";
+import { allPlatePortfolioForCard } from "~/mock/portfolio/all-plate-portfolio-for-card";
 
 const route = useRoute();
 

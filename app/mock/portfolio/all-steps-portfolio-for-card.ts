@@ -1,4 +1,4 @@
-export const stepStepsPortfolioForCard = [
+export const allStepsPortfolioForCard = [
   {
     id: 0,
     title: "Фото 1",

@@ -4,9 +4,9 @@
     <TitlePage title="Брусчатка" subtitle="Портфолио" />
     <PortfolioCurrentList :imageList="pavingStonePortfolio" />
     <ProductPortfolioForCard
-      title="Другие ступени"
-      path="/portfolio/step"
-      :imageList="stepStepsPortfolioForCard"
+      title="Другая плитка"
+      path="/portfolio/plate"
+      :imageList="allPlatePortfolioForCard"
     />
   </ContainerPage>
 </template>
@@ -20,8 +20,8 @@ import {
   SITE_AUTHOR,
   SITE_NAME,
 } from "~/mock/meta";
-import { pavingStonePortfolio } from "~/mock/plate/paving-stone/facade-tile-portfolio";
-import { stepStepsPortfolioForCard } from "~/mock/portfolio/all-steps-portfolio-for-card";
+import { pavingStonePortfolio } from "~/mock/plate/paving-stone/paving-stone-portfolio";
+import { allPlatePortfolioForCard } from "~/mock/portfolio/all-plate-portfolio-for-card";
 
 const route = useRoute();
 

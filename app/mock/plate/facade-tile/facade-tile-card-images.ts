@@ -1,0 +1,38 @@
+export const facadeTileCardImages = [
+  {
+    id: 0,
+    title: "Фасадная плитка",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-1-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-1-1080-1920.webp",
+    image1000: "/images/catalog/plate/facade-tile/facade-tile-1-1000-563.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-1-550-310.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-1-100-56.webp",
+  },
+  {
+    id: 1,
+    title: "Фасадная плитка",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-2-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-2-1080-1920.webp",
+    image1000: "/images/catalog/plate/facade-tile/facade-tile-2-1000-563.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-2-550-310.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-2-100-56.webp",
+  },
+  {
+    id: 2,
+    title: "Фасадная плитка",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-3-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-3-1080-1920.webp",
+    image1000: "/images/catalog/plate/facade-tile/facade-tile-3-1000-563.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-3-550-310.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-3-100-56.webp",
+  },
+  {
+    id: 3,
+    title: "Фасадная плитка",
+    image1920: "/images/catalog/plate/facade-tile/facade-tile-4-1920-1080.webp",
+    image1080: "/images/catalog/plate/facade-tile/facade-tile-4-1080-1920.webp",
+    image1000: "/images/catalog/plate/facade-tile/facade-tile-4-1000-563.webp",
+    image550: "/images/catalog/plate/facade-tile/facade-tile-4-550-310.webp",
+    image100: "/images/catalog/plate/facade-tile/facade-tile-4-100-56.webp",
+  },
+];
