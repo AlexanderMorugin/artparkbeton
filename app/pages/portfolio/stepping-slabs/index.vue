@@ -6,7 +6,7 @@
     <ProductPortfolioForCard
       title="Другие ступени"
       path="/portfolio/step"
-      :imageList="stepStepsPortfolioForCard"
+      :imageList="allStepsPortfolioForCard"
     />
   </ContainerPage>
 </template>
@@ -21,7 +21,7 @@ import {
   SITE_NAME,
 } from "~/mock/meta";
 import { steppingSlabsPortfolio } from "~/mock/stepping-slabs/stepping-slabs-portfolio";
-import { stepStepsPortfolioForCard } from "~/mock/portfolio/all-steps-portfolio-for-card";
+import { allStepsPortfolioForCard } from "~/mock/portfolio/all-steps-portfolio-for-card";
 
 const route = useRoute();
 
