@@ -12,8 +12,8 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
-  center: boolean;
-  paddingTop: boolean;
+  center?: boolean;
+  paddingTop?: boolean;
 }>();
 </script>
 

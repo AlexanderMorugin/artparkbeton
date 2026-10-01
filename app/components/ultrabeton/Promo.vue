@@ -4,7 +4,7 @@
     <div class="ultrabetonPromo__subtitle">Как это возможно?</div>
     <ButtonLinkIcon
       place="promo"
-      route="/company/ultrabeton"
+      route="/ultrabeton"
       class="ultrabetonPromo__buttonLink"
     />
     <div class="ultrabetonPromo__textBox">

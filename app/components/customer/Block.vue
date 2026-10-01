@@ -7,6 +7,11 @@
       :answerOpen="answerOpen"
       @toggleOpening="toggleOpening"
     />
+    <ParagraphLarge center>
+      Если вы не нашли ответ на интересующий вопрос, то можно уточнить по
+      телефону в часы работы мастерской или в мессенджерах круглосуточно. Всегда
+      рад ответить на ваши вопросы. С уважением, Николай.
+    </ParagraphLarge>
   </section>
 </template>
 

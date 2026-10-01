@@ -18,6 +18,7 @@
         path="/portfolio"
         :imageList="stepCurvedPortfolioForCard"
       />
+      <CustomerBlockForMain />
     </ContainerPage>
   </div>
 </template>

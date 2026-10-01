@@ -34,6 +34,11 @@ export const footerMenu = [
     title: "Отзывы",
     route: "/review",
   },
+  {
+    id: 8,
+    title: "Ультрабетон",
+    route: "/ultrabeton",
+  },
 ];
 
 export const footerCatalogOne = [

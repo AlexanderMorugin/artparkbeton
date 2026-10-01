@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/company/ultrabeton" class="ultrabetonPageLink">
+  <NuxtLink to="/ultrabeton" class="ultrabetonPageLink">
     <span class="ultrabetonPageLink__title">Ультрабетон</span>
     <span class="ultrabetonPageLink__subtitle">Как это возможно?</span>
     <span class="ultrabetonPageLink__details">Подробнее...</span>

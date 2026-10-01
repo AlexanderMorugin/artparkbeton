@@ -139,3 +139,8 @@ export const SERVICE_TITLE = `Услуги мастерской ${COMPANY_NAME}`
 export const SERVICE_DESCRIPTION = `Услуги мастерской ${COMPANY_NAME}`;
 export const SERVICE_IMAGE =
   "https://artparkbeton.ru/images/meta/meta-service-1200-630.jpg";
+
+export const ULTRABETON_TITLE = `Ультрабетон мастерской ${COMPANY_NAME}`;
+export const ULTRABETON_DESCRIPTION = `Ультрабетон мастерской ${COMPANY_NAME}`;
+export const ULTRABETON_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-ultrabeton-1200-630.jpg";

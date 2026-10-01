@@ -1,19 +1,19 @@
 <template>
   <ContainerPage>
     <Breadcrumbs :breadcrumbs="breadcrumbs" :route="SITE + route.path" />
-    <TitlePage title="Мастерская" />
-    <CompanyBlock />
+    <TitlePage title="Ультрабетон" />
+    <UltrabetonBlock />
   </ContainerPage>
 </template>
 
 <script lang="ts" setup>
 import {
-  COMPANY_DESCRIPTION,
-  COMPANY_IMAGE,
-  COMPANY_TITLE,
   SITE,
   SITE_AUTHOR,
   SITE_NAME,
+  ULTRABETON_DESCRIPTION,
+  ULTRABETON_IMAGE,
+  ULTRABETON_TITLE,
 } from "~/mock/meta";
 
 const route = useRoute();
@@ -21,8 +21,8 @@ const route = useRoute();
 const breadcrumbs = [
   { name: "Главная", path: "/", content: "1" },
   {
-    name: "Мастерская",
-    path: "/company",
+    name: "Ультрабетон",
+    path: "/ultrabeton",
     content: "last",
   },
 ];
@@ -32,13 +32,13 @@ useHead({
 });
 
 useSeoMeta({
-  title: `${COMPANY_TITLE}`,
-  description: `${COMPANY_DESCRIPTION}`,
+  title: `${ULTRABETON_TITLE}`,
+  description: `${ULTRABETON_DESCRIPTION}`,
   author: `${SITE_AUTHOR}`,
   robots: "index, follow",
-  ogTitle: `${COMPANY_TITLE}`,
-  ogDescription: `${COMPANY_DESCRIPTION}`,
-  ogImage: `${COMPANY_IMAGE}`,
+  ogTitle: `${ULTRABETON_TITLE}`,
+  ogDescription: `${ULTRABETON_DESCRIPTION}`,
+  ogImage: `${ULTRABETON_IMAGE}`,
   ogUrl: `${SITE}/`,
   ogSiteName: `${SITE_NAME}`,
   ogType: "website",

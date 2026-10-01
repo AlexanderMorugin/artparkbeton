@@ -44,7 +44,7 @@ const emits = defineEmits(["toggleOpening"]);
   display: flex;
   flex-direction: column;
   border: 1px solid $white-mask-three;
-  border-radius: $br-xl;
+  border-radius: $br-xs;
   padding: 20px 10px;
   backdrop-filter: blur(15px) brightness(80%);
   transition: 0.5s ease;
