@@ -7,7 +7,14 @@
 </template>
 
 <script lang="ts" setup>
-import { SITE } from "~/mock/meta";
+import {
+  AGREEMENT_DESCRIPTION,
+  AGREEMENT_IMAGE,
+  AGREEMENT_TITLE,
+  SITE,
+  SITE_AUTHOR,
+  SITE_NAME,
+} from "~/mock/meta";
 
 const route = useRoute();
 
@@ -24,17 +31,17 @@ useHead({
   link: [{ rel: "canonical", href: `${SITE}${route.path}` }],
 });
 
-// useSeoMeta({
-//   title: `${REVIEW_TITLE}`,
-//   description: `${REVIEW_DESCRIPTION}`,
-//   author: `${SITE_AUTHOR}`,
-//   robots: "index, follow",
-//   ogTitle: `${REVIEW_TITLE}`,
-//   ogDescription: `${REVIEW_DESCRIPTION}`,
-//   ogImage: `${REVIEW_IMAGE}`,
-//   ogUrl: `${SITE}/`,
-//   ogSiteName: `${SITE_NAME}`,
-//   ogType: "website",
-//   ogLocale: "ru_RU",
-// });
+useSeoMeta({
+  title: `${AGREEMENT_TITLE}`,
+  description: `${AGREEMENT_DESCRIPTION}`,
+  author: `${SITE_AUTHOR}`,
+  robots: "index, follow",
+  ogTitle: `${AGREEMENT_TITLE}`,
+  ogDescription: `${AGREEMENT_DESCRIPTION}`,
+  ogImage: `${AGREEMENT_IMAGE}`,
+  ogUrl: `${SITE}${route.path}`,
+  ogSiteName: `${SITE_NAME}`,
+  ogType: "website",
+  ogLocale: "ru_RU",
+});
 </script>

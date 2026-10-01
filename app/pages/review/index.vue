@@ -29,7 +29,7 @@ const breadcrumbs = [
 ];
 
 useHead({
-  link: [{ rel: "canonical", href: `${SITE}` }],
+  link: [{ rel: "canonical", href: `${SITE}${route.path}` }],
 });
 
 useSeoMeta({
@@ -40,7 +40,7 @@ useSeoMeta({
   ogTitle: `${REVIEW_TITLE}`,
   ogDescription: `${REVIEW_DESCRIPTION}`,
   ogImage: `${REVIEW_IMAGE}`,
-  ogUrl: `${SITE}/`,
+  ogUrl: `${SITE}${route.path}`,
   ogSiteName: `${SITE_NAME}`,
   ogType: "website",
   ogLocale: "ru_RU",

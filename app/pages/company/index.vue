@@ -39,7 +39,7 @@ useSeoMeta({
   ogTitle: `${COMPANY_TITLE}`,
   ogDescription: `${COMPANY_DESCRIPTION}`,
   ogImage: `${COMPANY_IMAGE}`,
-  ogUrl: `${SITE}/`,
+  ogUrl: `${SITE}${route.path}`,
   ogSiteName: `${SITE_NAME}`,
   ogType: "website",
   ogLocale: "ru_RU",

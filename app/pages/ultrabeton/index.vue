@@ -39,7 +39,7 @@ useSeoMeta({
   ogTitle: `${ULTRABETON_TITLE}`,
   ogDescription: `${ULTRABETON_DESCRIPTION}`,
   ogImage: `${ULTRABETON_IMAGE}`,
-  ogUrl: `${SITE}/`,
+  ogUrl: `${SITE}${route.path}`,
   ogSiteName: `${SITE_NAME}`,
   ogType: "website",
   ogLocale: "ru_RU",

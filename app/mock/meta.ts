@@ -144,3 +144,13 @@ export const ULTRABETON_TITLE = `Ультрабетон мастерской ${C
 export const ULTRABETON_DESCRIPTION = `Ультрабетон мастерской ${COMPANY_NAME}`;
 export const ULTRABETON_IMAGE =
   "https://artparkbeton.ru/images/meta/meta-ultrabeton-1200-630.jpg";
+
+export const AGREEMENT_TITLE = `Пользовательское соглашение мастерской ${COMPANY_NAME}`;
+export const AGREEMENT_DESCRIPTION = `Пользовательское соглашение мастерской ${COMPANY_NAME}`;
+export const AGREEMENT_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-agreement-1200-630.jpg";
+
+export const REQUISITES_TITLE = `Реквизиты мастерской ${COMPANY_NAME}`;
+export const REQUISITES_DESCRIPTION = `Реквизиты мастерской ${COMPANY_NAME}`;
+export const REQUISITES_IMAGE =
+  "https://artparkbeton.ru/images/meta/meta-requisites-1200-630.jpg";
